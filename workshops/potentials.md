@@ -9,3 +9,4 @@
 * R functions
 * Reproducible research (basics of best practices on coding, folder
   structure, running scripts, etc.)
+* How to select the appropriate stat test
