@@ -8,12 +8,13 @@ is mostly used, and what they may best benefit from.
 
 1. Which topics would you be interested in learning about? Select as
    many as you wish.
-    * Data visualization
-    * Statistical techniques
+    * Exploring your data visually using graphs (in R)
+    * Common statistical techniques
     * Best practices in doing analyses in SAS or R
-    * Data management
+    * Managing, cleaning, and massaging your data into a suitable format for analysis 
     * Best practices in version control (e.g. sending your draft
       paper around for edits)
+    * Techniques to automate and make easier putting your results into your manuscript 
     * Better understanding how coding and programming work
 
 2. Which statistical software do you use (e.g. SAS, R, SPSS, etc.)?
@@ -25,3 +26,14 @@ is mostly used, and what they may best benefit from.
    Would you be interested in learning more about how they work and
    checking their assumptions (e.g. ANOVA assumes normal distributions
    of its variables)?
+   
+5. Please describe two main aspects of your research you struggle the most with (eg. Managing and cleaning your data, getting your data into a format that can be analyzed, choosing the right test and learning how to apply it, getting results into the right format to put into tables and manuscripts, etc.). 
+
+6. Please describe other, secondary aspects of your research that you find difficult. 
+
+7. If a series of workshops were set up on all things data related, which times would be best for running them? 
+    * (should we do a link to doodle or something?) 
+    * Thursday after seminar? 
+    * Tuesday afternoon? 
+    * a weekend morning? 
+    * other time? 
