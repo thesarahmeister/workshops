@@ -6,9 +6,8 @@ is mostly used, and what they may best benefit from.
 
 ## Potential Questions ##
 
-0a. What is your name? 
-0b. What program are you in? 
-0c. What year are you into your program? 
+0. a) What is your name? b) What program are you in? c) What year are
+   you into your program?
 
 1. Which topics would you be interested in learning about? Select as
    many as you wish.
