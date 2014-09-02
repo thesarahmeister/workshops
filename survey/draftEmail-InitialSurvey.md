@@ -6,7 +6,7 @@ We are planning a series of workshops that will teach you how to use programs (i
 
 The first workshop will be held in late October, so if you're interested in signing up please complete our brief 10 question survey at the link below by Friday, September 12. This survey will give us a better idea of what you'd like to learn and areas of your analysis that you may struggle with, which will enable us to customize our learning objectives to better suit your needs.
 
-Survey link: https://www.surveymonkey.com/s/S2CM73F
+Survey link: https://www.surveymonkey.com/s/5XJ6XHC
 
 Thank you!
 
