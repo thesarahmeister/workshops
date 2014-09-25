@@ -6,3 +6,4 @@
   explains what it is
 * Make a name for our workshops (e.g. "Journal Club" for going over
   articles)
+* Confirm with Anthea about email
