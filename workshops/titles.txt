@@ -1,11 +1,12 @@
 Ideas for workshops titles
 
-Workshop 1: Let's "Git" started! An introduction to version control. (Git)
+Workshop 1: Let's "Git" started! An introduction to version control (Git)
 
-Workshop 2: From codes to tables: Reducing the number of steps in your
+Workshop 2: Know your data and how to handle it correctly: Statistical
+assumptions (SAS)
+
+Workshop 3: From codes to tables: Reducing the number of steps in your
 analyses (SAS)
-
-Workshop 3: Know your data and how to handle it correctly: Statistical assumptions.
 
 Workshop 4: Fighting chaos: Coding tricks to keep your analysis -- and
 mind -- sane (SAS & R)
