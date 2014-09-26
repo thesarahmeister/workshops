@@ -10,3 +10,8 @@
     * Go over what VCS is, how it can help, and how it is particularly
       (especially!) useful in science as it is a form of
       documentation (like a lab notebook)
+
+* Brief discussion on why it is important to keep things documented,
+  organized, and in mainly plain text files/scripts
+
+* 
