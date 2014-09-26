@@ -1,6 +1,6 @@
 Ideas for workshops titles
 
-Workshop 1: Let's "Git" started! An introduction to version control.
+Workshop 1: Let's "Git" started! An introduction to version control. (Git)
 
 Workshop 2: From codes to tables: Reducing the number of steps in your
 analyses (SAS)
@@ -8,10 +8,10 @@ analyses (SAS)
 Workshop 3: Know your data and how to handle it correctly: Statistical assumptions.
 
 Workshop 4: Fighting chaos: Coding tricks to keep your analysis -- and
-mind -- in a state of simplicity and cleanliness
+mind -- sane (SAS & R)
 
-Workshop 5: Nice (graph) curves! Dressing up your data to explore it
-visually
+Workshop 5: Visual exploration (of data): Techniques and code to
+better understand your data using plots and graphs (R (sas?))
 
 Workshop 6: Manipulating your data... In a good way! Managing and
-wrangling your data into an analyze-able form
+wrangling your data into an analyze-able form (SAS & R)
