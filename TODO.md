@@ -8,3 +8,4 @@
   articles)
 * Confirm with Anthea about email
 * Create an etherpad.mozilla team account or use public pad?
+* Make an organization github account?
