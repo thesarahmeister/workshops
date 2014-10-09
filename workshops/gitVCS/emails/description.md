@@ -5,7 +5,7 @@ Thank you for completing our SurveyMonkey in Septemeber. We (Daiva and Luke) are
 
 In order to find the most convenient time to schedule our first workshop, we ask you to complete the following Doodle by Tuesday, October 21. Please indicate all times during the first week of November when you will be free for 2 hours between 10am and 6pm. We are food friendly as a very viable scheduling option for these workshops is during an extended lunch hour during weekdays, so if you are free during typical lunch times (11am-1pm, 12pm-2pm, etc.) let us know!
 
-https://doodle.com/262w6e53rncc3m2r
+<https://doodle.com/262w6e53rncc3m2r>
 
 Thanks!  Daiva & Luke
 
