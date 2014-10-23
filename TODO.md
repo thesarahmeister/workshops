@@ -9,3 +9,5 @@
 * Confirm with Anthea about email
 * Create an etherpad.mozilla team account or use public pad?
 * Make an organization github account?
+* Set up a concomitant "Code Review Club"?
+* Easy way to push (no pull requests)
