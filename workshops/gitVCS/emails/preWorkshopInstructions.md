@@ -12,8 +12,8 @@ This is the first workshop in a series of data-related workshops.  The reason **
 
 ### Time: ###
 
-4:00-6:00pm  
-November #, 2014  
+2:00-4:00pm  
+November 7, 2014  
 FitzGerald rm 423
 
 ### Register... or not ###
