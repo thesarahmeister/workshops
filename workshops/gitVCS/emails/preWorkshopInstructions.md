@@ -18,7 +18,7 @@ FitzGerald rm 423
 
 ### Register... or not ###
 
-While we gladly welcome anyone to come and join, it would really help us better prepare for the workshop if we know how many are coming. So, please register for this workshop using this [Eventbrite link]().
+While we gladly welcome anyone to come and join, it would really help us better prepare for the workshop if we know how many are coming. So, please register for this workshop using this [Eventbrite link](https://www.eventbrite.com/e/workshop-1-tips-and-tricks-for-data-related-efficiency-tickets-13890200965).
 
 ### Before coming to the workshop: ###
 
