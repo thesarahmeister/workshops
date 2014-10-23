@@ -1,6 +1,6 @@
 ---
 title: "Let's 'Git' started: An introduction to version control"
-date: 2014-11
+date: 2014-11-07
 author: Luke & Daiva
 classoption: xcolor=dvipsnames
 output:
@@ -11,56 +11,68 @@ header-includes:
     
 ---
 
+# Welcome to our Data-related workshop #
 
-# Slide 1 #
+## Purpose: ##
 
-* Welcome to our Data-related workshop*
+To teach a few tips and tricks for more efficiently managing your
+data, tracking your computer files, understanding appropriate
+analytical approaches, and speeding up the process from code to
+tables.
 
-Purpose: To teach a few tips and tricks for more efficiently managing your data, tracking your computer files, understanding appropriate analytical approaches, and speeding up the process from code to tables. 
+## Significance: ##
 
-Significance: Topics we cover will help you get more comfortable with data, reduce the chance of overlooked errors, and give you more control over your work. They are also all important parts of a science movement gaining increasing attention -- Reproducible Research.
+Topics we cover will help you get more comfortable with data, reduce
+the chance of overlooked errors, and give you more control over your
+work. They are also all important parts of a science movement gaining
+increasing attention -- Reproducible Research.
 
+# Overview of some future workshops #
 
-# Slide 2 #
+* Let's "Git" started! An introduction to version control
 
-*Overview of Some Workshop Topics*
+* Know your data and how to handle it correctly: Statistical
+  assumptions
 
-Workshop 1: Let's "Git" started! An introduction to version control
+* Fighting chaos: Coding tricks to keep your analysis -- and mind --
+  sane
 
-Workshop 2: Know your data and how to handle it correctly: Statistical
-assumptions
+* Visual exploration (of data): Techniques and code to better
+  understand your data using plots and graphs
 
-Workshop 3: Fighting chaos: Coding tricks to keep your analysis -- and
-mind -- sane
+. . .
 
-Workshop 4: Visual exploration (of data): Techniques and code to
-better understand your data using plots and graphs
+* Code Review Clud...?
 
-.....Code Review Club
-
-# Slide 3 #
-
-*Reproducible Research*
+# Reproducible Research #
 
 Definition
 
-PLOS paper (Greg Wilson)
+[PLOS Biology](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001745)
+by Greg Wilson, founder of
+[Software Carpentry](http://software-carpentry.org/)
 
-# Slide 4 #
+# Version control #
 
-*Filenaming Rules*
+![](filenamingComic.gif)
 
-1) Keep the names short, but meaningful. Remove unnecessary words such as the, and, a, etc.
+# Brief tangent: Filenaming rules #
 
-2) Don't include spaces and avoid underscores. For a string of words, capitalize the first letter of each word, except for the first word (e.g. "fileNameDescription")
+1. Keep names short, meaningful. Remove "the", "and", "a", etc.
 
-3) Use hyphens to separate important parts of the name or when there is an abbreviation followed by another word (e.g. "diabetesRisk-AnalysisOutput" which separates the two concepts, the project descriptor ["diabetesRisk"] and the contents of the file ["AnalysisOutput"], or "report-AnalysisFoodIntake-2014.pdf" and not "reportAnalysisFoodIntake2014.pdf").
+2. Don't include spaces.
 
-4) Avoid redundancy in file names and file paths (e.g. folderName/fileName-folderName.txt, instead use folderName/file.Name.txt or "diabetesSatFats/analysis-DiabetesSatFats.sas", use "diabetesSatFats/analysis.sas")
+3. Use hyphens to separate important parts of the filename.
 
-5) If a number is included in the filename, such as for the version number, use two digits not one (e.g. V01, not V1).
+4. Avoid redundancy in file names and folder names
+   (e.g. `folderName/fileName-folderName.txt`, instead use
+   `folderName/fileName.txt`).
 
-6) When including a date, include it at the very end of the filename and in the international standard format YYYY-MM-DD. 
+5. If a number is included, such as for the version number, use two
+   digits not one (e.g. V01, not V1).
+
+6. When including a date, include it at the end of the filename and in
+   the international standard format YYYY-MM-DD.
 
 # Slide 5 #
 
@@ -80,10 +92,12 @@ Explain Git (brief history of how it came to be, how it is used, Git Repo)
 Some common git codes and their functions, can verbally explain analogies to familiar tasks (e.g. "cd")
 
 # Slide 8 #
+
 *GitHub*
 Have students make an account
 State that this can be used to back-up files
 Go through mini exercise of pushing/pulling a txt file -- will have to explain why we are tracking txt files and why it is a good idea to get into the habit of using txt files.
 
 # Slide 9 #
+
 *Main Exercise*
