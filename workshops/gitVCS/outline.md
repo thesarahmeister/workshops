@@ -1,6 +1,7 @@
 # Outline of workshop #
 
 * Introductions
+    * What we are and are not...
 
 * Best practices on file naming
 
@@ -19,3 +20,8 @@
   organized, and in mainly plain text files/scripts
 
 * Go into exercises
+
+
+NOtes:
+
+resources: stackoverflow
