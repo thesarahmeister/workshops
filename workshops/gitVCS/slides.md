@@ -42,7 +42,14 @@ increasing attention -- Reproducible Research.
 
 . . .
 
-* Code Review Clud...?
+* Code Review Club...?
+
+
+# Slide 3 #
+*Help with Statistics*
+http://www.utstat.toronto.edu/wordpress/?page_id=25
+
+# Slide 4 #
 
 # Reproducible Research #
 
@@ -74,32 +81,26 @@ by Greg Wilson, founder of
 6. When including a date, include it at the end of the filename and in
    the international standard format YYYY-MM-DD.
 
-# Slide 5 #
+# Slide 6 #
 
 What happens when your files aren't organized? (Can we include a funny screenshot of a super cluttered folder with crazy file names -- e.g. Thesis_Proposal_Draft, Thesis_Proposal_FINAL, Thesis_Proposal_FINAL2, Thesis_Proposal_FINAL_FINAL)
 
 -Maybe add another slide after this with points about what could happen (errors, difficulty keeping track of edits, more files to back-up...)
 
-# Slide 6 #
+# Slide 7 #
 
 *Solution: Version Control*
 Define VC
 Explain Git (brief history of how it came to be, how it is used, Git Repo)
 
-# Slide 7 #
+# Git #
 
-*Git*
 Some common git codes and their functions, can verbally explain analogies to familiar tasks (e.g. "cd")
 
-# Slide 8 #
+# GitHub #
 
-*GitHub*
 Have students make an account
 State that this can be used to back-up files
 Go through mini exercise of pushing/pulling a txt file -- will have to explain why we are tracking txt files and why it is a good idea to get into the habit of using txt files.
 
-# Slide 9 #
-
-*Main Exercise*
-
-# 
+# Main Exercise #
