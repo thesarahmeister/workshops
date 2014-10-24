@@ -2,6 +2,8 @@
 
 * Introductions
 
+* Best practices on file naming
+
 * Brief lecture on VCS
     * Ask questions regarding sending around drafts, wanting to do
       some experimenting with the analysis so you create other files,
