@@ -47,8 +47,7 @@ increasing attention -- Reproducible Research.
 <<<<<<< HEAD
 .....Code Review Club
 
-# Slide 3 #
-*Help with Statistics*
+# Help with Statistics #
 http://www.utstat.toronto.edu/wordpress/?page_id=25
 
 # Slide 4 #
