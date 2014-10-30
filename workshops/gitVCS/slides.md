@@ -42,20 +42,15 @@ increasing attention -- Reproducible Research.
 
 . . .
 
-* Code Review Clud...?
+* Code Review Club...?
 
-<<<<<<< HEAD
-.....Code Review Club
 
 # Help with Statistics #
 http://www.utstat.toronto.edu/wordpress/?page_id=25
 
 # Slide 4 #
 
-*Reproducible Research*
-=======
 # Reproducible Research #
->>>>>>> d272792a8a094d4ef5ca826bc0fa706fa17357cc
 
 Definition
 
@@ -65,11 +60,7 @@ by Greg Wilson, founder of
 
 # Version control #
 
-<<<<<<< HEAD
-# Slide 5 #
-=======
 ![](filenamingComic.gif)
->>>>>>> d272792a8a094d4ef5ca826bc0fa706fa17357cc
 
 # Brief tangent: Filenaming rules #
 
@@ -101,27 +92,14 @@ What happens when your files aren't organized? (Can we include a funny screensho
 Define VC
 Explain Git (brief history of how it came to be, how it is used, Git Repo)
 
-# Slide 8 #
+# Git #
 
-*Git*
 Some common git codes and their functions, can verbally explain analogies to familiar tasks (e.g. "cd")
 
-<<<<<<< HEAD
-# Slide 9 #
-=======
-# Slide 8 #
+# GitHub #
 
->>>>>>> d272792a8a094d4ef5ca826bc0fa706fa17357cc
-*GitHub*
 Have students make an account
 State that this can be used to back-up files
 Go through mini exercise of pushing/pulling a txt file -- will have to explain why we are tracking txt files and why it is a good idea to get into the habit of using txt files.
 
-<<<<<<< HEAD
-# Slide 10 #
-*Main Exercise*
-=======
-# Slide 9 #
-
-*Main Exercise*
->>>>>>> d272792a8a094d4ef5ca826bc0fa706fa17357cc
+# Main Exercise #

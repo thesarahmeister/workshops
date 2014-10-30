@@ -20,9 +20,9 @@ FitzGerald rm 423
 
 While we gladly welcome anyone to come and join, it would really help us better prepare for the workshop if we know how many are coming. So, please register for this workshop using this [Eventbrite link](https://www.eventbrite.com/e/workshop-1-tips-and-tricks-for-data-related-efficiency-tickets-13890200965).
 
-### Before coming to the workshop: ###
+## Before coming to the workshop: ##
 
-#### Install Git ####
+### Install Git ###
 
 Installing instructions from the [Git download site](http://git-scm.com/book/en/Getting-Started-Installing-Git)
 
@@ -38,7 +38,7 @@ Installing instructions from the [Git download site](http://git-scm.com/book/en/
 
     Install through your package manager (for example, if you use Ubuntu, run this code: ``sudo apt-get install git``
 
-#### Getting a text editor ####
+### Getting a text editor ###
 
 Because we will be writing a fake report using something called Markdown, you will need to install a plain text editor (or use a currently installed one).
 
@@ -54,6 +54,6 @@ Because we will be writing a fake report using something called Markdown, you wi
 
     There are a number of good options available to easily install. Check out gedit. Your distro likely has it in its package management repos.
 
-#### Using or getting a statistical program ####
+### Using or getting a statistical program ###
 
 We will be using SAS to run analyses.  But! If you don't have it already and don't want to pay the high cost for the SAS license, you can use R (which is free) instead.  Instructions for download can be found at on the [R website](http://cran.utstat.utoronto.ca/).  A good editor for R is [RStudio](http://www.rstudio.com/products/rstudio/#Desk).  If you need any help, come a bit early before the workshop and we'll try to help out.
