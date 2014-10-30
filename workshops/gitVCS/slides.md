@@ -20,6 +20,8 @@ data, tracking your computer files, understanding appropriate
 analytical approaches, and speeding up the process from code to
 tables.
 
+. . .
+
 ## Significance: ##
 
 Topics we cover will help you get more comfortable with data, reduce
@@ -44,7 +46,6 @@ increasing attention -- Reproducible Research.
 
 * Code Review Club...?
 
-
 # Help with Statistics #
 
 * http://www.utstat.toronto.edu/wordpress/?page_id=25
@@ -53,9 +54,15 @@ increasing attention -- Reproducible Research.
 
 * stats.stackexchange.com
 
-# Slide 4 #
+# Reproducible research #
 
-# Reproducible Research #
+![](img/reproducibleCrisis.png)
+
+* http://www.nature.com/nature/focus/reproducibility/
+
+* http://ropensci.org/blog/2014/06/09/reproducibility/
+
+# Reproducible research #
 
 ![](img/PLOS.png)
 
@@ -64,7 +71,7 @@ by Greg Wilson, founder of
 
 # Version control #
 
-![](filenamingComic.gif)
+![](img/filenamingComic.gif)
 
 # Brief tangent: Filenaming rules #
 
@@ -84,11 +91,15 @@ by Greg Wilson, founder of
 6. When including a date, include it at the end of the filename and in
    the international standard format YYYY-MM-DD.
 
+# What is version control #
 
-# Solution: Version Control #
+# Why version control is important #
 
-Definition:
-Explain Git (brief history of how it came to be, how it is used, Git Repo)
+* Future of journals and retractions
+
+* Requests for data and code
+
+* Transparency, scientific rigor
 
 # Git #
 
@@ -96,7 +107,6 @@ git config --global user.name "Your Name"
 git config --global user.email "you@some.domain"
 git config --global color.ui "auto"
 git config --global core.editor "your_editor"
-
 
 # GitHub #
 
