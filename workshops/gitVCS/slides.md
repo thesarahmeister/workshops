@@ -46,15 +46,19 @@ increasing attention -- Reproducible Research.
 
 
 # Help with Statistics #
-http://www.utstat.toronto.edu/wordpress/?page_id=25
+
+* http://www.utstat.toronto.edu/wordpress/?page_id=25
+
+* www.stackoverflow.com
+
+* stats.stackexchange.com
 
 # Slide 4 #
 
 # Reproducible Research #
 
-Definition
+![](img/PLOS.png)
 
-[PLOS Biology](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001745)
 by Greg Wilson, founder of
 [Software Carpentry](http://software-carpentry.org/)
 
@@ -80,21 +84,19 @@ by Greg Wilson, founder of
 6. When including a date, include it at the end of the filename and in
    the international standard format YYYY-MM-DD.
 
-# Slide 6 #
 
-What happens when your files aren't organized? (Can we include a funny screenshot of a super cluttered folder with crazy file names -- e.g. Thesis_Proposal_Draft, Thesis_Proposal_FINAL, Thesis_Proposal_FINAL2, Thesis_Proposal_FINAL_FINAL)
+# Solution: Version Control #
 
--Maybe add another slide after this with points about what could happen (errors, difficulty keeping track of edits, more files to back-up...)
-
-# Slide 7 #
-
-*Solution: Version Control*
-Define VC
+Definition:
 Explain Git (brief history of how it came to be, how it is used, Git Repo)
 
 # Git #
 
-Some common git codes and their functions, can verbally explain analogies to familiar tasks (e.g. "cd")
+git config --global user.name "Your Name"
+git config --global user.email "you@some.domain"
+git config --global color.ui "auto"
+git config --global core.editor "your_editor"
+
 
 # GitHub #
 
