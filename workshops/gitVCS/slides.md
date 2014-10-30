@@ -20,6 +20,8 @@ data, tracking your computer files, understanding appropriate
 analytical approaches, and speeding up the process from code to
 tables.
 
+. . .
+
 ## Significance: ##
 
 Topics we cover will help you get more comfortable with data, reduce
@@ -44,16 +46,19 @@ increasing attention -- Reproducible Research.
 
 * Code Review Club...?
 
-
 # Slide 3 #
 *Help with Statistics*
 http://www.utstat.toronto.edu/wordpress/?page_id=25
 
-# Slide 4 #
+# Reproducible research #
 
-# Reproducible Research #
+![](img/reproducibleCrisis.png)
 
-Definition
+* http://www.nature.com/nature/focus/reproducibility/
+
+* http://ropensci.org/blog/2014/06/09/reproducibility/
+
+# Reproducible research #
 
 [PLOS Biology](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001745)
 by Greg Wilson, founder of
@@ -61,7 +66,7 @@ by Greg Wilson, founder of
 
 # Version control #
 
-![](filenamingComic.gif)
+![](img/filenamingComic.gif)
 
 # Brief tangent: Filenaming rules #
 
@@ -81,13 +86,17 @@ by Greg Wilson, founder of
 6. When including a date, include it at the end of the filename and in
    the international standard format YYYY-MM-DD.
 
-# Slide 6 #
+# What is version control #
 
-What happens when your files aren't organized? (Can we include a funny screenshot of a super cluttered folder with crazy file names -- e.g. Thesis_Proposal_Draft, Thesis_Proposal_FINAL, Thesis_Proposal_FINAL2, Thesis_Proposal_FINAL_FINAL)
 
--Maybe add another slide after this with points about what could happen (errors, difficulty keeping track of edits, more files to back-up...)
 
-# Slide 7 #
+# Why version control is important #
+
+* Future of journals and retractions
+
+* Requests for data and code
+
+* Transparency, scientific rigor
 
 *Solution: Version Control*
 Define VC
@@ -96,6 +105,8 @@ Explain Git (brief history of how it came to be, how it is used, Git Repo)
 # Git #
 
 Some common git codes and their functions, can verbally explain analogies to familiar tasks (e.g. "cd")
+
+
 
 # GitHub #
 
