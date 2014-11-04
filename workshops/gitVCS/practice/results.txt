@@ -1,0 +1,13 @@
+SAS Fish database results
+
+Means
+
+weight 398.7 g
+length1 26.2 inches
+length2 28.4 inches
+
+Standard deviations
+
+weight 359.1 g
+length1 10.0 inches
+length2 10.7 inches
