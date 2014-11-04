@@ -20,8 +20,3 @@
   organized, and in mainly plain text files/scripts
 
 * Go into exercises
-
-
-NOtes:
-
-resources: stackoverflow

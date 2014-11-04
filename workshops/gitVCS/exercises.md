@@ -6,7 +6,7 @@
     * color.ui
     * core.editor
 
-* Go over creating a github account
+* Go over creating a github account (Yes, no?)
 
 * Work individually
 
