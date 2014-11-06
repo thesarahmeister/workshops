@@ -41,8 +41,6 @@ Need help with stats? Use these resources!
 
 # Overview of some future workshops #
 
-* Let's "Git" started! An introduction to version control
-
 * Know your data and how to handle it correctly: Statistical
   assumptions
 
@@ -79,6 +77,8 @@ by Greg Wilson, founder of Software Carpentry
 
 # Version control #
 
+. . .
+
 ![](img/filenamingComic.gif)
 
 # What is version control[^gitvcs] (VC) #
@@ -109,7 +109,9 @@ by Greg Wilson, founder of Software Carpentry
 [^gitpic]: Taken from the Git site
     ([click here](http://git-scm.com/book/en/v2/Getting-Started-Git-Basics))
 
-# Brief tangent: Filenaming rules #
+# Slight tangent: Filenaming rules #
+
+. . .
 
 1. Keep names short, meaningful. Remove "the", "and", "a", etc.
 
@@ -126,6 +128,8 @@ by Greg Wilson, founder of Software Carpentry
 
 6. When including a date, include it at the end of the filename and in
    the international standard format YYYY-MM-DD.
+
+# Before getting into Git, any questions? #
 
 # Using Git #
 
@@ -173,6 +177,8 @@ Check out the `cheatsheet.html` file.
 # Live coding #
 
 # Main Exercise #
+
+. . .
 
 1. Create a git repository in a new folder to practice in
 2. Create a SAS (or R) file to run analyses on the dataset
