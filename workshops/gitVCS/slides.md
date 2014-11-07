@@ -68,12 +68,20 @@ Go to this website:
 
 * <http://ropensci.org/blog/2014/06/09/reproducibility/>
 
+* <http://biostatistics.oxfordjournals.org/content/10/3/405.full>
+
+* <http://www.sciencemag.org/content/314/5807/1856.full>
+
+* <http://stats.stackexchange.com/questions/14999/how-are-we-defining-reproducible-research>
+
 # Reproducible research #
 
 \includegraphics[width=\textwidth]{img/PLOS.png}
 
 by Greg Wilson, founder of Software Carpentry
 ([click here](http://software-carpentry.org/))
+
+* <http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003285>
 
 # Version control #
 
