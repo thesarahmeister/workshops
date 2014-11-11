@@ -1,6 +1,6 @@
 ---
-title: "Let's 'Git' started: An introduction to version control"
-date: 2014-11-07
+title: "'Git'-ing better: practice with version control and GitHub for collaboration"
+date: 2014-12-05
 author: Luke & Daiva
 classoption: xcolor=dvipsnames
 output:
@@ -11,23 +11,12 @@ header-includes:
     
 ---
 
-# Welcome to our Data-related workshop #
+# Welcome back! #
 
 ## Purpose: ##
 
-To teach a few tips and tricks for more efficiently managing your
-data, tracking your computer files, understanding appropriate
-analytical approaches, and speeding up the process from code to
-tables.
+To review Git in more detail, give you more practice exercises that mimic what you may do in your day-to-day research activities, and show you how GitHub can be used for collaboration.
 
-. . .
-
-## Significance: ##
-
-Topics we cover will help you get more comfortable with data, reduce
-the chance of overlooked errors, and give you more control over your
-work. They are also all important parts of a science movement gaining
-increasing attention -- Reproducible Research.
 
 # Caveat: We aren't here to teach statistics #
 
@@ -39,20 +28,6 @@ Need help with stats? Use these resources!
 
 * <http://stats.stackexchange.com>
 
-# Overview of some future workshops #
-
-* Know your data and how to handle it correctly: Statistical
-  assumptions
-
-* Fighting chaos: Coding tricks to keep your analysis -- and mind --
-  sane
-
-* Visual exploration (of data): Techniques and code to better
-  understand your data using plots and graphs
-
-. . .
-
-* Code Review Club...?
 
 # Notes and help during this workshop #
 
@@ -60,30 +35,8 @@ Go to this website:
 
 <https://etherpad.mozilla.org/dnsWorkshops>
 
-# Reproducible research #
 
-\includegraphics[width=\textwidth]{img/reproducibleCrisis.png}
-
-* <http://www.nature.com/nature/focus/reproducibility/>
-
-* <http://ropensci.org/blog/2014/06/09/reproducibility/>
-
-* <http://biostatistics.oxfordjournals.org/content/10/3/405.full>
-
-* <http://www.sciencemag.org/content/314/5807/1856.full>
-
-* <http://stats.stackexchange.com/questions/14999/how-are-we-defining-reproducible-research>
-
-# Reproducible research #
-
-\includegraphics[width=\textwidth]{img/PLOS.png}
-
-by Greg Wilson, founder of Software Carpentry
-([click here](http://software-carpentry.org/))
-
-* <http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003285>
-
-# Version control #
+# Version control refresher #
 
 . . .
 
@@ -117,29 +70,9 @@ by Greg Wilson, founder of Software Carpentry
 [^gitpic]: Taken from the Git site
     ([click here](http://git-scm.com/book/en/v2/Getting-Started-Git-Basics))
 
-# Slight tangent: Filenaming rules #
-
-. . .
-
-1. Keep names short, meaningful. Remove "the", "and", "a", etc.
-
-2. Don't include spaces.
-
-3. Use hyphens to separate important parts of the filename.
-
-4. Avoid redundancy in file names and folder names
-   (e.g. `folderName/fileName-folderName.txt`, instead use
-   `folderName/fileName.txt`).
-
-5. If a number is included, such as for the version number, use two
-   digits not one (e.g. V01, not V1).
-
-6. When including a date, include it at the end of the filename and in
-   the international standard format YYYY-MM-DD.
-
-# Before getting into Git, any questions? #
 
 # Using Git #
+/*DN: Should we keep this in in case new people come and need to set up their Git? Maybe move these slides to the end?*/
 
 Before we start...The command line is **not** something to be afraid
 of!!  Open up the terminal (Mac/Linux) or Git Bash (Windows).
@@ -182,9 +115,9 @@ Check out the `cheatsheet.html` file.
 
 [^gitserver]: Or <http://BitBucket.org>
 
-# Live coding #
+# Live coding -- add in push/pull #
 
-# Main Exercise #
+# Main Exercise -- incorporate a collaborative exercise #
 
 . . .
 

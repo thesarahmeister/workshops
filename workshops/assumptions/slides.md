@@ -21,6 +21,7 @@ To teach the statistical assumptions of linear regression and show how you test 
 
 It is very important to check that your data satisfies linear regression assumptions. If your data does not meet these criteria, the use of linear regression is inappropriate. Other methods can be used, but...
 
+
 # Caveat (again): We aren't here to teach statistics #
 
 Need help with stats? Use these resources!
@@ -35,6 +36,13 @@ Need help with stats? Use these resources!
 
 * Very helpful webpage on regression diagnostics: http://www.ats.ucla.edu/stat/sas/webbooks/reg/chapter2/sasreg2.htm
 (Note: Goes into much more detail than what is covered in this workshop)
+
+
+# Notes and help during this workshop #
+
+Go to this website:
+
+<https://etherpad.mozilla.org/dnsWorkshops>
 
 
 # Linear Regression #
