@@ -41,8 +41,6 @@ Need help with stats? Use these resources!
 
 # Overview of some future workshops #
 
-* Let's "Git" started! An introduction to version control
-
 * Know your data and how to handle it correctly: Statistical
   assumptions
 
@@ -56,6 +54,11 @@ Need help with stats? Use these resources!
 
 * Code Review Club...?
 
+# Notes and help during this workshop #
+
+Go to this website:
+
+<https://etherpad.mozilla.org/dnsWorkshops>
 
 # Reproducible research #
 
@@ -65,6 +68,12 @@ Need help with stats? Use these resources!
 
 * <http://ropensci.org/blog/2014/06/09/reproducibility/>
 
+* <http://biostatistics.oxfordjournals.org/content/10/3/405.full>
+
+* <http://www.sciencemag.org/content/314/5807/1856.full>
+
+* <http://stats.stackexchange.com/questions/14999/how-are-we-defining-reproducible-research>
+
 # Reproducible research #
 
 \includegraphics[width=\textwidth]{img/PLOS.png}
@@ -72,7 +81,11 @@ Need help with stats? Use these resources!
 by Greg Wilson, founder of Software Carpentry
 ([click here](http://software-carpentry.org/))
 
+* <http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003285>
+
 # Version control #
+
+. . .
 
 ![](img/filenamingComic.gif)
 
@@ -91,6 +104,7 @@ by Greg Wilson, founder of Software Carpentry
 * Future of journals and retractions
 * Requests for data and code
 * Transparency, scientific rigor
+* Protect against accusations of fraud
 
 [^gitvcs]: See the Git website
     ([click here](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control))
@@ -102,6 +116,28 @@ by Greg Wilson, founder of Software Carpentry
 
 [^gitpic]: Taken from the Git site
     ([click here](http://git-scm.com/book/en/v2/Getting-Started-Git-Basics))
+
+# Slight tangent: Filenaming rules #
+
+. . .
+
+1. Keep names short, meaningful. Remove "the", "and", "a", etc.
+
+2. Don't include spaces.
+
+3. Use hyphens to separate important parts of the filename.
+
+4. Avoid redundancy in file names and folder names
+   (e.g. `folderName/fileName-folderName.txt`, instead use
+   `folderName/fileName.txt`).
+
+5. If a number is included, such as for the version number, use two
+   digits not one (e.g. V01, not V1).
+
+6. When including a date, include it at the end of the filename and in
+   the international standard format YYYY-MM-DD.
+
+# Before getting into Git, any questions? #
 
 # Using Git #
 
@@ -134,9 +170,10 @@ reasons:
 In your terminal/Git-Bash, run:
 
 ```
-    cd ~
-    git clone https://github.com/codeasmanuscript/gitWorkshop.git
-    cd gitWorkshop
+cd ~
+git clone
+    https://github.com/codeasmanuscript/gitWorkshop.git
+cd gitWorkshop
 ```
 
 . . .
@@ -147,25 +184,9 @@ Check out the `cheatsheet.html` file.
 
 # Live coding #
 
-# Brief tangent: Filenaming rules #
-
-1. Keep names short, meaningful. Remove "the", "and", "a", etc.
-
-2. Don't include spaces.
-
-3. Use hyphens to separate important parts of the filename.
-
-4. Avoid redundancy in file names and folder names
-   (e.g. `folderName/fileName-folderName.txt`, instead use
-   `folderName/fileName.txt`).
-
-5. If a number is included, such as for the version number, use two
-   digits not one (e.g. V01, not V1).
-
-6. When including a date, include it at the end of the filename and in
-   the international standard format YYYY-MM-DD.
-
 # Main Exercise #
+
+. . .
 
 1. Create a git repository in a new folder to practice in
 2. Create a SAS (or R) file to run analyses on the dataset
