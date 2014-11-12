@@ -2,8 +2,11 @@
 #-------------------------------------------------------------------
 # Custom Make variables
 
-WORKSHOP_DIR = ../../../gitWorkshop
+# The location of the `playing` directory for the workshop
+WORKSHOP_DIR = ../../../statAssumptionsWS
 
+# Directory for the emails
+EMAILS_DIR = ./emails
 
 #-------------------------------------------------------------------
 # Targets and commands
@@ -25,6 +28,10 @@ cheatsheet :
 ## slides     : Create the pdf of the slides
 slides :
 	@pandoc slides.md -t beamer -o slides.pdf
+
+## emails     : Create the email files in a prettier format (html)
+emails :
+	$(MAKE) -C $(EMAILS_DIR)
 
 ## ws_copy    : Copy these files over into the workshop repo
 ws_copy :
