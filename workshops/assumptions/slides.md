@@ -89,37 +89,37 @@ Go to this website:
 
 # Model fit #
 
-SAS code
-
-model y= x1 x2
+proc sgplot data=playing;
+  scatter x=weight y=length1;
+run;
 
 \includegraphics[width=\textwidth]{img/modelFit.jpeg}
 
 
 # Residual distribution #
 
-SAS code
-
-proc glm data=codeasmanuscript
-	model y = x1 
-
-	output out = mydata.resid1
-	predicted=fit residual=resid;
+proc reg data=playing;
+ model height=weight;
+ output out=resid residual=r predicted=fit;
 run;
+quit;
 
-symbol1 value=circle h=1;
-proc gplot data=mydata.resid.1;
-plot x*fit/;
-
-title 'predicted vs. actual plot'
+goptions reset=all;
+proc univariate data=resid normal;
+ var r;
+ qqplot r / normal(mu=est sigma=est);
 run;
-
 \includegraphics[width=\textwidth]{img/residNorm.jpeg}
 
 
 # Residual variance #
 
-Sas code
+proc reg data=playing;
+ model height=weight;
+ plot r.*p.;
+run;
+quit;
+
 \includegraphics[width=\textwidth]{img/residVar.jpeg}
 
 
