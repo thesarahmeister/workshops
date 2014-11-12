@@ -34,7 +34,7 @@ Need help with stats? Use these resources!
 
 * Helpful statistical tests flowchart (PDF on GitHub)
 
-* Very helpful webpage on regression diagnostics: http://www.ats.ucla.edu/stat/sas/webbooks/reg/chapter2/sasreg2.htm
+* Very helpful webpage on regression diagnostics: <http://www.ats.ucla.edu/stat/sas/webbooks/reg/chapter2/sasreg2.htm>
 (Note: Goes into much more detail than what is covered in this workshop)
 
 
@@ -44,26 +44,25 @@ Go to this website:
 
 <https://etherpad.mozilla.org/dnsWorkshops>
 
-
 # Linear Regression #
 
 * Used to test associations between independent and dependent variables
 
-* Based on a linear relationship: y = mx + b
+* Based on a linear relationship: $y = mx + b$
+
+How about: $y = X\beta + \varepsilon$ ?
 
 * y = dependent variable(s), m = slope, x = independent variable, b = error terms (covariates)
-
 
 # Some Linear Regression Assumptions #
 
 * Model is good (i.e. linear relationship between predictors and outcome variable)
 
-* Residuals have a normal distribution
+* Residuals[^1] have a normal distribution
 
 * Residuals are homoscadastic (have equal/constant variance)
 
-* Footnote? Residual = observed - expected = error
-
+[^1]: Residual (aka the error term) = Observed - expected
 
 # Brief aside: assumptions/diagnostics we are not covering in this workshop #
 
@@ -75,7 +74,7 @@ Go to this website:
 
 * Collinearity (predictors that are linearly related -- affects estimate of regression coefficients)
 
-* Very helpful webpage on regression diagnostics that covers these: http://www.ats.ucla.edu/stat/sas/webbooks/reg/chapter2/sasreg2.htm
+* Very helpful webpage on regression diagnostics that covers these: <http://www.ats.ucla.edu/stat/sas/webbooks/reg/chapter2/sasreg2.htm>
 
 
 # How to check assumptions #
@@ -86,42 +85,51 @@ Go to this website:
 
 * Variance of residuals: Plot residuals vs. predicted fit (check spread of points)
 
+# Model fit #
+
+```
+    proc sgplot data=playing;
+        scatter x=weight y=length1;
+    run;
+```
 
 # Model fit #
 
-proc sgplot data=playing;
-  scatter x=weight y=length1;
-run;
-
-\includegraphics[width=\textwidth]{img/modelFit.jpeg}
-
+![](img/modelFit.jpg)
 
 # Residual distribution #
 
-proc reg data=playing;
- model height=weight;
- output out=resid residual=r predicted=fit;
-run;
-quit;
+```
+    proc reg data=playing;
+        model height=weight;
+        output out=resid residual=r predicted=fit;
+    run;
+    quit;
 
-goptions reset=all;
-proc univariate data=resid normal;
- var r;
- qqplot r / normal(mu=est sigma=est);
-run;
-\includegraphics[width=\textwidth]{img/residNorm.jpeg}
+    goptions reset=all;
+    proc univariate data=resid normal;
+        var r;
+        qqplot r / normal(mu=est sigma=est);
+    run;
+```
 
+# Residual distribution #
+
+![](img/residNorm.jpg)
 
 # Residual variance #
 
-proc reg data=playing;
- model height=weight;
- plot r.*p.;
-run;
-quit;
+```
+    proc reg data=playing;
+        model height=weight;
+        plot r.*p.;
+    run;
+    quit;
+```
 
-\includegraphics[width=\textwidth]{img/residVar.jpeg}
+# Residual variance #
 
+![](img/residVar.jpg)
 
 # What do you do if your data does not meet this assumptions? #
 
@@ -129,16 +137,15 @@ quit;
 
 * Use a non-parametric statistical test if can not obtain normal distribution of residuals after attempting a transformation
 
-
 # Main Exercise #
 
-* Download the Statistical Tests Flowchart from GitHub (.pdf)
-* Download datafile1 (.csv) from GitHub
-* Perform assumptions check using your statistical analysis software
-* Write a report summary of results (text file) for this datafile and conclude whether or not linear regression is appropriate for this data.
-* Push your report summary to the GitHub
-* Download datafile2 (.csv) from GitHub
-* Perform assumptions check using your statistical analysis software
-* Write a report summary of results (text file) for this datafile and conclude whether or not linear regression is appropriate for this data.
-* Push your report summary to the GitHub
+1. Download the Statistical Tests Flowchart from GitHub (.pdf)
+2. Download datafile1 (.csv) from GitHub
+3. Perform assumptions check using your statistical analysis software
+4. Write a report summary of results (text file) for this datafile and conclude whether or not linear regression is appropriate for this data.
+5. Push your report summary to the GitHub
+6. Download datafile2 (.csv) from GitHub
+7. Perform assumptions check using your statistical analysis software
+8. Write a report summary of results (text file) for this datafile and conclude whether or not linear regression is appropriate for this data.
+9. Push your report summary to the GitHub
 
