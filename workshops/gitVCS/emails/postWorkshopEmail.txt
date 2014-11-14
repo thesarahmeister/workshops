@@ -1,14 +1,13 @@
 Hi everyone,
 
-Thanks very much for coming out to our first DNS version control workshop. The slides, Git cheatsheet and Etherpad notes (in a text file) are all available from our GitHub:
+Thanks very much for coming out to our first DNS version control workshop! The slides, Git cheatsheet and Etherpad notes (in a text file) are all available from our GitHub:
 https://github.com/codeasmanuscript/development/tree/master/workshops/gitVCS
+
+If you're interested in learning more about the importance of reproducible research, feel free to pull up the articles we included in our slides.
 
 In our next workshop we will cover more topics about Git and GitHub. We will give you more hands-on exercises to practice working with Git so you can see how it will be useful in your day-to-day research work. We will send an Eventbright link and reminder closer to the date, which is Friday, December 5 from 2-4pm in FG423. Remember again to bring a fully charged laptop and if you could have some sort of statistical analysis software installed, that would be terrific.
 
 Thanks!
 
 Luke and Daiva
-
--Read the papers if they're interested? (Reproducible research articles in slides)
--Talk about GitHub for collaboration, push/pull?
 

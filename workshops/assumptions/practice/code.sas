@@ -10,6 +10,23 @@ proc sgplot data=playing;
   scatter x=weight y=length1;
 run;
 
+data playing; set playing;
+loglength=log(length1);
+elength=length1**2;
+run;
+
+proc sgplot data=playing;
+  scatter x=weight y=loglength;
+run;
+
+proc sgplot data=playing;
+  scatter x=weight y=elength;
+run;
+
+proc sgplot data=playing;
+  scatter x=weight y=length1;
+run;
+
 proc sgplot data=playing;
   scatter x=weight y=height;
 run;
@@ -24,7 +41,14 @@ run;
 
 /*2. Checking distribution of residuals -- this also gives scatterplot of residuals vs. fitted values*/
 proc reg data=playing;
- model height=weight;
+ model length1=weight;
+ output out=resid residual=r predicted=fit;
+run;
+quit;
+
+
+proc reg data=playing;
+ model elength=weight;
  output out=resid residual=r predicted=fit;
 run;
 quit;
@@ -38,7 +62,7 @@ run;
 
 /*3. Checking homoscedasticity of residuals*/
 proc reg data=playing;
- model height=weight;
+ model length1=weight;
  plot r.*p.; /*r. tells SAS to calculate residuals, p. tells SAS to calculate predicted value*/
 run;
 quit;
