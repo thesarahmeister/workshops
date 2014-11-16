@@ -1,5 +1,5 @@
 ---
-title: "'Git'-ing better: practice with version control and GitHub for collaboration"
+title: "'Git'-ing better: Collaborating on your research with version control and GitHub"
 date: 2014-12-05
 author: Luke & Daiva
 classoption: xcolor=dvipsnames
@@ -17,7 +17,6 @@ header-includes:
 
 To review Git in more detail, give you more practice exercises that mimic what you may do in your day-to-day research activities, and show you how GitHub can be used for collaboration.
 
-
 # Caveat: We aren't here to teach statistics #
 
 Need help with stats? Use these resources!
@@ -28,13 +27,11 @@ Need help with stats? Use these resources!
 
 * <http://stats.stackexchange.com>
 
-
 # Notes and help during this workshop #
 
 Go to this website:
 
 <https://etherpad.mozilla.org/dnsWorkshops>
-
 
 # Version control refresher #
 
@@ -72,7 +69,6 @@ Go to this website:
 
 
 # Using Git #
-/*DN: Should we keep this in in case new people come and need to set up their Git? Maybe move these slides to the end?*/
 
 Before we start...The command line is **not** something to be afraid
 of!!  Open up the terminal (Mac/Linux) or Git Bash (Windows).
@@ -104,9 +100,9 @@ In your terminal/Git-Bash, run:
 
 ```
 cd ~
-git clone
+git clone \
     https://github.com/codeasmanuscript/gitWorkshop.git
-cd gitWorkshop
+cd gitWorkshop/part2
 ```
 
 . . .
@@ -115,22 +111,23 @@ Check out the `cheatsheet.html` file.
 
 [^gitserver]: Or <http://BitBucket.org>
 
-# Live coding -- add in push/pull #
+# Create a GitHub account #
 
-# Main Exercise -- incorporate a collaborative exercise #
+# Live coding -- Create git repo from scratch #
+
+# Main Exercise -- Collaborate on a project #
 
 . . .
 
 1. Create a git repository in a new folder to practice in
 2. Create a SAS (or R) file to run analyses on the dataset
    `sashelp.fish` (SAS) or `airquality` (R)
-3. Output the dataset into a `csv` file
-4. Save your work to the git repository
-5. Find the means and run an ANOVA on the dataset
-6. Commit your changes to git
-7. Make a fake report on your findings
-8. Commit
-9. Make a change to your report
-10. Commit
-11. Revert to the older version
-12. Make a branch to experiment
+3. Find the means and run an ANOVA on the dataset (or simpler stuff)
+4. Commit your changes to git
+5. Make a fake report on your findings
+6. Commit
+7. Create a GitHub repo, push your changes to it
+8. Fork a friend's repo on GitHub (or someone fork yours)
+9. Change a friend's files
+10. Push the changes and make a pull request
+11. Check out your own pull requests!
