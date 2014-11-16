@@ -1,7 +1,14 @@
 #-------------------------------------------------------------------
+# Custom variables
+
+MD=$(wildcard *.md)
+
+HTML=$(MD:.md=.html)
+
+#-------------------------------------------------------------------
 
 # emails : Create the format that the emails will be sent
-emails : %.html
+emails : $(HTML)
 
-%.html : %.md
+$(HTML) : $(MD)
 	@pandoc $< -o $@
