@@ -88,9 +88,11 @@ How about: $y = X\beta + \varepsilon$ ?
 # Model fit #
 
 ```
+
     proc sgplot data=playing;
         scatter x=weight y=length1;
     run;
+
 ```
 
 # Model fit #
@@ -100,6 +102,7 @@ How about: $y = X\beta + \varepsilon$ ?
 # Residual distribution #
 
 ```
+
     proc reg data=playing;
         model height=weight;
         output out=resid residual=r predicted=fit;
