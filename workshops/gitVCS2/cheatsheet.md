@@ -14,11 +14,11 @@ Git is an amazing and very powerful tool that is useful for managing your projec
 
 ## Git commands: ##
 
-**git clone <repository>** ---
+**git clone \<repository\>** ---
 
  :  Take an existing git repository (aka project, aka folders and files) and duplicate/copy/clone it.  For example, I have a folder called `diabetesAndObesity` that contains all of my data, analysis, and manuscript on my research regarding diabetes and obesity.  If you wanted to collaborate with me on the project, you would run `git clone` on my project to copy all of the files and folders and Git history into your computer.
 
-**git remote add <name> <server-name>** ---
+**git remote add \<name\> \<server-name\>** ---
 
  :  `remote` is the name used to describe your Git project that you want to store on the server such as Github.  Think of `remote` as your external hard drive, like Dropbox, or like the cloud.  If you want to save your Git project files and folders, you can create a remote for it.  If you use Github or some of cloud-based service, usually they provide pretty good instructions on what to do.  For example, if you wanted to save (aka `push`) your Git project files to Github, you would copy this command into you terminal/shell/Git Bash:
 
@@ -30,7 +30,7 @@ Git is an amazing and very powerful tool that is useful for managing your projec
 
  :  Tells Git to create a repository in the folder you are in.  Basically, `git init` tells Git to start watching your folder and the files within it.
 
-**git add <files>** ---
+**git add \<files\>** ---
 
  :  Add the files you want Git to commit to the history.  For example, if you edited a file and you wanted to commit that file, you would run `git add filename`.  Same thing applies when you create a file.
 
@@ -46,7 +46,7 @@ Git is an amazing and very powerful tool that is useful for managing your projec
 
  :  Displays the current state of your folder that Git is watching.  `git status` shows all the files that have been edited or created since the last commit.
 
-**git push <remote-name> <your-branch>** ---
+**git push \<remote-name\> \<your-branch\>** ---
 
  :  If you have a remote/server/Github/[BitBucket](bitbucket.org) git repository, you can push all of your Git history to the "cloud", so you will always have a backup of your most important work, aka your research!!
 
@@ -69,6 +69,6 @@ Git is an amazing and very powerful tool that is useful for managing your projec
 
     Now I can edit the files all I want and still have my main SAS files untouched.  I can get back by running the command: `git checkout master`
 
-**git diff <commit-id> <file>** ---
+**git diff \<commit-id (optional)\> \<file\>** ---
 
  :  Diff shows the differences between the files in your last commit with the files you are currently editting.  This is useful if you forgot what you changed so you can write better commit messages.
