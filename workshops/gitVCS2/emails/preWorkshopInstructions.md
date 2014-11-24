@@ -11,6 +11,7 @@ Before coming:
 * Register [here](eventbrite link)
 * Install software (Git, SAS, or R) on laptop (see below)
 * Bring fully charged laptop!
+* *If you didn't come to the first Git workshop* and would like to get more familiar with Git, *come 30 minutes before the workshop*
 
 ## 'Git'-ing better: Collaborating on your research with version control and GitHub ##
 
@@ -18,14 +19,17 @@ Using Dropbox as a backup for your files?  Working with multiple people on a pro
 
 We had some great feedback from our previous workshop on using Git and version control to better keep track of your data and your analyses.  Version control is so powerful and useful, we decided to go over more of it, especially for using it as a tool to make collaboration easy and for keeping a detailed history of everything you ever did to your files.
 
+**A note**: To get more out of this workshop, bring along your real analyses and get it under version control, practice with Git, and work on the exercises with us using your own files!  If you didn't come to the first workshop and/or would like more practice with Git, come 30 minutes before the workshop to get a quick run-down on Git.
+
 ## Time: ##
 
-2:00-4:00pm  
-Dec. 5, 2014 FitzGerald rm 423
+2:00 (or 1:30) to 4:00pm  
+Dec. 5, 2014  
+FitzGerald rm 423
 
 ## Register ##
 
-While we gladly welcome anyone to come and join, it would really help us better prepare for the workshop if we know how many are coming. So, please register for this workshop using this [Eventbrite link](link)
+To help us prepare better, please register for this workshop using this [Eventbrite link](link) (though anyone is welcome to come!).
 
 ## Before coming to the workshop: ##
 
