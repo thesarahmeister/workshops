@@ -10,5 +10,5 @@ HTML=$(MD:.md=.html)
 # emails : Create the format that the emails will be sent
 emails : $(HTML)
 
-$(HTML) : $(MD)
+%.html : %.md
 	@pandoc $< -o $@
