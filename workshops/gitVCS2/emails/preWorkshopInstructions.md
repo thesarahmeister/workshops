@@ -8,7 +8,7 @@ We will be going over how to use Git and GitHub to version control your files an
 
 Before coming:
 
-* Register [here](eventbrite link)
+* Register [here](https://www.eventbrite.com/e/workshop-2-tips-and-tricks-for-data-related-efficiency-tickets-14628437049​)
 * Install software (Git, SAS, or R) on laptop (see below)
 * Bring fully charged laptop!
 * *If you didn't come to the first Git workshop* and would like to get more familiar with Git, *come 30 minutes before the workshop*
@@ -29,7 +29,7 @@ FitzGerald rm 423
 
 ## Register ##
 
-To help us prepare better, please register for this workshop using this [Eventbrite link](link) (though anyone is welcome to come!).
+To help us prepare better, please register for this workshop using this [Eventbrite link](https://www.eventbrite.com/e/workshop-2-tips-and-tricks-for-data-related-efficiency-tickets-14628437049) (though anyone is welcome to come!).
 
 ## Before coming to the workshop: ##
 
