@@ -17,3 +17,4 @@
     * Or thrown in with other workshops
 * Tutorial on how coding/programming software works (its important to understand to grasp other concepts (e.g. macros, ODS, etc.))
 * Data visualization (I would argue this is more important to teach before other stats methods)
+* Report generation (R (knitr), pandoc, markdown)
