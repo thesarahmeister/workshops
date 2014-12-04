@@ -41,10 +41,9 @@ Go to this website:
 
 # What is version control[^gitvcs] (VC) #
 
-* Keeps history of all changes done to files in a folder
-* Like a big track changes
-* Like your experiment logbook/journal (basic science)
-* Can revert to previous change
+* Keeps a history of everything done in a folder
+* Like a big track changes or logbook (basic science)
+* Can revert to previous change, try new things out
 * Don't have to worry about losing what you wrote!
 
 . . .
@@ -113,21 +112,34 @@ Check out the `cheatsheet.html` file.
 
 # Create a GitHub account #
 
-# Live coding -- Create git repo from scratch #
+# How GitHub works
+
+\centering
+\includegraphics[height=0.60\textheight]{img/GitHubFlow.png}
+
+# How GitHub Forking (collaboration) works
+
+\centering
+\includegraphics[height=0.60\textheight]{img/GitHubForkFlow.png}
+
+# Live coding -- Create git repo from scratch and push to GitHub #
+
+Tip: Most of the time you don't really need to remember the code, just
+google search it!  Or use our cheatsheet!! :D
+
+\vfill
 
 # Main Exercise -- Collaborate on a project #
 
 . . .
 
-1. Create a git repository in a new folder to practice in
-2. Create a SAS (or R) file to run analyses on the dataset
-   `sashelp.fish` (SAS) or `airquality` (R)
-3. Find the means and run an ANOVA on the dataset (or simpler stuff)
-4. Commit your changes to git
-5. Make a fake report on your findings
-6. Commit
-7. Create a GitHub repo, push your changes to it
-8. Fork a friend's repo on GitHub (or someone fork yours)
-9. Change a friend's files
-10. Push the changes and make a pull request
-11. Check out your own pull requests!
+1. Create a git repository in a new folder or your own research folder
+2. Create a SAS (or R) file to practice in or add your own files
+3. Run basic stats (means) or change a file in your own folder
+4. Add and commit your changes to Git
+5. Create a GitHub repo and push your changes to it*
+6. Fork a friend's repo on GitHub (or someone fork yours) and clone
+   onto your computer
+7. Change a friend's files
+8. Push the changes and make a pull request
+9. Check out your own pull requests!
