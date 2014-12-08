@@ -1,0 +1,9 @@
+Hi Liam,
+
+I hope you're doing well! I have been developing a workshop series with a colleague of mine from the Department of Nutritional Sciences (Luke Johnston, PhD candidate, Cc'd). The goal of the series is to teach graduate students ways in which they can use computing skills to improve the efficiency of their data analyses and adhere to guidelines for reproducible research. Reproducibility is becoming increasingly important in the scientific publicaton process and securing of research funds. We have started teaching the workshop to graduate students in the Department of Nutritional Sciences and have received very good feedback. We were wondering if the GPS program would be interested in the content of our series and if there could be an opportunity to develop the series into a GPS course. We envision the course running 4-5 weeks (one 2-hour class per week) and the content could fall into the "Research-Related Skills" area.
+
+Let us know your thoughts and if you believe there could be an opportunity to develop a course. We have attached a sample course syllabus for your review and if you like we can also send you the feedback from students who have attended our workshop.
+
+Sincerely,
+
+Daiva
