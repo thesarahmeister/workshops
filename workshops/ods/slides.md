@@ -47,11 +47,23 @@ Go to this website:
 
 <https://etherpad.mozilla.org/dnsWorkshops>
 
-# Slide title #
+# What is ODS #
 
-Text, some **bolded**, or *italics*
+* Output Delivery System
 
-[URL link here](http://link/here.com)
+# Why use ODS #
+* SAS outputs **A LOT** of data
+* ODS will extract data/results you are *actually* interested in
+* Cleaner output
+* Easier to put into tables
+
+# Steps to getting ODS work #
+* ods trace on/off
+ 
+# Examples #
+* with and without ANOVA, proc univariate
+* Proc means, make a variable for MeanSD (m (sd))
+* Assumptions (diagnostics)
 
 ```
     Code text
@@ -70,7 +82,11 @@ Footnote[^1]
 
 # Main Exercise #
 
-. . .
-
-1. Exercise 1
-2. Exercise 2
+* Create a table without ODS
+* Create a table with ODS (w/o data wrangling)
+* Create a table with ODS (w/ data wrangling)
+* Proc univariate
+* ANOVA
+* Linear regression (betas of the exposure/outcome)
+* Outputting to a csv/xls file
+* Incorporate into macro (or use macros from last workshop)
