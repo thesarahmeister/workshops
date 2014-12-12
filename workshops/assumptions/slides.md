@@ -123,11 +123,13 @@ Go to this website:
 # Residual variance #
 
 ```
+
     proc reg data=playing;
         model height=weight;
         plot r.*p.;
     run;
     quit;
+
 ```
 
 # Residual variance #
@@ -151,10 +153,12 @@ Go to this website:
 * vif > 10 or tol < 0.1 suggest collinearity is present
 
 ```
+
 	proc reg data=playing;
  		model height = weight length / vif tol;
 	run;
 	quit;
+
 ```
 
 # Influence #
@@ -164,10 +168,12 @@ Go to this website:
 * Do a visual check for extreme observations
  
 ```
+
 	proc gplot data=playing;
 	  plot height*weight=1 / vaxis=axis1;
 	run;
 	quit;
+
 ```
 
 * OR proc univariate and/or proc means will output smallest and largest observations
