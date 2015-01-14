@@ -13,7 +13,7 @@ Daiva Nielsen, PhD: daiva.nielsen@mail.utoronto.ca
 **Class day, time and location:** 2 hours per class is requested
  	 
 **Course description:** 
-The purpose of this course is to introduce students to the concept of research reproducibility and present methods of conducting statistical analyses in a more efficient, less error prone way. Tips for increasing the efficiency of collaborative work will also be presented. The content will be tailored specifically to R users. The ultimate goal of the course is to demonstrate how to reduce the number of steps required to produce a manuscript from the data analysis stage. Students will be expected to bring their own fully-charged laptop to each class with the appropriate software installed (Git, a text editor and SAS). Emphasis will be placed on hands-on practice activities integrated into each weekly class.
+The purpose of this course is to introduce students to the concept of research reproducibility and present methods of conducting statistical analyses in a more efficient, less error prone way. Tips for increasing the efficiency of collaborative work will also be presented. The content will be tailored specifically to R users. The ultimate goal of the course is to demonstrate how to reduce the number of steps required to produce a manuscript from the data analysis stage. Students will be expected to bring their own fully-charged laptop to each class with the appropriate software installed (Git, a text editor and R). Emphasis will be placed on hands-on practice activities integrated into each weekly class.
 
 **Suggested preparation:** Working knowledge of R, some experience with the command line or familiarity with computing. 
 
