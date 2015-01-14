@@ -1,5 +1,5 @@
 # Outline of workshop #
 
 * Introductions
-    * Item 1
+* State goal for workshop
 * Item 2
