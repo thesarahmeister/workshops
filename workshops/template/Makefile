@@ -3,7 +3,7 @@
 # Custom Make variables
 
 # The location of the `playing` directory for the workshop
-WORKSHOP_DIR = ../../../name
+WORKSHOP_DIR = ../../../materials/workshop_name
 
 # Directory for the emails
 EMAILS_DIR = ./emails

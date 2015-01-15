@@ -2,7 +2,7 @@
 #-------------------------------------------------------------------
 # Custom Make variables
 
-WORKSHOP_DIR = ../../../gitWorkshop/part2
+WORKSHOP_DIR = ../../../materials/git/part2
 
 #-------------------------------------------------------------------
 # Targets and commands
