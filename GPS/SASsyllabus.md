@@ -44,7 +44,7 @@ Week 1 	Introduction to version control with Git
 Week 2 	GitHub
 Week 3 	Macro-coding
 Week 4 	Output Delivery System (ODS)
-Week 5	Review and practice (optional) 
+Week 5	Review and practice (optional; add session on forking)
  
 **Course Resource List**
 
