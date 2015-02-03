@@ -128,11 +128,13 @@ Go to this website:
 # Residual variance #
 
 ```
+
     proc reg data=sashelp.fish;
         model height=weight;
         plot r.*p.;
     run;
     quit;
+
 ```
 
 # Residual variance #
@@ -160,10 +162,12 @@ Go to this website:
     - OR Check tol (tolerance = 1/vif)
 
 ```
+
     proc reg data=sashelp.fish;
         model height = weight length / vif tol;
     run;
     quit;
+
 ```
 
 * VIF > 10 or tol < 0.1 suggest collinearity is present
@@ -173,10 +177,12 @@ Go to this website:
 > * Make a scatterplot of all observations
 
 ```
+
     proc gplot data=sashelp.fish;
         plot height*weight=1 / vaxis=axis1;
     run;
     quit;
+
 ```
 
 > * Do a visual check for extreme observations

@@ -1,14 +1,21 @@
-**Code as Manuscript: Analytical Practices in SAS for Data Efficiency and Reproducibility**
+---  
+geometry: margin=1in  
+fontsize: 12pt  
+papersize: letterpaper  
 
-**Course Syllabus**
+---
 
+#**Code as Manuscript: Analytical Practices in SAS for Data Efficiency and Reproducibility**#
+
+## **Course Syllabus** ##
 
 **Instructors**
 
-Luke Johnston, MSc, PhD (C):
+Luke Johnston, MSc, PhD (C)  
 luke.johnston@mail.utoronto.ca
 
-Daiva Nielsen, PhD: daiva.nielsen@mail.utoronto.ca
+Daiva Nielsen, PhD  
+daiva.nielsen@mail.utoronto.ca
 
 **Class day, time and location:** 2 hours per class is requested
 
@@ -26,40 +33,38 @@ you go in your career.
 
 **Suggested preparation:** Working knowledge of SAS, some experience with the command line or familiarity with computing. 
 
-**Intended audience:** Graduate students or post-doctoral fellows who work with large-scale cohort or clinical databases.
+**Intended audience:** Graduate students or post-doctoral fellows whose primary research is data analysis heavy.  
+&nbsp;
 
 **Course objectives:**
-
 At the end of the course, students will be able to:
 
 * Track their research files with Git to control multiple versions of files.
 * Operate GitHub to maintain a back-up of files and have an outlet for efficient collaboration.
 * Create macros to condense statistical code writing.
 * Use ODS to output results into a more useable form.
-
+&nbsp;
 
 **Course Schedule**
 
-Week 1 	Introduction to version control with Git
-Week 2 	GitHub
-Week 3 	Macro-coding
-Week 4 	Output Delivery System (ODS)
-Week 5	Review and practice (optional; add session on forking)
- 
-**Course Resource List**
+ Week 1: Introduction to version control with Git   
+ Week 2: GitHub  
+ Week 3: Macro-coding  
+ Week 4: Output Delivery System (ODS)  
+ Week 5: Review and practice (optional)
 
-Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, et al. (2014). Best practices for scientific computing. PLoS Biol. 12(1):e1001745.
+**Course Resource List**  
 
-Sandve GK, Nekrutenko A, Taylor J, Hovig E (2013) Ten Simple Rules for Reproducible Computational Research. PLoS Comput Biol 9(10): e1003285.
+Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, et al. (2014). Best practices for scientific computing. PLoS Biol. 12(1):e1001745.  
 
-Alsheikh-Ali, Qureshi W, Al-Mallah MH, Ioannidis JP. (2013). Public availability of published research data in high-impact journals. PLoS One. 6(9):e24357.
+Sandve GK, Nekrutenko A, Taylor J, Hovig E (2013) Ten Simple Rules for Reproducible Computational Research. PLoS Comput Biol 9(10): e1003285.  
 
-Laine C, Goodman SN, Griswold ME, Sox HC. (2007). Reproducible research: moving toward research the public can really trust. Ann Intern Med. 146(6):450-3.
+Alsheikh-Ali, Qureshi W, Al-Mallah MH, Ioannidis JP. (2013). Public availability of published research data in high-impact journals. PLoS One. 6(9):e24357.  
 
-Peng RD, Dominici F, Zeger SL (2006). Reproducible epidemiologic research. Am J Epidemiol. 163(9):783-789.
+Laine C, Goodman SN, Griswold ME, Sox HC. (2007). Reproducible research: moving toward research the public can really trust. Ann Intern Med. 146(6):450-3.  
 
-http://reproducibleresearch.net/ (Contains informative Blog)
+Peng RD, Dominici F, Zeger SL (2006). Reproducible epidemiologic research. Am J Epidemiol. 163(9):783-789.  
 
-http://blogs.plos.org/everyone/2012/08/14/plos-one-launches-reproducibility-initiative/ (PLOS ONE 2012 Reproducibility Initiative)
+http://reproducibleresearch.net/ *(an informative blog)*  
 
-***GitHub URLs and cheat sheets?***
+http://blogs.plos.org/everyone/2012/08/14/plos-one-launches-reproducibility-initiative/ *(Announcement of PLOS ONE 2012 Reproducibility Initiative)*
