@@ -3,7 +3,7 @@
 # Custom Make variables
 
 # The location of the `playing` directory for the workshop
-WORKSHOP_DIR = ../../../statAssumptionsWS
+WORKSHOP_DIR = ../../../materials/stats
 
 # Directory for the emails
 EMAILS_DIR = ./emails

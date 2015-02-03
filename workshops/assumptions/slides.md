@@ -1,6 +1,6 @@
 ---
-title: "Know your data and how to handle it correctly: statistical assumptions"
-date: 2015-01-09
+title: "Know your data and how to analyze it correctly: Statistical assumptions"
+date: 2015-01-30
 author: Daiva & Luke
 classoption: xcolor=dvipsnames
 output:
@@ -16,6 +16,7 @@ header-includes:
 ## Purpose: ##
 
 To teach the statistical assumptions of linear regression and show how you test data to see if they satisfy the assumptions. Knowing how to check these assumptions is part of "best practices" in data analysis. 
+
 
 ## Significance: ##
 
@@ -49,8 +50,10 @@ Go to this website:
 * Used to test associations between independent and dependent variables
 
 * Based on a linear relationship: $y = X\beta + \varepsilon$
-
-* y = dependent variable(s), beta = slope, X = independent variable, \varepsilon = error terms (covariates)
+    - y = dependent variable(s)
+    - $\beta$ = slope
+    - X = independent variable
+    - $\varepsilon$ = error, or residual, terms
 
 # Some Linear Regression Assumptions #
 
@@ -60,13 +63,13 @@ Go to this website:
 
 * Residuals are homoscadastic (have equal/constant variance)
 
-[^1]: Residual (aka the error term) = Observed - expected
+[^1]: Residual (aka the error term) = observed - expected
 
 # Other Checks to Ensure Appropriate Model #
 
 * Check for collinearity (predictors that are highly linearly related -- may result in inaccurate estimates of regression coefficients)
 
-* Check for influence (i.e. outliers)  
+* Check for influence (i.e. outliers)
 
 # Brief aside: assumptions/diagnostics we are not covering in this workshop #
 
@@ -75,7 +78,6 @@ Go to this website:
 * Errors in variables (predictor variables are measured without error)
 
 * Very helpful webpage on regression diagnostics that covers these: <http://www.ats.ucla.edu/stat/sas/webbooks/reg/chapter2/sasreg2.htm>
-
 
 # How to check assumptions #
 
@@ -89,7 +91,8 @@ Go to this website:
 
 ```
 
-    proc sgplot data=playing;
+    * Run a scatter plot;
+    proc sgplot data=sashelp.fish;
         scatter x=weight y=length1;
     run;
 
@@ -102,13 +105,15 @@ Go to this website:
 # Residual distribution #
 
 ```
-
-    proc reg data=playing;
+    * Run a linear regression model and output the ;
+    * residual and predicted terms to a new dataset;
+    proc reg data=sashelp.fish;
         model height=weight;
         output out=resid residual=r predicted=fit;
     run;
     quit;
 
+    * Create a plot of the new output dataset;
     goptions reset=all;
     proc univariate data=resid normal;
         var r;
@@ -124,7 +129,7 @@ Go to this website:
 
 ```
 
-    proc reg data=playing;
+    proc reg data=sashelp.fish;
         model height=weight;
         plot r.*p.;
     run;
@@ -138,58 +143,59 @@ Go to this website:
 
 # What do you do if your data does not meet these assumptions? #
 
-* Try transforming the data (log, square root)
+> * Try transforming the data (log, square root)
+    
+        data new;
+            set sashelp.fish;
+            logWt = log(Weight);
+            run;
 
-* Use a non-parametric statistical test if can not obtain normal distribution of residuals after attempting a transformation
+> * Use a non-parametric statistical test if can not obtain normal distribution of residuals after attempting a transformation
 
 # Collinearity #
 
 * What is it? Two or more predictors in a model that are moderately to highly correlated with one another (e.g. BMI and body weight)
 
-* Check vif (variance inflation factor)
+. . .
 
-* OR Check tol (tolerance = 1/vif)
+* Check VIF (variance inflation factor)
+    - OR Check tol (tolerance = 1/vif)
 
-* vif > 10 or tol < 0.1 suggest collinearity is present
+```
+
+    proc reg data=sashelp.fish;
+        model height = weight length / vif tol;
+    run;
+    quit;
 
 ```
 
-	proc reg data=playing;
- 		model height = weight length / vif tol;
-	run;
-	quit;
-
-```
+* VIF > 10 or tol < 0.1 suggest collinearity is present
 
 # Influence #
 
-* Make a scatterplot of all observations
-
-* Do a visual check for extreme observations
- 
-```
-
-	proc gplot data=playing;
-	  plot height*weight=1 / vaxis=axis1;
-	run;
-	quit;
+> * Make a scatterplot of all observations
 
 ```
 
-* OR proc univariate and/or proc means will output smallest and largest observations
+    proc gplot data=sashelp.fish;
+        plot height*weight=1 / vaxis=axis1;
+    run;
+    quit;
 
-* Observation is "influential" if removing it substantially changes the estimate of coefficients (sometimes! exception: genetics--extreme observations may be hyper/hypo-responders)
+```
+
+> * Do a visual check for extreme observations
+
+> * OR proc univariate will output extreme observations
+
+> * Observation is "influential" if removing it substantially changes the estimate of coefficients (sometimes! exception: genetics--extreme observations may be hyper/hypo-responders)
 
 # Main Exercise #
 
-1. Download the Statistical Tests Flowchart from GitHub (.pdf)
-2. Download datafile1 (.csv) from GitHub
-3. Perform assumptions check using your statistical analysis software
-4. Write a report summary of results (text file) for this datafile and conclude whether or not linear regression is appropriate for this data.
-5. Push your report summary to the GitHub
-6. Download datafile2 (.csv) from GitHub
-7. Perform assumptions check using your statistical analysis software
-8. Check for collinearity and influence
-9. Write a report summary of results (text file) for this datafile and conclude whether or not linear regression is appropriate for this data.
-10. Push your report summary to the GitHub
+1. Download the Statistical Tests Flowchart from GitHub (.pdf).
+2. Use the SAS help dataset fish (`sashelp.fish`) or your own data.
+3. Perform assumptions check using your statistical analysis software.
+4. Write a report summary of results for the assumptions we covered and conclude whether or not linear regression is appropriate for this data.
+5. Check for collinearity and influence.
 

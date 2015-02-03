@@ -1,3 +1,5 @@
+Copyright (c) 2015 Luke W. Johnston and Daiva Nielsen (CC-BY)
+
 ## creative commons
 
 # Attribution 4.0 International

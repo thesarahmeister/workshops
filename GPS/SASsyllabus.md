@@ -19,10 +19,17 @@ daiva.nielsen@mail.utoronto.ca
 
 **Class day, time and location:** 2 hours per class is requested
 
-&nbsp;
-										
 **Course description:** 
 The purpose of this course is to introduce students to the concept of research reproducibility and present methods of conducting statistical analyses in a more efficient, less error prone way. Tips for increasing the efficiency of collaborative work will also be presented. The content will be tailored specifically to SAS users. The ultimate goal of the course is to demonstrate how to reduce the number of steps required to produce a manuscript from the data analysis stage. Students will be expected to bring their own fully-charged laptop to each class with the appropriate software installed (Git, a text editor and SAS). Emphasis will be placed on hands-on practice activities integrated into each weekly class.
+
+## Course goal: ##
+
+To be able to put one of your research projects under version control,
+develop macros with ODS output in a macro autocall library to
+streamline your analysis, and to push your research up into the
+"cloud" (either GitHub or BitBucket).  This will be the start of a
+productive and efficient workflow that you can take with you wherever
+you go in your career.
 
 **Suggested preparation:** Working knowledge of SAS, some experience with the command line or familiarity with computing. 
 
@@ -40,34 +47,24 @@ At the end of the course, students will be able to:
 
 **Course Schedule**
 
- Week 1:    Introduction to version control with Git   
- Week 2: 	GitHub  
- Week 3: 	Macro-coding  
- Week 4: 	Output Delivery System (ODS)  
- Week 5: 	Review and practice (optional)
-
- 
-&nbsp;
+ Week 1: Introduction to version control with Git   
+ Week 2: GitHub  
+ Week 3: Macro-coding  
+ Week 4: Output Delivery System (ODS)  
+ Week 5: Review and practice (optional)
 
 **Course Resource List**  
-&nbsp;
 
 Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, et al. (2014). Best practices for scientific computing. PLoS Biol. 12(1):e1001745.  
-&nbsp;
 
 Sandve GK, Nekrutenko A, Taylor J, Hovig E (2013) Ten Simple Rules for Reproducible Computational Research. PLoS Comput Biol 9(10): e1003285.  
-&nbsp;
 
 Alsheikh-Ali, Qureshi W, Al-Mallah MH, Ioannidis JP. (2013). Public availability of published research data in high-impact journals. PLoS One. 6(9):e24357.  
-&nbsp;
 
 Laine C, Goodman SN, Griswold ME, Sox HC. (2007). Reproducible research: moving toward research the public can really trust. Ann Intern Med. 146(6):450-3.  
-&nbsp;
 
 Peng RD, Dominici F, Zeger SL (2006). Reproducible epidemiologic research. Am J Epidemiol. 163(9):783-789.  
-&nbsp;
 
 http://reproducibleresearch.net/ *(an informative blog)*  
-&nbsp;
 
 http://blogs.plos.org/everyone/2012/08/14/plos-one-launches-reproducibility-initiative/ *(Announcement of PLOS ONE 2012 Reproducibility Initiative)*
