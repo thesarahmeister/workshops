@@ -17,7 +17,6 @@ header-includes:
 
 To teach the statistical assumptions of linear regression and show how you test data to see if they satisfy the assumptions. Knowing how to check these assumptions is part of "best practices" in data analysis. 
 
-. . .
 
 ## Significance: ##
 
@@ -48,9 +47,9 @@ Go to this website:
 
 # Linear Regression #
 
-> * Used to test associations between independent and dependent variables
+* Used to test associations between independent and dependent variables
 
-> * Based on a linear relationship: $y = X\beta + \varepsilon$
+* Based on a linear relationship: $y = X\beta + \varepsilon$
     - y = dependent variable(s)
     - $\beta$ = slope
     - X = independent variable
@@ -58,19 +57,19 @@ Go to this website:
 
 # Some Linear Regression Assumptions #
 
-> * Model is good (i.e. linear relationship between predictors and outcome variable)
+* Model is good (i.e. linear relationship between predictors and outcome variable)
 
-> * Residuals[^1] have a normal distribution
+* Residuals[^1] have a normal distribution
 
-> * Residuals are homoscadastic (have equal/constant variance)
+* Residuals are homoscadastic (have equal/constant variance)
 
-[^1]: Residual (aka the error term) = Observed - expected
+[^1]: Residual (aka the error term) = observed - expected
 
 # Other Checks to Ensure Appropriate Model #
 
-> * Check for collinearity (predictors that are highly linearly related -- may result in inaccurate estimates of regression coefficients)
+* Check for collinearity (predictors that are highly linearly related -- may result in inaccurate estimates of regression coefficients)
 
-> * Check for influence (i.e. outliers)
+* Check for influence (i.e. outliers)
 
 # Brief aside: assumptions/diagnostics we are not covering in this workshop #
 
@@ -82,11 +81,11 @@ Go to this website:
 
 # How to check assumptions #
 
-> * Model fit: Plot residuals vs. predicted fit (check pattern)
+* Model fit: Plot residuals vs. predicted fit (check pattern)
 
-> * Distribution of residuals: Normal probability plot
+* Distribution of residuals: Normal probability plot
 
-> * Variance of residuals: Plot residuals vs. predicted fit (check spread of points)
+* Variance of residuals: Plot residuals vs. predicted fit (check spread of points)
 
 # Model fit #
 
@@ -167,7 +166,7 @@ Go to this website:
     quit;
 ```
 
-* VIG > 10 or tol < 0.1 suggest collinearity is present
+* VIF > 10 or tol < 0.1 suggest collinearity is present
 
 # Influence #
 
@@ -182,15 +181,15 @@ Go to this website:
 
 > * Do a visual check for extreme observations
 
-> * OR proc univariate and/or proc means will output smallest and largest observations
+> * OR proc univariate will output extreme observations
 
 > * Observation is "influential" if removing it substantially changes the estimate of coefficients (sometimes! exception: genetics--extreme observations may be hyper/hypo-responders)
 
 # Main Exercise #
 
-1. Download the Statistical Tests Flowchart from GitHub (.pdf)
-2. Use the SAS help dataset fish (`sashelp.fish`)
-3. Perform assumptions check using your statistical analysis software
-4. Write a report summary of results (text file) for this datafile and conclude whether or not linear regression is appropriate for this data.
-5. Check for collinearity and influence
+1. Download the Statistical Tests Flowchart from GitHub (.pdf).
+2. Use the SAS help dataset fish (`sashelp.fish`) or your own data.
+3. Perform assumptions check using your statistical analysis software.
+4. Write a report summary of results for the assumptions we covered and conclude whether or not linear regression is appropriate for this data.
+5. Check for collinearity and influence.
 
