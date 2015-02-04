@@ -6,7 +6,7 @@ proc freq data=sashelp.fish;
 tables species;
 run;
 
-/*Model Fit*/
+/*Model Fit -- scatter plot*/
 proc sgplot data=sashelp.fish;
 scatter x=weight y=length1;
 run;
@@ -24,7 +24,7 @@ var r;
 qqplot r / normal(mu=est sigma=est);
 run;
 
-/*Residual Variance*/
+/*Residual Variance -- linear regression and predicted plot*/
 proc reg data=sashelp.fish;
 model length1=weight;
 plot r.*p.;
@@ -86,7 +86,8 @@ quit;
 
 /*....give an example of a non-parametric test that could handle the fish data?*/
 
-/*Analysis specifically on Perch species*/
+/*Analyses specifically on Perch species*/
+
 /*Model Fit*/
 proc sgplot data=sashelp.fish;
 scatter x=weight y=length1;

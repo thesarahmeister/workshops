@@ -1,6 +1,6 @@
 ---
 title: "Know your data and how to analyze it correctly: Statistical assumptions"
-date: 2015-01-30
+date: 2015-02-13
 author: Daiva & Luke
 classoption: xcolor=dvipsnames
 output:
@@ -36,14 +36,21 @@ Need help with stats? Use these resources!
 * Helpful statistical tests flowchart (PDF on GitHub)
 
 * Very helpful webpage on regression diagnostics: <http://www.ats.ucla.edu/stat/sas/webbooks/reg/chapter2/sasreg2.htm>
-(Note: Goes into much more detail than what is covered in this workshop)
 
 
 # Notes and help during this workshop #
 
-Go to this website:
+* Go to this website:
 
 <https://etherpad.mozilla.org/dnsWorkshops>
+
+* Download our SAS code file from our GitHub page:
+
+(Insert GitHub URL)
+
+* Download the Statistical Tests Flowchart from our GitHub page:
+
+(Insert GitHub URL)
 
 # Linear Regression #
 
@@ -89,9 +96,10 @@ Go to this website:
 
 # Model fit #
 
+* Run a scatter plot:
+
 ```
 
-    * Run a scatter plot;
     proc sgplot data=sashelp.fish;
         scatter x=weight y=length1;
     run;
@@ -104,17 +112,22 @@ Go to this website:
 
 # Residual distribution #
 
+ * Run a linear regression model and output the residual and predicted terms to a new dataset:
+
 ```
-    * Run a linear regression model and output the ;
-    * residual and predicted terms to a new dataset;
+  
     proc reg data=sashelp.fish;
-        model height=weight;
+        model length1=weight;
         output out=resid residual=r predicted=fit;
     run;
     quit;
 
-    * Create a plot of the new output dataset;
-    goptions reset=all;
+```
+
+* Create a plot of the new output dataset:
+
+```
+   goptions reset=all;
     proc univariate data=resid normal;
         var r;
         qqplot r / normal(mu=est sigma=est);
@@ -127,10 +140,12 @@ Go to this website:
 
 # Residual variance #
 
+* Run a linear regression model and plot residuals against predicted values:
+
 ```
 
     proc reg data=sashelp.fish;
-        model height=weight;
+        model length1=weight;
         plot r.*p.;
     run;
     quit;
@@ -151,6 +166,7 @@ Go to this website:
             run;
 
 > * Use a non-parametric statistical test if can not obtain normal distribution of residuals after attempting a transformation
+> (Daiva will think of an example :) )
 
 # Collinearity #
 
@@ -191,11 +207,8 @@ Go to this website:
 
 > * Observation is "influential" if removing it substantially changes the estimate of coefficients (sometimes! exception: genetics--extreme observations may be hyper/hypo-responders)
 
-# Main Exercise #
+# Practice #
 
-1. Download the Statistical Tests Flowchart from GitHub (.pdf).
-2. Use the SAS help dataset fish (`sashelp.fish`) or your own data.
-3. Perform assumptions check using your statistical analysis software.
-4. Write a report summary of results for the assumptions we covered and conclude whether or not linear regression is appropriate for this data.
-5. Check for collinearity and influence.
+1. Perform these checks on your own research data.
+2. Conclude if linear regression is appropriate and if collinearity or influence is present in your model.
 
