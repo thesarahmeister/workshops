@@ -44,7 +44,7 @@ Need help with stats? Use these resources!
 
 <https://etherpad.mozilla.org/dnsWorkshops>
 
-* Download our SAS code file from our GitHub page:
+* Download our SAS code files from our GitHub page:
 
 (Insert GitHub URL)
 
@@ -100,8 +100,8 @@ Need help with stats? Use these resources!
 
 ```
 
-    proc sgplot data=sashelp.fish;
-        scatter x=weight y=length1;
+    proc sgplot data=sashelp.class;
+        scatter x=height y=weight;
     run;
 
 ```
@@ -116,8 +116,8 @@ Need help with stats? Use these resources!
 
 ```
   
-    proc reg data=sashelp.fish;
-        model length1=weight;
+    proc reg data=sashelp.class;
+        model height=weight;
         output out=resid residual=r predicted=fit;
     run;
     quit;
@@ -144,8 +144,8 @@ Need help with stats? Use these resources!
 
 ```
 
-    proc reg data=sashelp.fish;
-        model length1=weight;
+    proc reg data=sashelp.class;
+        model height=weight;
         plot r.*p.;
     run;
     quit;
@@ -166,7 +166,7 @@ Need help with stats? Use these resources!
             run;
 
 > * Use a non-parametric statistical test if can not obtain normal distribution of residuals after attempting a transformation
-> (Daiva will think of an example :) )
+
 
 # Collinearity #
 
@@ -179,8 +179,8 @@ Need help with stats? Use these resources!
 
 ```
 
-    proc reg data=sashelp.fish;
-        model height = weight length / vif tol;
+    proc reg data=sashelp.class;
+        model height = weight age / vif tol;
     run;
     quit;
 
@@ -194,7 +194,7 @@ Need help with stats? Use these resources!
 
 ```
 
-    proc gplot data=sashelp.fish;
+    proc gplot data=sashelp.class;
         plot height*weight=1 / vaxis=axis1;
     run;
     quit;
