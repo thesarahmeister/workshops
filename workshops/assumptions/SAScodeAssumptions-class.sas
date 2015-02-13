@@ -1,7 +1,7 @@
 /* Tests to check assumptions in linear regression
    DNS Data-related Workshop
    2015-02-13
-   Daiva Nielsen and Luke Johnson */
+   Daiva Nielsen and Luke Johnston */
 
 proc contents data=sashelp.class;
 run;
@@ -28,7 +28,7 @@ run;
 
 /*3) Residual Variance -- linear regression and predicted plot*/
 proc reg data=sashelp.class;
-model height=weight;
+model height=weight / spec;
 plot r.*p.;
 run;
 quit;
