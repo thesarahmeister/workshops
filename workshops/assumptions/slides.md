@@ -46,11 +46,11 @@ Need help with stats? Use these resources!
 
 * Download our SAS code files from our GitHub page:
 
-(Insert GitHub URL)
+([click here](https://github.com/codeasmanuscript/materials/assumptions))
 
 * Download the Statistical Tests Flowchart from our GitHub page:
 
-(Insert GitHub URL)
+([click here](https://github.com/codeasmanuscript/materials/assumptions))
 
 # Linear Regression #
 
@@ -88,9 +88,9 @@ Need help with stats? Use these resources!
 
 # How to check assumptions #
 
-* Model fit: Plot residuals vs. predicted fit (check pattern)
+* Model fit: Make a scatterplot (check pattern)
 
-* Distribution of residuals: Normal probability plot
+* Distribution of residuals: Q-Q Plot
 
 * Variance of residuals: Plot residuals vs. predicted fit (check spread of points)
 
@@ -145,7 +145,7 @@ Need help with stats? Use these resources!
 ```
 
     proc reg data=sashelp.class;
-        model height=weight;
+        model height=weight / spec;
         plot r.*p.;
     run;
     quit;
@@ -191,19 +191,24 @@ Need help with stats? Use these resources!
 # Influence #
 
 > * Make a scatterplot of all observations
+```
 
+    proc sgplot data=sashelp.class;
+        scatter x=height y=weight;
+    run;
+```
+> Or another way to make a scatterplot:
 ```
 
     proc gplot data=sashelp.class;
         plot height*weight=1 / vaxis=axis1;
-    run;
-    quit;
-
+    run; quit;
 ```
-
 > * Do a visual check for extreme observations
 
-> * OR proc univariate will output extreme observations
+# Influence cnt'd #
+
+> * Another method: proc univariate will output extreme observations
 
 > * Observation is "influential" if removing it substantially changes the estimate of coefficients (sometimes! exception: genetics--extreme observations may be hyper/hypo-responders)
 
