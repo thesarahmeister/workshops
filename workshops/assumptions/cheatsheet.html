@@ -1,0 +1,46 @@
+<h2 id="cheatsheet-statistical-assumptions">Cheatsheet: Statistical Assumptions</h2>
+<p>This cheatsheet provides statistical codes that can be used in SAS to test 3 assumptions of linear regression: model fit, residual distribution and residual variance. It also provides statistical codes to examine 2 important factors to examine in statistical models: collinearity and influence/outliers (however, these are not assumptions of linear regression).</p>
+<h2 id="sas-codes-for-assumptions">SAS codes for Assumptions</h2>
+<p><em>To view contents of the SAS practice dataset &quot;Class&quot;</em></p>
+<pre><code>proc contents data=sashelp.class;
+run;</code></pre>
+<p><em>Assumption 1) Model Fit -- make a scatterplot</em></p>
+<pre><code>proc sgplot data=sashelp.class;
+scatter x=height y=weight;
+run;</code></pre>
+<p><em>Assumption 2) Residual Distribution (2 step process)</em></p>
+<p><em>Step 1: Run a linear regression and output residual and predicted terms in a new dataset</em></p>
+<pre><code>proc reg data=sashelp.class;
+model height=weight age;
+output out=resid residual=r predicted=fit;
+run;
+quit;</code></pre>
+<p><em>Step 2: Plot the output of the new dataset</em></p>
+<pre><code>goptions reset=all;
+proc univariate data=resid normal;
+var r;
+qqplot r / normal(mu=est sigma=est);
+run;</code></pre>
+<p><em>Assumption 3) Residual Variance -- run a linear regression and create a predicted plot</em></p>
+<pre><code>proc reg data=sashelp.class;
+model height=weight / spec;
+plot r.*p.;
+run;
+quit;</code></pre>
+<h2 id="sas-codes-for-collinearity-and-outliers">SAS codes for Collinearity and Outliers</h2>
+<p><em>Collinearity -- examine VIF or tolerance</em></p>
+<pre><code>proc reg data=sashelp.class;
+model height = weight age / vif tol;
+run;
+quit;</code></pre>
+<p><em>Outliers -- make a scatterplot and visually inspect the points or run proc univariate to obtain 5 highest and 5 lowest extreme observations</em></p>
+<p><em>Scatterplot -- this is a more complex code to make a scatterplot. Using the code from &quot;Assumption 1) Model Fit&quot; will also work.</em></p>
+<pre><code>proc gplot data=sashelp.class;
+plot height*weight=1 / vaxis=axis1;
+run;
+quit;</code></pre>
+<p><em>Proc univariate to obtain output of extreme observations</em></p>
+<pre><code>proc univariate data=sashelp.class;
+var height weight;
+run;
+quit;</code></pre>
