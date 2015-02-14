@@ -40,10 +40,6 @@ model height = weight age / vif tol;
 run;
 quit;
 
-proc glm data=sashelp.class;
-model height = weight age / tol;
-run;
-quit;
 
 /*5) Influence/outliers*/
 /*Visual inspection of scatterplot -- this is the more complex code to make a scatterplot.
