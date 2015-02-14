@@ -41,9 +41,16 @@ logWt = log(weight);
 logLg=log(length1);
 run;
 
+/*trying square root transformation too*/
+data new;
+set sashelp.fish;
+sqWt = sqrt(weight);
+sqLg=sqrt(length1);
+run;
+
 /*Model Fit with transformed data*/
 proc sgplot data=new;
-scatter x=logWt y=logLg;
+scatter x=weight y=sqLg;
 run;
 
 /*Residual Distribution with transformed data*/
@@ -106,7 +113,7 @@ quit;
 
 
 
-/*Analyses specifically on Perch species -- I may remove this before the workshop*/
+/*Analyses specifically on Perch species -- still not fit for linear regression*/
 
 /*Model Fit*/
 proc sgplot data=sashelp.fish;

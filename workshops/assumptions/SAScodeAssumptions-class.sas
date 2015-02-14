@@ -14,7 +14,7 @@ run;
 /*2) Residual Distribution -- 2 step process:
 Step 1: Run a linear regression and output residual and predicted terms in a new dataset*/
 proc reg data=sashelp.class;
-model height=weight;
+model height=weight age;
 output out=resid residual=r predicted=fit;
 run;
 quit;
@@ -33,14 +33,21 @@ plot r.*p.;
 run;
 quit;
 
+
 /*4) Collinearity*/
 proc reg data=sashelp.class;
 model height = weight age / vif tol;
 run;
 quit;
 
+proc glm data=sashelp.class;
+model height = weight age / tol;
+run;
+quit;
+
 /*5) Influence/outliers*/
-/*Visual inspection of scatterplot*/
+/*Visual inspection of scatterplot -- this is the more complex code to make a scatterplot.
+Using the code from "1) Model Fit" will also work.*/
 proc gplot data=sashelp.class;
 plot height*weight=1 / vaxis=axis1;
 run;
