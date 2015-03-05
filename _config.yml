@@ -8,8 +8,8 @@ relative_permalinks: true
 
 # Setup
 title:               Code As Manuscript
-tagline:             'Writing your code and analyses as if *it* was the manuscript'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+tagline:             'Change the way you see your code.'
+description:         'Writing your code and analyses as if <i>it</i> was the manuscript.'
 url:                 http://codeasmanuscript.github.io
 baseurl:          /
 

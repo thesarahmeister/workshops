@@ -19,7 +19,3 @@ update_site :
 ## build_local : Build the site locally to test out before going live
 build_local :
 	jekyll serve --watch --draft
-
-# Not sure about this one
-update_jekyll :
-	bundle update

@@ -1,7 +1,6 @@
----
-layout: post
-title: Example content
----
+
+ layout: post
+ title: Example content
 
 
 <div class="message">

@@ -4,27 +4,23 @@ title: About
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  Our mission is to provide training to researchers and scientists on
+  how to make their analyses more reproducible and to change how
+  researchers view their code.
 </p>
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+We get much inspiration for our workshops from
+[Software Carpentry (SWC)](http://software-carpentry.org/), of which
+we are also SWC instructors.
 
-There are currently two themes built on Poole:
+## Misc facts about this website ##
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
+* Uses the [Hyde](http://hyde.getpoole.com/)
+  [Jekyll](http://jekyllrb.com) theme
 * Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+Have questions or suggestions? Feel free to
+[open an issue on GitHub](https://github.com/codeasmanuscript/development/issues/new)
+or contact either Diava Nielsen (<daiva.nielsen@gmail.com>) or Luke
+Johnston (<lwjohnst@gmail.com>) for more information.
 
-Thanks for reading!
