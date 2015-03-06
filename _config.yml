@@ -11,7 +11,7 @@ title:               Code As Manuscript
 tagline:             'Change the way you see your code.'
 description:         'Writing your code and analyses as if <i>it</i> was the manuscript.'
 url:                 http://codeasmanuscript.github.io/workshops
-baseurl:          /workshops/
+baseurl:          /
 
 author:
   name:           'Daiva & Luke'
