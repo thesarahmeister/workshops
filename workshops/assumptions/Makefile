@@ -3,7 +3,7 @@
 # Custom Make variables
 
 # The location of the `playing` directory for the workshop
-WORKSHOP_DIR = ../../../materials/stats
+WORKSHOP_DIR = ../../../materials/assumptions
 
 # Directory for the emails
 EMAILS_DIR = ./emails
@@ -37,3 +37,5 @@ emails :
 ws_copy :
 	@cp -u cheatsheet.* $(WORKSHOP_DIR)/
 	@cp -u slides.* $(WORKSHOP_DIR)/
+	@cp -u *.pdf $(WORKSHOP_DIR)/
+	@cp -u *.sas $(WORKSHOP_DIR)/
