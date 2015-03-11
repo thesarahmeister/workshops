@@ -1,0 +1,70 @@
+<h2 id="cheatsheet-using-sas-macros">Cheatsheet: Using SAS macros</h2>
+<p>SAS has a powerful feature know as the macro language. If you have repetitive code, or a particular analysis that is fairly complex, macros are there to make your life easier! Below are some basic things to remember and to know for using macros. Luke also has a brief intro/tutorial on writing your own macros at <a href="http://lwjohnst86.github.io/Introduction-Creating-Macro-SAS/">his blog</a>. Luke also has developed a <a href="https://github.com/lwjohnst86/sasToolkit/src">personal macro library on GitHub</a> that is fairly well documented, so you can look them over if you want. Maybe you will find something that suits your own analysis!</p>
+<h2 id="sas-macro-commands">SAS macro commands:</h2>
+<p><code>%macro name (arg1, arg2=);</code></p>
+<blockquote>
+<p>This is the command format you would use to start a macro. An example is shown in the &quot;Example&quot; section at the bottom.</p>
+</blockquote>
+<ul>
+<li><code>%macro</code> part tells SAS that the upcoming code is a macro.</li>
+<li><code>name</code> is the name you would give your macro, for example <code>means</code> or <code>corr</code> or <code>regression</code> and so on.</li>
+<li><code>arg1</code> and <code>arg2</code> are known as arguments. They are used to include other variables within the macro. A better explanation is below in the example section.</li>
+<li><code>arg1</code> is known as a positional argument (or parameter) because it has no <code>=</code> sign after it. A positional argument means that what ever variable is first supplied to the macro takes on the value of <code>arg1</code>. For example, for a macro such as <code>%macro means(vars,   where=);</code>, when you call the macro <code>%means(Height, where = Wgt &lt;   100);</code> the 'Height' variable takes on the value of <code>arg1</code> because it is first.</li>
+<li><code>arg2=</code> is known as a keyword argument (or parameter) because of the <code>=</code> sign. Thus, in order to use this argument, you need to specifically call it. For example, <code>%means(Height, where = Wgt &lt;   100);</code> the <code>where</code> argument needs to be called directly, while the <code>vars</code> argument is replaced by 'Height' because it is a positional argument.</li>
+</ul>
+<p><code>%mend name;</code></p>
+<blockquote>
+<p>This ends the macro definition (<code>mend</code> = macro end). So to end the <code>%macro means();</code> example, you use <code>%mend means;</code>. See the example below.</p>
+</blockquote>
+<p><code>%let variable = something;</code></p>
+<blockquote>
+<p>This is known as a macro variable. The <code>%let</code> statement is kind of like telling SAS to create a jar. You name this jar as 'variable' and inside the jar you place 'something'. This can be very useful when you have a long list of variables that you repeated use. For example, <code>%let jar = BMI Wgt Hgt Age;</code>. 'jar' now contains these 4 variables, which can be called using <code>&amp;jar</code> (see below).</p>
+</blockquote>
+<p><code>&amp;variable</code></p>
+<blockquote>
+<p>This is also known as a macro variable. However, unlike the <code>%let</code>, here you are not creating a macro variable, but rather telling SAS use the contents of the macro variable. Continuing with from the example directly above, <code>&amp;jar</code> is replaced with 'BMI Wgt Hgt Age' before SAS processes the <code>proc</code> or <code>data</code> command.</p>
+</blockquote>
+<p><code>%if ... %then ...;</code></p>
+<blockquote>
+<p>This is known as a conditional. This is a fairly advanced component of macros, but is really where using macros really starts to shine.</p>
+</blockquote>
+<p><code>%do i = 1 %to something;</code></p>
+<blockquote>
+<p>This is known as a 'do loop'. Like the <code>%if ... %then ...;</code> above, this is an advanced but <em>extremely</em> powerful feature of macros that lets you do some very impressive things!</p>
+</blockquote>
+<h2 id="example">Example</h2>
+<p>We want to create a macro for calculating means, than running it on some some data. This is real code that can be run, so try it out on your own!</p>
+<pre><code>%macro means(vars, where=, class=, data=);
+    proc means data=&amp;data;
+        var &amp;vars;
+        where &amp;where;
+        class &amp;class;
+        run;
+    %mend means;
+
+%let length = Length1 Length2 Length3;
+%let others = Weight Height Width;
+
+%means(&amp;length, where = Weight &lt; 200,
+    class = Species, data = sashelp.fish);
+
+%means(&amp;others, class = Species,
+    data = sashelp.fish);</code></pre>
+<p>Lets break this down:</p>
+<pre><code>%macro means(vars, where=, class=, data=);</code></pre>
+<p>This creates a macro called <code>means</code> that has 4 arguments, 1 of which is positional (<code>vars</code>).</p>
+<pre><code>proc means data=&amp;data;
+    var &amp;vars;
+    where &amp;where;
+    class &amp;class;
+run;</code></pre>
+<p>This is the meat of the macro. Using the ampersand <code>&amp;</code>, we can place the arguments at various places throughout the macro. When SAS runs this code, <code>&amp;data</code> will be replaced by what ever you put into it, and so on.</p>
+<pre><code>%mend means;</code></pre>
+<p>This tells SAS that your own custom macro is finished.</p>
+<pre><code>%let length = Length1 Length2 Length3;
+%let others = Weight Height Width;</code></pre>
+<p>These two commands are macro variables. Basically, we are creating two 'jars' here, named 'length' and 'others'. Each 'jar' contains 3 variables.</p>
+<pre><code>%means(&amp;length, where = Weight &lt; 200,
+    class = Species, data = sashelp.fish);</code></pre>
+<p>This is where we actually invoke the macro <code>means</code> that we created. Because <code>vars</code> was a positional argument, we don't have to call it directly (ie: <code>vars = &amp;length</code>). Just putting <code>&amp;length</code> in the first position tells SAS what the variable is. Because the other 3 arguments were keyword arguments, they have to be explicitly called (eg: <code>where =</code>).</p>
+<p>This is a <em>very</em> basic example. They can get fairly complex, but <em>very</em> powerful as you add more components to the macro. Anytime you have repetitive or complex code, create a macro and recycle your code. This saves an incredible amount of time and headache!</p>
