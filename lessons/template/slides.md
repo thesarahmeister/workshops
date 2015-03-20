@@ -1,16 +1,24 @@
 ---
-title: "Presentation title"
-date: Date in the YYYY-MM-DD
-author: Luke & Daiva
+title: "...title..."
+author: 
+date: YYYY-MM-DD
+layout: default
 classoption: xcolor=dvipsnames
+tag:
+    - Lessons
+    - Assignment
+    - (lesson topic)
+categories:
+    - Lessons
+    - (lesson topic)
+<!--permalink: /path/for/website/uncertain/-->
 output:
     beamer_presentation:
         slide_level: 1
 header-includes:
-    - \input{opt/slideOptions.tex}
-    
+    - \input{../slideOptions.tex}
 ---
-
+    
 # Welcome to our Data-related workshop #
 
 ## Purpose: ##
@@ -51,11 +59,27 @@ Go to this website:
 
 Text, some **bolded**, or *italics*
 
+__bold__ or _italics_ also works.
+
 [URL link here](http://link/here.com)
 
 ```
-    Code text
+    Code block
 ```
+
+Or:
+
+    Code block
+
+List here:
+
+* Item 1
+* Item 2
+
+List, but one-by-one 'animation':
+
+> * Item 1 appears first
+> * Item 2 appears second
 
 Inline `code text`
 
@@ -70,7 +94,11 @@ Footnote[^1]
 
 # Main Exercise #
 
+A pause/transition here (the . . .)
+
 . . .
+
+Numbered list
 
 1. Exercise 1
 2. Exercise 2

@@ -1,5 +1,5 @@
 ---
-title: "Cheatsheet: (topic)"
+title: "Assignment: ..."
 author:
     - 
 date: YYYY-MM-DD
@@ -9,7 +9,7 @@ papersize: letterpaper
 layout: default
 tag:
     - Lessons
-    - Cheatsheet
+    - Assignment
     - (lesson topic)
 categories:
     - Lessons
@@ -17,9 +17,7 @@ categories:
 <!--permalink: /path/for/website/uncertain/-->
 ---
 
-## Cheatsheet: title ##
+# List of potential exercises here: #
 
-Brief description
-
-## (language) commands: ##
-
+* List item 1
+* List item 2

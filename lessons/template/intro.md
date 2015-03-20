@@ -1,5 +1,5 @@
 ---
-title: "Cheatsheet: (topic)"
+title: "Introduction: (topic)"
 author:
     - 
 date: YYYY-MM-DD
@@ -9,17 +9,17 @@ papersize: letterpaper
 layout: default
 tag:
     - Lessons
-    - Cheatsheet
+    - Assignment
     - (lesson topic)
 categories:
     - Lessons
     - (lesson topic)
 <!--permalink: /path/for/website/uncertain/-->
+<!--permalink: / -->
 ---
 
-## Cheatsheet: title ##
+# Introduction of workshop #
 
-Brief description
-
-## (language) commands: ##
-
+* Introductions
+* State goal for workshop
+* Item 2
