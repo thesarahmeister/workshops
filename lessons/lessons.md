@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Lessons
+permalink: /
 ---
 
 Our lesson material:
