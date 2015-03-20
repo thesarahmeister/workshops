@@ -1,6 +1,12 @@
+---
+layout: default
+title: License
+---
 
-Website content: Copyright (c) 2015 Luke W. Johnston and Daiva Nielsen (CC-BY)
-Website layout and design License: Copyright (c) 2013 Mark Otto (MIT, see bottom)
+
+Content: Copyright (c) 2015 Luke W. Johnston and Daiva Nielsen (CC-BY)
+
+Design: Copyright (c) 2013 Mark Otto (MIT, see bottom)
 
 ## creative commons
 
