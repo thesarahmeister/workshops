@@ -1,0 +1,13 @@
+SAS Fish database results sorted by species
+
+Means for bream
+
+weight 626 g
+length1 30.3 inches
+length2 33.1 inches
+
+Standard deviations
+
+weight 206.6 g
+length1 3.6 inches
+length2 3.9 inches

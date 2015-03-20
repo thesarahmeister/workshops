@@ -14,8 +14,6 @@ Git is an amazing and very powerful tool that is useful for managing your projec
 
 ## Git commands: ##
 
-git config --global push.default current
-
 **git clone \<repository\>** ---
 
  :  Take an existing git repository (aka project, aka folders and files) and duplicate/copy/clone it.  For example, I have a folder called `diabetesAndObesity` that contains all of my data, analysis, and manuscript on my research regarding diabetes and obesity.  If you wanted to collaborate with me on the project, you would run `git clone` on my project to copy all of the files and folders and Git history into your computer.
