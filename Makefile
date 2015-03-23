@@ -13,7 +13,7 @@ commands :
 
 ## build_local    : Build the site locally to test out before going live
 build_local :
-	jekyll serve --watch --draft --baseurl '/'
+	jekyll serve --watch --draft --baseurl ''
 
 ## clean_lessons  : Clean out the lessons folder to update the material
 clean_lessons :
