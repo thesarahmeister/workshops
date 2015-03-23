@@ -14,12 +14,26 @@ tag:
 categories:
     - Lessons
     - (lesson topic)
-<!--permalink: /path/for/website/uncertain/-->
+permalink: /lessons/topic/cheatsheet/
 ---
 
-## Cheatsheet: title ##
+Brief description/intro
 
-Brief description
+# (language) commands: Some useful or common ones #
 
-## (language) commands: ##
+## `command` ##
+
+> Description
+
+> Example code:
+
+    example code (note the tab/4 spaces indent)
+
+## `command` ##
+
+> Description
+
+> Example code:
+
+    example code (note the tab/4 spaces indent)
 

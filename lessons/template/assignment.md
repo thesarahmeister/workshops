@@ -14,7 +14,7 @@ tag:
 categories:
     - Lessons
     - (lesson topic)
-<!--permalink: /path/for/website/uncertain/-->
+permalink: /lessons/topic/assignment/
 ---
 
 # List of potential exercises here: #

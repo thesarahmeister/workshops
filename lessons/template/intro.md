@@ -14,8 +14,7 @@ tag:
 categories:
     - Lessons
     - (lesson topic)
-<!--permalink: /path/for/website/uncertain/-->
-<!--permalink: / -->
+permalink: /lessons/topic/
 ---
 
 # Introduction of workshop #
@@ -23,3 +22,10 @@ categories:
 * Introductions
 * State goal for workshop
 * Item 2
+
+* Link for website to location of material:
+  * [Cheatsheet location](/lessons/topic/cheatsheet/index.html)
+  * [Assignment location](/lessons/topic/assignment/index.html)
+  * [Slides location](/lessons/topic/slides/index.html)
+    * [Slides pdf](/lessons/topic/slides/slides.pdf) (I'm not sure
+      this works.

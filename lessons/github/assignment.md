@@ -1,10 +1,31 @@
-# List of potential exercises here: #
+---
+title: "Assignment: GitHub"
+author:
+    - Luke
+    - Daiva
+date: 2015-03-20
+fontsize: 12pt
+geometry: margin=1in
+papersize: letterpaper
+layout: default
+tag:
+    - Lessons
+    - Assignment
+    - GitHub
+categories:
+    - Lessons
+    - GitHub
+<!--permalink: /path/for/website/uncertain/-->
+---
+
+> Work in progress
 
 * Config global values:
     * user.name
     * user.email
     * color.ui
     * core.editor
+    * push.default
 
 * Go over creating a github account (Yes, no?)
 

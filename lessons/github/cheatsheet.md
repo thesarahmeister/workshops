@@ -1,18 +1,26 @@
----  
-title:  
-author:  
-date:  
-geometry: margin=1in  
-fontsize: 12pt  
-papersize: letterpaper  
-
+---
+title: "Cheatsheet: GitHub"
+author:
+    - Luke
+date: 2015-03-23
+fontsize: 12pt
+geometry: margin=1in
+papersize: letterpaper
+layout: default
+tag:
+    - Lessons
+    - Cheatsheet
+    - GitHub
+categories:
+    - Lessons
+    - GitHub
+permalink: /lessons/git/cheatsheet/
 ---
 
-## Cheatsheet: Useful (and common) Git commands ##
 
 Git is an amazing and very powerful tool that is useful for managing your projects and tools.  However, because of its power and usefulness, it can be confusing for beginners because of the need to use the command line (or terminal) to run Git commands as well as the large number of commands and options available.  So, we put together the commands that are the most useful and most common --- and the only ones you may ever use!
 
-## Git commands: ##
+# Useful (and common) Git commands #
 
 **git clone \<repository\>** ---
 
