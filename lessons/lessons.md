@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Lessons
-permalink: /workshops/lessons/
+permalink: /lessons/
 ---
 
 > Hello and welcome to our Code As Manuscript site for data analysis
