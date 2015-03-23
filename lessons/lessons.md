@@ -1,16 +1,16 @@
 ---
 layout: page
 title: Lessons
-permalink: /lessons/
+permalink: lessons/
 ---
 
 > Hello and welcome to our Code As Manuscript site for data analysis
 > and coding-related workshops!  This page contains links to
 > pre-workshop instructions, lesson material, and our teaching goals.
 
-# [Instructions](/lessons/instructions/index.html) #
+# [Instructions](lessons/instructions/index.html) #
 
-Please check our [instructions](/lessons/instructions/index.html)
+Please check our [instructions](lessons/instructions/index.html)
 before coming to the workshops.  There will be instructions on what to
 install and how to install it.  We **strongly** encourage you to do
 this *before* coming to the workshops as doing this during the
@@ -30,7 +30,7 @@ first.
 
 Our lesson material:
 
-* [Git introduction](/lessons/git/index.html)
-    * [Cheatsheet](/lessons/git/cheatsheet/index.html)
-    * [Assignment](/lessons/git/assignment/index.html)
-    * [Slides](/lessons/git/slides/index.html)
+* [Git introduction](lessons/git/index.html)
+    * [Cheatsheet](lessons/git/cheatsheet/index.html)
+    * [Assignment](lessons/git/assignment/index.html)
+    * [Slides](lessons/git/slides/index.html)

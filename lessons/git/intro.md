@@ -15,7 +15,7 @@ tag:
 categories:
     - Lessons
     - Git
-permalink: /lessons/git/
+permalink: lessons/git/
 ---
 
 Work in progress...

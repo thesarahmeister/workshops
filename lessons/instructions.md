@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Pre-Workshop Instructions
-permalink: /lessons/instructions/
+permalink: lessons/instructions/
 ---
 
 Hey everyone!
