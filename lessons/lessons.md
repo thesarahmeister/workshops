@@ -30,7 +30,7 @@ first.
 
 Our lesson material:
 
-* [Git introduction](lessons/git/index.html)
-    * [Cheatsheet](lessons/git/cheatsheet/index.html)
-    * [Assignment](lessons/git/assignment/index.html)
-    * [Slides](lessons/git/slides/index.html)
+* [Git introduction](git/index.html)
+    * [Cheatsheet](git/cheatsheet/index.html)
+    * [Assignment](git/assignment/index.html)
+    * [Slides](git/slides/index.html)
