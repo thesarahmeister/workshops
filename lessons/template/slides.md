@@ -11,7 +11,7 @@ tag:
 categories:
     - Lessons
     - (lesson topic)
-permalink: /lessons/topic/slides/
+permalink: lessons/topic/slides/
 output:
     beamer_presentation:
         slide_level: 1

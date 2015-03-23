@@ -14,7 +14,7 @@ tag:
 categories:
     - Lessons
     - Git
-permalink: /lessons/git/cheatsheet/
+permalink: lessons/git/cheatsheet/
 ---
 
 Git is an amazing and very powerful tool that is useful for managing

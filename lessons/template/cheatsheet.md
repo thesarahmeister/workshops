@@ -14,7 +14,7 @@ tag:
 categories:
     - Lessons
     - (lesson topic)
-permalink: /lessons/topic/cheatsheet/
+permalink: lessons/topic/cheatsheet/
 ---
 
 Brief description/intro

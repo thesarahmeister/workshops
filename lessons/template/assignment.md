@@ -14,7 +14,7 @@ tag:
 categories:
     - Lessons
     - (lesson topic)
-permalink: /lessons/topic/assignment/
+permalink: lessons/topic/assignment/
 ---
 
 # List of potential exercises here: #

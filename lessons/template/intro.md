@@ -14,7 +14,7 @@ tag:
 categories:
     - Lessons
     - (lesson topic)
-permalink: /lessons/topic/
+permalink: lessons/topic/
 ---
 
 # Introduction of workshop #
