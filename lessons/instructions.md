@@ -1,3 +1,9 @@
+---
+layout: default
+title: Pre-Workshop Instructions
+permalink: /lessons/instructions/
+---
+
 Hey everyone!
 
 Since you all had indicated interest in our workshops, here is our next workshop we are going to be running!
@@ -17,12 +23,6 @@ Before coming:
 Description of problem
 
 Explaining how our workshop will help and what we will teach.
-
-## Time: ##
-
-2:00-4:00pm  
-Month DD, YYYY  
-FitzGerald rm 423
 
 ## Register ##
 

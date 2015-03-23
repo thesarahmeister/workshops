@@ -1,23 +1,27 @@
 ---
+title: "Introduction: Version control using Git"
+author:
+    - Luke Johnston
+    - Daiva Nielsen
+date: 2015-03-23
+fontsize: 12pt
+geometry: margin=1in
+papersize: letterpaper
 layout: default
-title: Git workshop material
-permalink: /
-category: Git
-tags:
+tag:
+    - Lessons
+    - Assignment
     - Git
-    - GPS
+categories:
+    - Lessons
+    - Git
+permalink: /lessons/git/
 ---
 
-## Cheatsheet ##
+Work in progress...
 
-Our cheatsheet is located [*here*](./cheatsheet/index.html)
-
-## Very useful resources for learning and using Git ##
-
-* 
-
-
-# Outline of workshop #
+Version control is a system that manages and organizes different
+versions of a file...
 
 * Introductions
     * What we are and are not...

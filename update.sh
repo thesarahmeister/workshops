@@ -8,7 +8,7 @@
 # workshop).
 
 # Extract the files from the other branch
-git checkout master -- lesson/ gps/
+git checkout master -- lessons/ gps/
 
 # Remove extraneous files from the git staging area
 git rm -r --cached lessons/template/ lessons/*.sh \

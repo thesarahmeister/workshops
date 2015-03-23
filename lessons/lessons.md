@@ -1,10 +1,36 @@
 ---
 layout: page
-title: Lessons
-permalink: /
+title: Lessons in our Code As Manuscript workshops
+permalink: /lessons/
 ---
+
+> Hello and welcome to our Code As Manuscript site for data analysis
+> and coding-related workshops!  This page contains links to
+> pre-workshop instructions, lesson material, and our teaching goals.
+
+# [Instructions](/lessons/instructions/index.html) #
+
+Please check our [instructions](/lessons/instructions/index.html)
+before coming to the workshops.  There will be instructions on what to
+install and how to install it.  We **strongly** encourage you to do
+this *before* coming to the workshops as doing this during the
+workshops will delay the planned workshop material and slow everyone
+else down.  Given that, there are times when you may run into
+difficults while installing something.  In those cases, we will be at
+the workshop 20-30 minutes beforehand and if you need any assistance,
+*please* coming then and we will help out as much as we can!
+
+# Lessons #
+
+Our four primary workshops include learning about Git, GitHub, SAS
+macros, and SAS ODS.  We hope to eventually develop a series that
+focuses on R, however, given that a large majority of (at least
+biomedical) researchers use SAS, we've developed the SAS workshops
+first.
 
 Our lesson material:
 
-* [Git](../git/index.html)
-    * [Cheatsheet](../git/cheatsheet/index.html)
+* [Git introduction](/lessons/git/index.html)
+    * [Cheatsheet](/lessons/git/cheatsheet/index.html)
+    * [Assignment](/lessons/git/assignment/index.html)
+    * [Slides](/lessons/git/slides/index.html)

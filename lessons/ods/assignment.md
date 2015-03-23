@@ -1,4 +1,22 @@
-# List of potential exercises here: #
+---
+title: "Assignment: SAS ODS"
+author:
+    - Luke
+    - Daiva
+date: 2015-03-20
+fontsize: 12pt
+geometry: margin=1in
+papersize: letterpaper
+layout: default
+tag:
+    - Lessons
+    - Assignment
+    - ODS
+categories:
+    - Lessons
+    - ODS
+<!--permalink: /path/for/website/uncertain/-->
+---
 
-* List item 1
-* List item 2
+> Work in progress
+
