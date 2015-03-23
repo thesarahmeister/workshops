@@ -1,0 +1,13 @@
+Welcome to MoPad!
+
+This pad text is synchronized as you type, so that everyone viewing this page sees the same text.  This allows you to collaborate seamlessly on documents!
+
+Please be cognizant of whether you are using a public pad or private/team pad, and take appropriate precautions with data you post here!
+
+Version control: a way of controlling the number of versions of the "same" file! Don't need to have multiple files with multiple file names for specific versions of a document. Controls the number of iterations in a clean, efficient, sophisticated way.
+
+Issue of reproducibility: a lot of published findings haven't been able to be reproduced. Does not necessarily reflect wrong-doing, but rather an illustration of the lack of organization in analysis. The original investigators may not remember where the final version of their statistical codes are or the codes may be very messy/disorganized/hard for someone else to follow.
+
+Version control will keep a history of all the changes you've made to a file so you don't need to create multiple versions of them with different file names.
+
+  
