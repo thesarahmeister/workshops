@@ -1,14 +1,22 @@
 ---
 title: "Let's 'Git' started: An introduction to version control"
-date: 2014-11-07
-author: Luke & Daiva
+author: Daiva & Luke
+date: 2015-03-29
+layout: default
 classoption: xcolor=dvipsnames
+tag:
+    - Lessons
+    - Assignment
+    - Git
+categories:
+    - Lessons
+    - Git
+permalink: lessons/git/slides/
 output:
     beamer_presentation:
         slide_level: 1
 header-includes:
-    - \input{opt/slideOptions.tex}
-    
+    - \input{../slideOptions.tex}
 ---
 
 # Welcome to our Data-related workshop #
