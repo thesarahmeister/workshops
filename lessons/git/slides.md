@@ -12,9 +12,8 @@ categories:
     - Lessons
     - Git
 permalink: lessons/git/slides/
-output:
-    beamer_presentation:
-        slide_level: 1
+slide-level: 1
+fontsize: 8pt
 header-includes:
     - \input{../slideOptions.tex}
 ---
@@ -70,7 +69,7 @@ Go to this website:
 
 # Reproducible research #
 
-\includegraphics[width=\textwidth]{img/reproducibleCrisis.png}
+![](img/reproducibleCrisis.png)
 
 * <http://www.nature.com/nature/focus/reproducibility/>
 
@@ -84,7 +83,7 @@ Go to this website:
 
 # Reproducible research #
 
-\includegraphics[width=\textwidth]{img/PLOS.png}
+![](img/PLOS.png)
 
 by Greg Wilson, founder of Software Carpentry
 ([click here](http://software-carpentry.org/))
@@ -120,7 +119,7 @@ by Greg Wilson, founder of Software Carpentry
 
 # Visualization of VC[^gitpic] #
 
-\includegraphics[width=\textwidth]{img/vcs-Snapshot.png}
+![](img/vcs-Snapshot.png)
 
 [^gitpic]: Taken from the Git site
     ([click here](http://git-scm.com/book/en/v2/Getting-Started-Git-Basics))
@@ -179,8 +178,7 @@ In your terminal/Git-Bash, run:
 
 ```
 cd ~
-git clone
-    https://github.com/codeasmanuscript/gitWorkshop.git
+git clone https://github.com/codeasmanuscript/gitWorkshop.git
 cd gitWorkshop
 ```
 
