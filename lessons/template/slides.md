@@ -12,9 +12,8 @@ categories:
     - Lessons
     - (lesson topic)
 permalink: lessons/topic/slides/
-output:
-    beamer_presentation:
-        slide_level: 1
+slide-level: 1
+fontsize: 8pt
 header-includes:
     - \input{../slideOptions.tex}
 ---
