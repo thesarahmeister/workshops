@@ -17,6 +17,8 @@ categories:
 permalink: lessons/topic/assignment/
 ---
 
+# Assignment: ...title... #
+
 # List of potential exercises here: #
 
 * List item 1

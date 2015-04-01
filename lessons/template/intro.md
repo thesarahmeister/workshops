@@ -17,15 +17,18 @@ categories:
 permalink: lessons/topic/
 ---
 
-# Introduction of workshop #
+# Introduction: (topic) #
 
 * Introductions
 * State goal for workshop
 * Item 2
 
-* Link for website to location of material:
-  * [Cheatsheet location](/lessons/topic/cheatsheet/index.html)
-  * [Assignment location](/lessons/topic/assignment/index.html)
-  * [Slides location](/lessons/topic/slides/index.html)
-    * [Slides pdf](/lessons/topic/slides/slides.pdf) (I'm not sure
-      this works.
+# Materials for this lesson: #
+
+* [Slides](slides/index.html)
+* [Cheatsheet](cheatsheet/index.html)
+* [Assignment](assignment/index.html)
+
+# Other resources: #
+
+* [link](http://)

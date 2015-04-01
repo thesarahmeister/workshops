@@ -17,6 +17,8 @@ categories:
 permalink: lessons/topic/cheatsheet/
 ---
 
+# Cheatsheet: (topic) #
+
 Brief description/intro
 
 # (language) commands: Some useful or common ones #
