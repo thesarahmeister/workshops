@@ -1,67 +1,72 @@
 ---
 layout: default
-title: Pre-Workshop Instructions
+title: Pre-workshop instructions
 permalink: lessons/instructions/
 ---
 
-Hey everyone!
+# Pre-workshop instructions #
 
-Since you all had indicated interest in our workshops, here is our next workshop we are going to be running!
+Before coming to any of our workshops, please make sure to do the
+following:
 
-## Brief Summary ##
+* Register (either from our email or from our through GPS)
+* Install the required software (Git, SAS, or R) on your laptop
+* Make sure to fully charge your laptop
 
-Quick description
+# Software installation #
 
-Before coming:
+Please install these programs before coming to the workshops.  If you
+have issues with installing the programs, please come 15 minutes early
+to the workshop and we'll try to help you out.
 
-* Register [here](eventbrite link)
-* Install software (Git, SAS, or R) on laptop (see below)
-* Bring fully charged laptop
+## Git ##
 
-## Workshop title ##
+Installation instructions for Git can be found the
+[Git download site](http://git-scm.com/book/en/Getting-Started-Installing-Git)
 
-Description of problem
+* On Windows: Download the `.exe` file from this
+  [Github link](http://msysgit.github.io) and run it.
 
-Explaining how our workshop will help and what we will teach.
+* On Mac: To use the graphical Git installer, download from this
+  [SourceForge link](http://sourceforge.net/projects/git-osx-installer/)
 
-## Register ##
+* On Linux: Use your respective package manager (for example, if you
+  use Ubuntu or Debian, run this code: `sudo apt-get install git`)
 
-While we gladly welcome anyone to come and join, it would really help us better prepare for the workshop if we know how many are coming. So, please register for this workshop using this [Eventbrite link](link)
+## Text editor ##
 
-## Before coming to the workshop: ##
+Because we will be writing plain text (for
+[Markdown](https://guides.github.com/features/mastering-markdown/) and
+Git), you'll need a text editor.  Most operating systems (Microsoft,
+Mac, Linux) generally come pre-installed with a text editor.
 
-### Install Git ###
+* Windows: Notepad is installed by default, however
+  [Notepad++](http://notepad-plus-plus.org/download/v6.6.9.html) is
+  really good.  Another option is
+  [MarkdownPad](http://markdownpad.com/).
 
-Installing instructions from the [Git download site](http://git-scm.com/book/en/Getting-Started-Installing-Git)
+* Mac: [TextMate](http://macromates.com/download) is good, check the
+  website to install it.
+  [Nano](http://en.wikipedia.org/wiki/GNU_nano) is also (usually)
+  pre-installed.
 
-* On Windows
+* Linux: Most distributions have pretty good pre-installed plain text
+  editors.  For instance, Ubuntu and Debian have gedit.  Nano is also
+  generally pre-installed.
 
-    Download the installer exe file and run it from this [Github link](http://msysgit.github.io)
+## SAS (for our SAS workshops) ##
 
-* On Mac
+The installation instructions for SAS tend to be not the most
+intuitive (especially for Linux users).  Mac users can not use SAS
+natively and must dual-boot onto Windows.  SAS has their own
+installation guide that comes with the CDs.
 
-    To use the graphical Git installer, download from this [SourceForge link](http://sourceforge.net/projects/git-osx-installer/)
+## R (for our R workshops) ##
 
-* On Linux
+To install R, go to the [R Project website](http://cran.rstudio.com/)
+and choose your operating system.  Unlike SAS, R does not come with an
+editor, so you will need to install an editor.  One very useful and
+beginner-friendly editor is [RStudio](http://www.rstudio.com).  For
+more advanced users who are eager for a (substantial) challenge, you
+can try [Emacs and ESS](http://ess.r-project.org/).
 
-    Install through your package manager (for example, if you use Ubuntu, run this code: `sudo apt-get install git`
-
-### Getting a text editor ###
-
-Because we will be writing a fake report using something called Markdown, you will need to install a plain text editor (or use a currently installed one).
-
-* Windows
-
-    Notepad is installed by default, however [Notepad++](http://notepad-plus-plus.org/download/v6.6.9.html) is really good.  Another option is [MarkdownPad](http://markdownpad.com/).
-
-* Mac
-
-    [TextMate](http://macromates.com/download) is good, check the website to install it.
-
-* Linux
-
-    There are a number of good options available to easily install. Check out gedit. Your distro likely has it in its package management repos.
-
-### Using or getting a statistical program ###
-
-We will be using SAS to run analyses.  But! If you don't have it already and don't want to pay the high cost for the SAS license, you can use R (which is free) instead.  Instructions for download can be found at on the [R website](http://cran.utstat.utoronto.ca/).  A good editor for R is [RStudio](http://www.rstudio.com/products/rstudio/#Desk).  If you need any help, come a bit early before the workshop and we'll try to help out.

@@ -17,6 +17,8 @@ categories:
 permalink: lessons/git/cheatsheet/
 ---
 
+# Cheatsheet: Git #
+
 Git is an amazing and very powerful tool that is useful for managing
 your projects and tools, letting you experiment and try out new things
 in your files without worrying about losing anything.  However,

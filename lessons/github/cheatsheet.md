@@ -14,7 +14,7 @@ tag:
 categories:
     - Lessons
     - GitHub
-permalink: /lessons/git/cheatsheet/
+permalink: /lessons/github/cheatsheet/
 ---
 
 

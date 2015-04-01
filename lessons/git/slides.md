@@ -1,14 +1,21 @@
 ---
 title: "Let's 'Git' started: An introduction to version control"
-date: 2014-11-07
-author: Luke & Daiva
+author: Daiva & Luke
+date: 2015-03-29
+layout: default
 classoption: xcolor=dvipsnames
-output:
-    beamer_presentation:
-        slide_level: 1
+tag:
+    - Lessons
+    - Assignment
+    - Git
+categories:
+    - Lessons
+    - Git
+permalink: lessons/git/slides/
+slide-level: 1
+fontsize: 8pt
 header-includes:
-    - \input{opt/slideOptions.tex}
-    
+    - \input{../slideOptions.tex}
 ---
 
 # Welcome to our Data-related workshop #
@@ -62,7 +69,7 @@ Go to this website:
 
 # Reproducible research #
 
-\includegraphics[width=\textwidth]{img/reproducibleCrisis.png}
+![](img/reproducibleCrisis.png)
 
 * <http://www.nature.com/nature/focus/reproducibility/>
 
@@ -76,7 +83,7 @@ Go to this website:
 
 # Reproducible research #
 
-\includegraphics[width=\textwidth]{img/PLOS.png}
+![](img/PLOS.png)
 
 by Greg Wilson, founder of Software Carpentry
 ([click here](http://software-carpentry.org/))
@@ -112,7 +119,7 @@ by Greg Wilson, founder of Software Carpentry
 
 # Visualization of VC[^gitpic] #
 
-\includegraphics[width=\textwidth]{img/vcs-Snapshot.png}
+![](img/vcs-Snapshot.png)
 
 [^gitpic]: Taken from the Git site
     ([click here](http://git-scm.com/book/en/v2/Getting-Started-Git-Basics))
@@ -171,8 +178,7 @@ In your terminal/Git-Bash, run:
 
 ```
 cd ~
-git clone
-    https://github.com/codeasmanuscript/gitWorkshop.git
+git clone https://github.com/codeasmanuscript/gitWorkshop.git
 cd gitWorkshop
 ```
 

@@ -8,9 +8,9 @@ permalink: lessons/
 > and coding-related workshops!  This page contains links to
 > pre-workshop instructions, lesson material, and our teaching goals.
 
-# [Instructions](lessons/instructions/index.html) #
+# [Instructions](instructions/index.html) #
 
-Please check our [instructions](lessons/instructions/index.html)
+Please check our [instructions](instructions/index.html)
 before coming to the workshops.  There will be instructions on what to
 install and how to install it.  We **strongly** encourage you to do
 this *before* coming to the workshops as doing this during the
