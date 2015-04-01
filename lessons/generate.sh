@@ -8,24 +8,26 @@
 
 # Assign all slide.md and cheatsheet files to the slides and
 # cheatsheet variables
-slides=$(find . -type d -path ./template -prune -o \ 
-    -type f -iname '*slide*md' -print)
+slides=$(find . ! -path '*/template/*' -type f \
+    -iname '*slide*md' -print)
 
-cheatsheet=$(find . -type d -path ./template -prune -o \
-    -type f -iname 'cheatsheet*md' -print)
+cheatsheet=$(find . ! -path '*/template/*' -type f \
+    -iname '*cheatsheet*md' -print)
 
 # Loop through each slide.md file found.
 for f in $slides; do
 
+    # Assign the filename (without the path)
+    fi=$(basename $f)
     # Check if the pdf exists and if the .md is newer
     if [ -f "${f%.md}.pdf" ] && [ "$f" -nt "${f%.md}.pdf" ] ; then
         echo PDF does exist and .md is newer: Generate pdf
-        pandoc $f -t beamer -o ${f%.md}.pdf
+        (cd $(dirname $f) && pandoc $fi -t beamer -o ${fi%.md}.pdf)
         
     # Check if the pdf exists
     elif [ ! -f "${f%.md}.pdf" ] ; then
         echo PDF does not exist: Generate pdf
-        pandoc $f -t beamer -o ${f%.md}.pdf
+        (cd $(dirname $f) && pandoc $fi -t beamer -o ${fi%.md}.pdf)
     else 
 
         echo .md is older: Do nothing
@@ -35,15 +37,17 @@ done
 # Loop through each cheatsheet.md file
 for f in $cheatsheet; do
     
+    # Assign the filename (without the path)
+    fi=$(basename $f)
     # Check if the pdf exists/if the md is newer
     if [ -f "${f%.md}.pdf" ] && [ "$f" -nt "${f%.md}.pdf" ] ; then
         echo PDF does exist and .md is newer: Generate pdf
-        pandoc $f -o ${f%.md}.pdf
+        (cd $(dirname $f) && pandoc $fi -o ${fi%.md}.pdf)
        
     # Check if the pdf exists
     elif [ ! -f "${f%.md}.pdf" ] ; then
         echo PDF does not exist: Generate pdf
-        pandoc $f -o ${f%.md}.pdf
+        (cd $(dirname $f) && pandoc $fi -o ${fi%.md}.pdf)
     else 
         echo .md is older: Do nothing
     fi
