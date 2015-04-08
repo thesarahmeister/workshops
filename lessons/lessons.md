@@ -33,7 +33,7 @@ Our lesson material:
 
 ## Our lesson material: ##
 
-{% for cat in site.category-list %} <!-- search list in config -->
+{% for cat in site.category-list %} 
 
 ### {{ cat }}: ###
 

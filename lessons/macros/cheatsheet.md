@@ -6,7 +6,8 @@ date: 2015-04-01
 fontsize: 12pt
 geometry: margin=1in
 papersize: letterpaper
-layout: default
+layout: page
+sidebar: false
 tag:
     - Lessons
     - Cheatsheet
@@ -14,7 +15,6 @@ tag:
 categories:
     - Lessons
     - Macros
-permalink: lessons/macros/cheatsheet/
 ---
 
 SAS has a powerful feature know as the macro language.  If you have
