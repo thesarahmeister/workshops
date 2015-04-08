@@ -1,7 +1,7 @@
 ---
 title: "Assignment: Git"
 author:
-    - Luke
+    - Luke Johnston
 date: 2015-03-20
 fontsize: 12pt
 geometry: margin=1in
