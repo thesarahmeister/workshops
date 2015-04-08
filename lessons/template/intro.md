@@ -23,6 +23,11 @@ permalink: lessons/topic/
 * State goal for workshop
 * Item 2
 
+# Learning objectives: #
+
+1. Objective one
+2. Objective two
+
 # Materials for this lesson: #
 
 * [Slides](slides/index.html)
