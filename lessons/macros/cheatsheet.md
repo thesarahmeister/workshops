@@ -1,13 +1,23 @@
 ---  
-title:  SAS Macros  
-author:  Luke & Daiva  
-date:  2015-03-11  
-geometry: margin=1in  
-fontsize: 12pt  
-papersize: letterpaper  
-...
+title: "Cheatsheet: SAS Macros"
+author:
+    - Luke Johnston
+date: 2015-04-01
+fontsize: 12pt
+geometry: margin=1in
+papersize: letterpaper
+layout: default
+tag:
+    - Lessons
+    - Cheatsheet
+    - Macros
+categories:
+    - Lessons
+    - Macros
+permalink: lessons/macros/cheatsheet/
+---
 
-## Cheatsheet: Using SAS macros ##
+# Cheatsheet: SAS Macros #
 
 SAS has a powerful feature know as the macro language.  If you have
 repetitive code, or a particular analysis that is fairly complex,
@@ -17,12 +27,12 @@ brief intro/tutorial on writing your own macros at
 [his blog](http://lwjohnst86.github.io/Introduction-Creating-Macro-SAS/).
 Luke also has developed a
 [personal macro library on GitHub](https://github.com/lwjohnst86/sasToolkit/src)
-that is fairly well documented, so you can look them over if you
-want.  Maybe you will find something that suits your own analysis!
+that is fairly well documented, so you can look them over if you want.
+Maybe you will find something that suits your own analysis!
 
-## SAS macro commands: ##
+# SAS macro commands: #
 
-`%macro name (arg1, arg2=);`
+## `%macro name (arg1, arg2=);` ##
 
 > This is the command format you would use to start a macro.  An
 > example is shown in the "Example" section at the bottom.
@@ -47,41 +57,49 @@ want.  Maybe you will find something that suits your own analysis!
   the `vars` argument is replaced by 'Height' because it is a
   positional argument.
 
-`%mend name;`
+## `%mend name;` ##
 
 > This ends the macro definition (`mend` = macro end).  So to end the
 > `%macro means();` example, you use `%mend means;`.  See the example
 > below.
 
-`%let variable = something;`
+## `%let variable = something;` ##
 
 > This is known as a macro variable.  The `%let` statement is kind of
 > like telling SAS to create a jar.  You name this jar as 'variable'
 > and inside the jar you place 'something'.  This can be very useful
-> when you have a long list of variables that you repeated use.  For
-> example, `%let jar = BMI Wgt Hgt Age;`.  'jar' now contains these 4
-> variables, which can be called using `&jar` (see below).
+> when you have a long list of variables that you repeated use.
 
-`&variable`
+> Example: `%let jar = BMI Wgt Hgt Age;`, 'jar' now contains
+> these 4 variables, which can be called using `&jar` (see below).
 
-> This is also known as a macro variable.  However, unlike the `%let`,
-> here you are not creating a macro variable, but rather telling SAS
-> use the contents of the macro variable.  Continuing with from the
-> example directly above, `&jar` is replaced with 'BMI Wgt Hgt Age'
-> before SAS processes the `proc` or `data` command.
+## `&variable` ##
 
-`%if ... %then ...;`
+> This is also known as a macro variable.  However, unlike the `%let`
+> command above, here you are not creating a macro variable, but
+> rather telling SAS to use the contents of the macro variable from
+> the `%let` command (when you created the 'jar').  Continuing with
+> from the example directly above, `&jar` is replaced with 'BMI Wgt
+> Hgt Age' before SAS processes the `proc` or `data` command.  Again,
+> see the example at the bottom.
+
+## `%if ... %then ...;` ##
 
 > This is known as a conditional.  This is a fairly advanced component
 > of macros, but is really where using macros really starts to shine.
+> They let you expand your macro to include other components of code
+> without creating a whole new macro.  Depending on time, we may or
+> may not cover this.
 
-`%do i = 1 %to something;`
+## `%do i = 1 %to num;` ##
 
 > This is known as a 'do loop'.  Like the `%if ... %then ...;` above,
 > this is an advanced but *extremely* powerful feature of macros that
-> lets you do some very impressive things!
+> lets you do some very impressive things!  Given the advanced nature
+> of this command, we won't likely be going over this, but it's good
+> to know other features to use in macros.
 
-## Example ##
+# Example macro: #
 
 We want to create a macro for calculating means, than running it on
 some some data.  This is real code that can be run, so try it out on
@@ -104,7 +122,9 @@ your own!
     %means(&others, class = Species,
         data = sashelp.fish);
 
-Lets break this down:
+    %means(&length, data = sashelp.fish);
+
+## Lets break this macro down: ##
 
     %macro means(vars, where=, class=, data=);
 
@@ -131,7 +151,7 @@ This tells SAS that your own custom macro is finished.
 
 These two commands are macro variables.  Basically, we are creating
 two 'jars' here, named 'length' and 'others'.  Each 'jar' contains 3
-variables.
+variables each.
 
     %means(&length, where = Weight < 200,
         class = Species, data = sashelp.fish);

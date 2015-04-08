@@ -1,4 +1,27 @@
-# Outline of workshop --- Macros #
+---
+title: "Introduction: SAS Macros"
+author:
+    - Luke Johnston
+date: 2015-04-01
+fontsize: 12pt
+geometry: margin=1in
+papersize: letterpaper
+layout: default
+tag:
+    - Lessons
+    - Assignment
+    - Macros
+categories:
+    - Lessons
+    - Macros
+permalink: lessons/macros/
+---
+
+# Introduction: SAS Macros #
+
+* Introductions
+* State goal for workshop
+* Item 2
 
 * Introduction
     * Make sure they have git and github
@@ -21,11 +44,25 @@
     * Use their own data/analysis
     * Or just make up their own
 
-* Exercises:
-    * Make bad code (together)
-    * Push to github
-    * Pull partners bad code
-    * Fix it by making macro (together)
-    * Push to github
-
 * For future: mention power of combining with ODS
+
+## Learning objectives ##
+
+Our expectations are that after this workshop you
+
+1. Can explain fairly well what macros and macro variables are (how
+   they work, what the basic structure is, and how they are used).
+
+
+
+# Materials for this lesson: #
+
+* [Slides](slides/index.html)
+* [Cheatsheet](cheatsheet/index.html)
+* [Assignment](assignment/index.html)
+
+# Other resources: #
+
+* [link](http://)
+* [Luke's intro blog to SAS macros](http://lwjohnst86.github.io/Introduction-Creating-Macro-SAS/).
+* [Luke's personal macro library on GitHub](https://github.com/lwjohnst86/sasToolkit/src)
