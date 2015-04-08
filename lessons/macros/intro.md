@@ -6,7 +6,8 @@ date: 2015-04-01
 fontsize: 12pt
 geometry: margin=1in
 papersize: letterpaper
-layout: default
+layout: page
+sidebar: true
 tag:
     - Lessons
     - Assignment
@@ -16,8 +17,6 @@ categories:
     - Macros
 permalink: lessons/macros/
 ---
-
-# Introduction: SAS Macros #
 
 * Introductions
 * State goal for workshop

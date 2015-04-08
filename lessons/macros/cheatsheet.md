@@ -17,8 +17,6 @@ categories:
 permalink: lessons/macros/cheatsheet/
 ---
 
-# Cheatsheet: SAS Macros #
-
 SAS has a powerful feature know as the macro language.  If you have
 repetitive code, or a particular analysis that is fairly complex,
 macros are there to make your life easier!  Below are some basic
