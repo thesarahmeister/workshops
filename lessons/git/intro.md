@@ -7,7 +7,8 @@ date: 2015-03-23
 fontsize: 12pt
 geometry: margin=1in
 papersize: letterpaper
-layout: default
+layout: page
+sidebar: false
 tag:
     - Lessons
     - Assignment
@@ -17,8 +18,6 @@ categories:
     - Git
 permalink: lessons/git/
 ---
-
-# Introduction: Version control using Git #
 
 Version control is a system that manages changes to a file or files.
 These changes are kept as logs in a history, with detailed information
@@ -98,8 +97,8 @@ together some below:
 
 # Materials for this lesson: #
 
-* [Slides](slides/index.html)
-* [Cheatsheet](cheatsheet/index.html)
+* [Slides](slides/)
+* [Cheatsheet](cheatsheet/)
 * [Assignment](assignment/)
 
 # Other resources: #

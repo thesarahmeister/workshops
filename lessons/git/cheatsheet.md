@@ -1,12 +1,13 @@
 ---
 title: "Cheatsheet: Git"
 author:
-    - Luke
+    - Luke Johnston
 date: 2015-03-23
 fontsize: 12pt
 geometry: margin=1in
 papersize: letterpaper
-layout: default
+layout: page
+sidebar: false
 tag:
     - Lessons
     - Cheatsheet
@@ -14,10 +15,7 @@ tag:
 categories:
     - Lessons
     - Git
-permalink: lessons/git/cheatsheet/
 ---
-
-# Cheatsheet: Git #
 
 Git is an amazing and very powerful tool that is useful for managing
 your projects and tools, letting you experiment and try out new things
@@ -48,7 +46,7 @@ These commands basically tell Git:
 * What the colour output should be after running Git commands
   (`color.ui`)
 * What your **text** editor is that you use (`core.editor`).  See
-  [our instructions](/lessons/instructions/index.html) for more
+  [our instructions](/lessons/instructions/) for more
   details about editors, but briefly:
   - On Windows, you will likely use
     [Notepad](http://en.wikipedia.org/wiki/Notepad_%28software%29)
@@ -63,7 +61,7 @@ These commands basically tell Git:
     [nano](https://wiki.archlinux.org/index.php/Nano) usually are
     pre-installed
 * How you want the push and pull default behaviour (`push.default`;
-  more on this in the [GitHub lesson](/lessons/github/index.html))
+  more on this in the [GitHub lesson](/lessons/github/))
 
 # Useful (and common) Git commands #
 
