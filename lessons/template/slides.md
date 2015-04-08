@@ -2,7 +2,8 @@
 title: "...title..."
 author: 
 date: YYYY-MM-DD
-layout: default
+layout: page
+sidebar: false
 classoption: xcolor=dvipsnames
 tag:
     - Lessons
@@ -11,7 +12,6 @@ tag:
 categories:
     - Lessons
     - (lesson topic)
-permalink: lessons/topic/slides/
 slide-level: 1
 fontsize: 8pt
 header-includes:
@@ -83,7 +83,7 @@ List, but one-by-one 'animation':
 Inline `code text`
 
 Image:
-![](/path/to/image)
+![](../images/file.png)
 
 Footnote[^1]
 

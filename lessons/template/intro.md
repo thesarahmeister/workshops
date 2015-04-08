@@ -6,7 +6,8 @@ date: YYYY-MM-DD
 fontsize: 12pt
 geometry: margin=1in
 papersize: letterpaper
-layout: default
+layout: page
+sidebar: true
 tag:
     - Lessons
     - Assignment
@@ -16,8 +17,6 @@ categories:
     - (lesson topic)
 permalink: lessons/topic/
 ---
-
-# Introduction: (topic) #
 
 * Introductions
 * State goal for workshop

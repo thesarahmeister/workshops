@@ -6,7 +6,8 @@ date: YYYY-MM-DD
 fontsize: 12pt
 geometry: margin=1in
 papersize: letterpaper
-layout: default
+layout: page
+sidebar: false
 tag:
     - Lessons
     - Assignment
@@ -14,10 +15,7 @@ tag:
 categories:
     - Lessons
     - (lesson topic)
-permalink: lessons/topic/assignment/
 ---
-
-# Assignment: ...title... #
 
 # List of potential exercises here: #
 
