@@ -69,7 +69,7 @@ Go to this website:
 
 # Reproducible research #
 
-![]({{ site.baseurl }}/lesso{{ site.url }}/lessons/images/reproducibleCrisis.png)
+![]({{ site.baseurl }}/lessons/images/reproducibleCrisis.png)
 
 * <http://www.nature.com/nature/focus/reproducibility/>
 
@@ -83,7 +83,7 @@ Go to this website:
 
 # Reproducible research #
 
-![]({{ site.baseurl }}/lesso{{ site.url }}/lessons/images/PLOS.png)
+![]({{ site.baseurl }}/lessons/images/PLOS.png)
 
 by Greg Wilson, founder of Software Carpentry
 ([click here](http://software-carpentry.org/))
@@ -94,7 +94,7 @@ by Greg Wilson, founder of Software Carpentry
 
 . . .
 
-![]({{ site.baseurl }}/lesso{{ site.url }}/lessons/images/filenamingComic.gif)
+![]({{ site.baseurl }}/lessons/images/filenamingComic.gif)
 
 # What is version control[^gitvcs] (VC) #
 
@@ -119,7 +119,7 @@ by Greg Wilson, founder of Software Carpentry
 
 # Visualization of VC[^gitpic] #
 
-![]({{ site.baseurl }}/lesso{{ site.url }}/lessons/images/vcs-Snapshot.png)
+![]({{ site.baseurl }}/lessons/images/vcs-Snapshot.png)
 
 [^gitpic]: Taken from the Git site
     ([click here](http://git-scm.com/book/en/v2/Getting-Started-Git-Basics))
