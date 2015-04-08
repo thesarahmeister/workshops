@@ -6,7 +6,8 @@ date: 2015-03-20
 fontsize: 12pt
 geometry: margin=1in
 papersize: letterpaper
-layout: default
+layout: page
+sidebar: false
 tag:
     - Lessons
     - Assignment
@@ -14,17 +15,14 @@ tag:
 categories:
     - Lessons
     - Git
-permalink: /lessons/git/assignment/
 ---
-
-# Assignment: Git #
 
 In order to learn how to use Git, you really need to just start using
 it and get some practice!  So, here are some things we would like you
 to do:
 
-1. Set global configuration values (see the
-  [cheatsheet](cheatsheet/index.html) for more details):
+1. Set global configuration values (see the [cheatsheet](cheatsheet/)
+  for more details):
   * user.name
   * user.email
   * color.ui
