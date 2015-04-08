@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: page
+sidebar: false
 title: Pre-workshop instructions
 permalink: lessons/instructions/
 ---
-
-# Pre-workshop instructions #
 
 Before coming to any of our workshops, please make sure to do the
 following:

@@ -1,5 +1,6 @@
 ---
 layout: page
+sidebar: true
 title: Lessons
 permalink: lessons/
 ---
@@ -10,7 +11,7 @@ permalink: lessons/
 
 # Instructions #
 
-Please check our [instructions](instructions/index.html) before coming
+Please check our [instructions](instructions/) before coming
 to the workshops.  There will be instructions on what to install and
 how to install it.  We **strongly** encourage you to do this *before*
 coming to the workshops as doing this during the workshops will delay
@@ -30,12 +31,19 @@ first.
 
 Our lesson material:
 
-* [Git introduction](git/index.html)
-    * [Cheatsheet](git/cheatsheet/index.html)
-    * [Assignment](git/assignment/index.html)
-    * [Slides](git/slides/index.html)
+## Our lesson material: ##
 
-* [SAS Macros introduction](macros/index.html)
-    * [Cheatsheet](macros/cheatsheet/index.html)
-    * [Assignment](macros/assignment/index.html)
-    * [Slides](macros/slides/index.html)
+{% for cat in site.category-list %} <!-- search list in config -->
+
+### {{ cat }}: ###
+
+<ul>
+  {% for page in site.pages %} <!-- search all pages -->
+      {% for pc in page.categories %} <!-- search categories -->
+        {% if pc == cat %} <!-- compare category to config list -->
+          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+  {% endfor %}
+</ul>
+{% endfor %}
