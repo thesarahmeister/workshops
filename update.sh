@@ -21,3 +21,4 @@ find . -type f \( -iname '*.tex' -o \
     -iname '*.sas' -o \
     -iname '*.R' \) -delete
 
+find lessons/ -type f -print0 | xargs -0 sed -i 's;../images;{{ site.baseurl }}/lessons/images;'
