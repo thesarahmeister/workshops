@@ -8,7 +8,7 @@ fontsize: 12pt
 geometry: margin=1in
 papersize: letterpaper
 layout: page
-sidebar: true
+sidebar: false
 tag:
     - Lessons
     - Assignment
