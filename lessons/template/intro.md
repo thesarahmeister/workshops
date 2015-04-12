@@ -33,6 +33,4 @@ permalink: lessons/topic/
 * [Cheatsheet](cheatsheet/index.html)
 * [Assignment](assignment/index.html)
 
-# Other resources: #
-
-* [link](http://)
+Other resources can be found [here](../resources/).
