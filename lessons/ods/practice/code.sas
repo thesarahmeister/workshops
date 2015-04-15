@@ -43,3 +43,9 @@ run;
 
 proc print data=meansDS;
 run;
+
+proc export data=meansDS
+    dbms = csv
+    outfile = 'means.csv'
+    replace;
+run;
