@@ -1,17 +1,25 @@
 ---
-title: "Presentation title"
-date: Date in the YYYY-MM-DD
+title: "From code to tables: Reducing the number of steps in your
+    analysis with SAS ODS"
 author: Luke & Daiva
+date: 2015-04-15
+layout: page
+sidebar: false
 classoption: xcolor=dvipsnames
-output:
-    beamer_presentation:
-        slide_level: 1
+tag:
+    - Lessons
+    - Slides
+    - ODS
+categories:
+    - Lessons
+    - ODS
+slide-level: 1
+fontsize: 8pt
 header-includes:
-    - \input{opt/slideOptions.tex}
-    
+    - \input{../slideOptions.tex}
 ---
 
-# Welcome to our Data-related workshop #
+# Welcome to our Code As Manuscript workshop! #
 
 ## Purpose: ##
 
@@ -29,64 +37,66 @@ the chance of overlooked errors, and give you more control over your
 work. They are also all important parts of a science movement gaining
 increasing attention -- Reproducible Research.
 
-# Caveat: We aren't here to teach statistics #
+# Caveat: We aren't here to teach statistics or SAS basics #
 
-Need help with stats? Use these resources!
+Need help with stats or SAS? Use these resources!
 
 * U of T Statistical Consulting Services ([click here](http://www.utstat.toronto.edu/wordpress/?page_id=25))
 
-* <http://www.stackoverflow.com>
-
 * <http://stats.stackexchange.com>
 
-# Overview of other workshops? #
+* <http://www.stackoverflow.com>
+
+* <http://support.sas.com/rnd/base/ods/>
+
+* <http://www.ats.ucla.edu/stat/sas/faq/odsexample.htm>
 
 # Notes and help during this workshop #
 
 Go to this website:
 
-<https://etherpad.mozilla.org/dnsWorkshops>
+<https://etherpad.mozilla.org/camWorkshops>
 
-# What is ODS #
+Ask questions in the chat, write down notes for others.
+
+Go to our Code As Manuscript website for syllabus, slides, cheatsheet,
+and others:
+
+<codeasmanuscript.github.io/workshops/lessons/>
+
+# What is ODS? #
 
 * Output Delivery System
-
-# Why use ODS #
-* SAS outputs **A LOT** of data
-* ODS will extract data/results you are *actually* interested in
+* SAS outputs **A LOT** of results
+* ODS will extract results you are *actually* interested in
 * Cleaner output
-* Easier to put into tables
+* Easier to re-run analyses with new data and quickly put into
+  manuscript (ie: in tables)
+* Helps with making your research *reproducible*
+* Keeps you saner and less stressed!
 
-# Steps to getting ODS work #
-* ods trace on/off
+# Quick aside: What is reproducible research? #
+
+* <http://en.wikipedia.org/wiki/Reproducibility#Reproducible_research>
+* <http://biostatistics.oxfordjournals.org/content/10/3/405.full>
+* <http://lcav.epfl.ch/reproducible_research/>
+
+Basically: For any given research project, have the code that can
+easily 'reproduce' the results that are presented in the manuscript.
+
+ODS can help make this more of a reality.
+
+# Identifying the ODS object to use #
+
+    ods trace on;
+    ...
+    ods trace off;
+
+(Switch to live coding)
  
-# Examples #
-* with and without ANOVA, proc univariate
-* Proc means, make a variable for MeanSD (m (sd))
-* Assumptions (diagnostics)
+# Using the ODS object #
 
-```
-    Code text
-```
+    ods output <object-name> = <dataset-name>;
 
-Inline `code text`
+(Switch to live coding)
 
-Image:
-![](/path/to/image)
-
-Footnote[^1]
-
-[^1]: Footnote text
-
-# Live coding #
-
-# Main Exercise #
-
-* Create a table without ODS
-* Create a table with ODS (w/o data wrangling)
-* Create a table with ODS (w/ data wrangling)
-* Proc univariate
-* ANOVA
-* Linear regression (betas of the exposure/outcome)
-* Outputting to a csv/xls file
-* Incorporate into macro (or use macros from last workshop)
