@@ -33,7 +33,7 @@ Our lesson material:
 
 ## Our lesson material: ##
 
-{% for cat in site.category-list %} 
+{% for cat in site.lesson-list %} 
 
 ### {{ cat }}: ###
 
