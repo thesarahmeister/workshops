@@ -165,4 +165,28 @@ how to customize the results, and how to save them to a file.
     proc print data=meansDS;
     run;
 
+## `proc export ...;` ##
+
+> To make the most of customizing the output of a `proc` into a format
+> that resembles a table, it's probably a good idea to output the
+> results dataset into a file.  You can use the `proc export` command
+> to save the dataset into a file of your choice.  There are in
+> general four parts to the `proc export` command:
+
+* `data=` is the output dataset.
+* `dbms =` is the output format, eg 'XLS' or 'CSV'.  Given the 'csv'
+  format is simply plain text, I would recommend this option.
+* `outfile =` is the name and location of the new output file,
+  eg. 'means.csv'.
+* `replace` tells SAS to overwrite any old file with the same name as
+  the `outfile` name.
+
+> Example code:
+
+    /** Continuing with the dataset from the previous command */
+    proc export data=meansDS
+        dbms = csv
+        outfile = 'means.csv'
+        replace;
+    run;
 
