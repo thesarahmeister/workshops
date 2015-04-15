@@ -7,7 +7,7 @@ sidebar: false
 classoption: xcolor=dvipsnames
 tag:
     - Lessons
-    - Assignment
+    - Slides
     - (lesson topic)
 categories:
     - Lessons
