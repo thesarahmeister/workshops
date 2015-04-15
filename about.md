@@ -1,13 +1,13 @@
 ---
 layout: page
-title: About Code As Manuscript
+title: About
 sidebar: true
 permalink: /
 ---
 
 <p class="message">
 
-  Code As Manuscript is an group that teaches a series of workshops on
+  **Code As Manuscript** is an group that teaches a series of workshops on
   rethinking how code and analyses are structured, and how to
   implement it.  Our mission is to provide training to researchers and
   scientists on how to make their analyses more reproducible and to
