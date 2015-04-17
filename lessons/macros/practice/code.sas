@@ -1,5 +1,5 @@
 /**
-    SAS code here
+    SAS code showing the use of a simple macro
     */
 
 proc contents data=sashelp.fish;
@@ -20,6 +20,5 @@ run;
 %means(&length, where = Weight < 200,
     class = Species, data = sashelp.fish);
 
-%means(&others, class = Species,
-data = sashelp.fish)
+%means(&others, class = Species, data = sashelp.fish);
 

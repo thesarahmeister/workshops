@@ -1,44 +1,3 @@
-libname fats "C:\Users\User\Documents\SAS\FattyAcids";
-
-
-/*importing FA data from NEFA pool only*/
-PROC IMPORT OUT= fats.FApool 
-    DATAFILE= "C:\Users\User\Documents\Miscellaneous\FA Analys
-    is 2013\Complete data set with indices and ratios_SAS.xlsx" 
-    DBMS=EXCEL REPLACE;
-
-    RANGE="SAS$";
-    
-    GETNAMES=YES;
-
-    MIXED=NO;
-
-    SCANTEXT=YES;
-
-    USEDATE=YES;
-
-    SCANTIME=YES;
-
-RUN;
-
-
-
-/*merging baseline data*/
-
-    libname baseline "C:\Documents and Settings\User\My Documents\SAS\paper1_diabetes care";
-
-
-data fats.baselineFA;
-    set baseline.testpaper1mergeddata;
-    merge baseline.testpaper1mergeddata fats.FApool ;
-    by SID;
-run;
-
-data fats.baselineFA;
-    set fats.baselineFA;
-    if SFA140="" then delete;
-run;
- /*n=478*/
 
 proc contents data=fats.FApool position;
 run;
@@ -75,9 +34,6 @@ run;
 
 
 /****************FAMILY HISTORY OF DIABETES************************/
-
-    libname  "C:\Documents and Settings\User\My Documents\SAS";
-
 
 data t012dx;
 
