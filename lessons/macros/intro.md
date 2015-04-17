@@ -10,7 +10,7 @@ layout: page
 sidebar: false
 tag:
     - Lessons
-    - Assignment
+    - Introduction
     - Macros
 categories:
     - Lessons

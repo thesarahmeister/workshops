@@ -10,7 +10,7 @@ layout: page
 sidebar: false
 tag:
     - Lessons
-    - Assignment
+    - Introduction
     - (lesson topic)
 categories:
     - Lessons

@@ -11,7 +11,7 @@ layout: page
 sidebar: false
 tag:
     - Lessons
-    - Assignment
+    - Introduction
     - Git
 categories:
     - Lessons
