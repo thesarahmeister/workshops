@@ -10,7 +10,7 @@ layout: page
 sidebar: false
 tag:
     - Lessons
-    - Assignment
+    - Introduction
     - ODS
 categories:
     - Lessons
@@ -65,7 +65,5 @@ After this workshop, our expectation is that you will be able to:
 * [Cheatsheet](cheatsheet/)
 * [Assignment](assignment/)
 
-# Other resources: #
-
-* [link](http://)
+Other resources can be found [here](../resources/).
 

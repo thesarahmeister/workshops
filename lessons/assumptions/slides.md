@@ -7,7 +7,7 @@ output:
     beamer_presentation:
         slide_level: 1
 header-includes:
-    - \input{opt/slideOptions.tex}
+    - \input{../slideOptions.tex}
     
 ---
 
@@ -108,7 +108,7 @@ Need help with stats? Use these resources!
 
 # Model fit #
 
-![](img/modelFit.jpg)
+![]({{ site.url }}/lessons/images/modelFit.jpg)
 
 # Residual distribution #
 
@@ -136,7 +136,7 @@ Need help with stats? Use these resources!
 
 # Residual distribution #
 
-![](img/residNorm.jpg)
+![]({{ site.url }}/lessons/images/residNorm.jpg)
 
 # Residual variance #
 
@@ -154,7 +154,7 @@ Need help with stats? Use these resources!
 
 # Residual variance #
 
-![](img/residVar.jpg)
+![]({{ site.url }}/lessons/images/residVar.jpg)
 
 # What do you do if your data does not meet these assumptions? #
 

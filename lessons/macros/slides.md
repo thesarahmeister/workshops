@@ -7,7 +7,7 @@ output:
     beamer_presentation:
         slide_level: 1
 header-includes:
-    - \input{opt/slideOptions.tex}
+    - \input{../slideOptions.tex}
     
 ---
 

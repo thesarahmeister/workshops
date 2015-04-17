@@ -1,21 +1,30 @@
 ---
 title: "'Git'-ing better: Collaborating on your research with version control and GitHub"
-date: 2014-12-05
-author: Luke & Daiva
+author: Daiva & Luke
+date: 2015-04-17
+layout: page
+sidebar: false
 classoption: xcolor=dvipsnames
-output:
-    beamer_presentation:
-        slide_level: 1
+tag:
+    - Lessons
+    - Slides
+    - GitHub
+categories:
+    - Lessons
+    - GitHub
+slide-level: 1
+fontsize: 8pt
 header-includes:
-    - \input{opt/slideOptions.tex}
-    
+    - \input{../slideOptions.tex}
 ---
 
 # Welcome back! #
 
 ## Purpose: ##
 
-To review Git in more detail, give you more practice exercises that mimic what you may do in your day-to-day research activities, and show you how GitHub can be used for collaboration.
+To review Git in more detail, give you more practice exercises that
+mimic what you may do in your day-to-day research activities, and show
+you how GitHub can be used for collaboration.
 
 # Caveat: We aren't here to teach statistics #
 
@@ -31,13 +40,13 @@ Need help with stats? Use these resources!
 
 Go to this website:
 
-<https://etherpad.mozilla.org/dnsWorkshops>
+<https://etherpad.mozilla.org/camWorkshops>
 
 # Version control refresher #
 
 . . .
 
-![](img/filenamingComic.gif)
+![]({{ site.url }}/lessons/images/filenamingComic.gif)
 
 # What is version control[^gitvcs] (VC) #
 
@@ -61,7 +70,7 @@ Go to this website:
 
 # Visualization of VC[^gitpic] #
 
-\includegraphics[width=\textwidth]{img/vcs-Snapshot.png}
+\includegraphics[width=\textwidth]{{{ site.url }}/lessons/images/vcs-Snapshot.png}
 
 [^gitpic]: Taken from the Git site
     ([click here](http://git-scm.com/book/en/v2/Getting-Started-Git-Basics))
@@ -115,12 +124,12 @@ Check out the `cheatsheet.html` file.
 # How GitHub works
 
 \centering
-\includegraphics[height=0.60\textheight]{img/GitHubFlow.png}
+\includegraphics[height=0.60\textheight]{{{ site.url }}/lessons/images/GitHubFlow.png}
 
 # How GitHub Forking (collaboration) works
 
 \centering
-\includegraphics[height=0.60\textheight]{img/GitHubForkFlow.png}
+\includegraphics[height=0.60\textheight]{{{ site.url }}/lessons/images/GitHubForkFlow.png}
 
 # Live coding -- Create git repo from scratch and push to GitHub #
 
