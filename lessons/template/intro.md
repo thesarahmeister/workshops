@@ -29,8 +29,8 @@ permalink: lessons/topic/
 
 # Materials for this lesson: #
 
-* [Slides](slides/index.html)
-* [Cheatsheet](cheatsheet/index.html)
-* [Assignment](assignment/index.html)
+* [Slides](slides/)
+* [Cheatsheet](cheatsheet/)
+* [Assignment](assignment/)
 
 Other resources can be found [here](../resources/).

@@ -1,8 +1,8 @@
 ---
-title: "Introduction: (topic)"
+title: "Introduction: GitHub"
 author:
-    - 
-date: YYYY-MM-DD
+    - Luke Johnston
+date: 2015-04-17
 fontsize: 12pt
 geometry: margin=1in
 papersize: letterpaper
@@ -11,11 +11,11 @@ sidebar: false
 tag:
     - Lessons
     - Introduction
-    - (lesson topic)
+    - GitHub
 categories:
     - Lessons
-    - (lesson topic)
-permalink: lessons/topic/
+    - GitHub
+permalink: lessons/github/
 ---
 
 * Introductions
@@ -29,8 +29,8 @@ permalink: lessons/topic/
 
 # Materials for this lesson: #
 
-* [Slides](slides/index.html)
-* [Cheatsheet](cheatsheet/index.html)
-* [Assignment](assignment/index.html)
+* [Slides](slides/)
+* [Cheatsheet](cheatsheet/)
+* [Assignment](assignment/)
 
 Other resources can be found [here](../resources/).
