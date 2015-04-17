@@ -24,6 +24,6 @@ version:          2.1.0
 github:
   repo:           https://github.com/codeasmanuscript
 
-lesson-list: [Git, Github, Macros, ODS]
-category-list: [Lessons, Git, Github, Macros, ODS]
-tag-list: [Lessons, Git, Github, Macros, ODS, Assignment, Slides, Cheatsheet]
+lesson-list: [Git, GitHub, Macros, ODS]
+category-list: [Lessons, Git, GitHub, Macros, ODS]
+tag-list: [Lessons, Git, GitHub, Macros, ODS, Assignment, Slides, Cheatsheet]
