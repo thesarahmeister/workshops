@@ -6,7 +6,8 @@ date: 2015-03-23
 fontsize: 12pt
 geometry: margin=1in
 papersize: letterpaper
-layout: default
+layout: page
+sidebar: false
 tag:
     - Lessons
     - Cheatsheet
