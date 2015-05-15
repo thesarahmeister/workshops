@@ -1,5 +1,5 @@
 ---
-title: "Presentation title"
+title: "Macros in SAS"
 date: Date in the YYYY-MM-DD
 author: Luke & Daiva
 classoption: xcolor=dvipsnames
@@ -49,34 +49,47 @@ Go to this website:
 
 <https://etherpad.mozilla.org/dnsWorkshops>
 
-# Slide title #
-
-Text, some **bolded**, or *italics*
-
-[URL link here](http://link/here.com)
-
-```
-    Code text
-```
-
-Inline `code text`
-
-Image:
-![](/path/to/image)
-
-Footnote[^1]
-
-[^1]: Footnote text
-
 # What is a macro? #
 
-# Steps to making a macro? #
+* Macro = macroinstruction
 
-# Live coding #
+* Set of instructions in an abbreviated format (i.e. condensed code)
+
+* Specifies how an input sequence should be mapped to an output sequence, according to a defined procedure
+
+* Similar to "Find and Replace" feature
+
+# What is a macro variable? #
+* Method of organizing your code to cut down on typing
+* %let macrovar = var1 var2 var3
+* & calls a macrovariable
+* Not a true macro step
+
+		proc print data = SASdataset;
+		var = &macrovar;
+		run;
+
+# 4 steps to making a macro #
+
+1. Know what you want the macro to accomplish
+	* Data organization
+	* Statistical analysis
+	* Output printing
+	* Any/all of the above
+	
+2. Type the code you want to run
+	* Data step
+	* Proc step (proc corr, proc glm, proc contents, proc print)
+	
+3. Add macro commands and variables to Step 2
+	* %macro
+	* %mend (= *macro end*)
+
+4. Save your macros in a separate file
 
 # Not using a macro #
 
-Want to test association between caffeine intake and a number of genetic variants (CYP1A2, ADORA2A, DRD2, 5HT2RA):
+Want to test association between caffeine intake and 4 different genetic variants (CYP1A2, ADORA2A, DRD2, 5HT2RA):
 
 	proc glm data=genes;
 		class CYP1A2 sex smoke;
@@ -103,10 +116,13 @@ Want to test association between caffeine intake and a number of genetic variant
 	run;
 
 # Why is that undesirable? #
+* Risk of making typos and overlooking them
+* File of your code can become very long
+* Not ideal for sharing with others, especially once you leave your lab
 
-# Using a macro-variable #
+# Using a macro variable #
 
-Want to test association between caffeine intake and a number of genetic variants (CYP1A2, ADORA2A, DRD2, 5HT2RA):
+Want to test association between caffeine intake and 4 genetic variants (CYP1A2, ADORA2A, DRD2, 5HT2RA):
 
 	%let gene = CYP1A2 ADORA2A DRD2 5HT2RA;
 	proc glm data=genes;
@@ -132,11 +148,10 @@ Want to test association between caffeine intake and a number of genetic variant
 # Main Exercise #
 
 * Work in pairs
-* Make bad code
-* Push to Github
-* Pull partner's bad code
-* Fix it together by making a macro
-* Push to Github
+* Make a repetitive code without using a macro
+* Improve this code by making a macro (as a separate file)
+* Note differences between the two files
+* Try applying a macro to your own data
 
 # Thanks!#
 
