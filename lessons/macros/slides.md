@@ -1,17 +1,27 @@
 ---
-title: "Macros in SAS"
-date: Date in the YYYY-MM-DD
-author: Luke & Daiva
+title: "Fighting chaos: Tricks to re-use code and become more
+    productive"
+author: Daiva & Luke
+date: 2015-05-26
+layout: page
+sidebar: false
 classoption: xcolor=dvipsnames
-output:
-    beamer_presentation:
-        slide_level: 1
+highlight-style: kate
+tag:
+    - Lessons
+    - Slides
+    - Macros
+categories:
+    - Lessons
+    - Macros
+slide-level: 1
+fontsize: 8pt
 header-includes:
     - \input{../slideOptions.tex}
     
 ---
 
-# Welcome to our Data-related workshop #
+# Welcome to our Data- and Coding-related workshop #
 
 ## Purpose: ##
 
@@ -39,10 +49,6 @@ Need help with stats? Use these resources!
 
 * <http://stats.stackexchange.com>
 
-# Overview of other workshops? #
-* ODS
-* Code review club
-
 # Notes and help during this workshop #
 
 Go to this website:
@@ -51,99 +57,103 @@ Go to this website:
 
 # What is a macro? #
 
-* Macro = macroinstruction
+* SAS has a facility to allow code to be more organized, efficient,
+  and productive for you as the 'coder'
+* Two components:
 
-* Set of instructions in an abbreviated format (i.e. condensed code)
-
-* Specifies how an input sequence should be mapped to an output sequence, according to a defined procedure
-
-* Similar to "Find and Replace" feature
+    - Macro variables
+    - Macros -> A set of commands that can be re-used in different
+      situations to make coding easier.
 
 # What is a macro variable? #
-* Method of organizing your code to cut down on typing
-* %let macrovar = var1 var2 var3
-* & calls a macrovariable
-* Not a true macro step
 
-		proc print data = SASdataset;
-		var = &macrovar;
-		run;
+* Method of organizing your code to cut down on typing, reduce errors,
+  and make you more productive
+* Basically act as 'jars' for other variables
+
+. . .
+
+Example code:
+
+    %let jar = BMI FatIntake Activity;
+    proc print data = SASdataset;
+    var = &jar; * SAS replaces jar with 'BMI FatIntake Activity';
+    run;
 
 # 4 steps to making a macro #
 
 1. Know what you want the macro to accomplish
-	* Data organization
-	* Statistical analysis
-	* Output printing
-	* Any/all of the above
-	
+    * Data organization
+    * Statistical analysis
+    * Output printing
+    * Any/all of the above
 2. Type the code you want to run
-	* Data step
-	* Proc step (proc corr, proc glm, proc contents, proc print)
-	
+    * Data step
+    * Proc step (proc corr, proc glm, proc contents, proc print)
 3. Add macro commands and variables to Step 2
-	* %macro
-	* %mend (= *macro end*)
-
-4. Save your macros in a separate file
+    * `%macro`
+    * `%mend;` (mend = macro end)
+4. Add macro arguments (basically macro variables)
+5. Save your macros in a separate file
 
 # Not using a macro #
 
-Want to test association between caffeine intake and 4 different genetic variants (CYP1A2, ADORA2A, DRD2, 5HT2RA):
+Want to test association between caffeine intake and 3 different
+genetic variants (CYP1A2, ADORA2A, DRD2):
 
-	proc glm data=genes;
-		class CYP1A2 sex smoke;
-		model caff = CYP1A2 BMI sex smoke;
-		lsmeans/ stderr;
-	run;
+    proc glm data=genes;
+        class CYP1A2 sex smoke;
+        model caff = CYP1A2 BMI sex smoke;
+        lsmeans/ stderr;
+    run;
 
-	proc glm data=genes;
-		class ADORA2A sex smoke;
-		model caff = ADORA2A BMI sex smoke;
-		lsmeans/ stderr;
-	run;
+    proc glm data=genes;
+        class ADORA2A sex smoke;
+        model caff = ADORA2A BMI sex smoke;
+        lsmeans/ stderr;
+    run;
 
-	proc glm data=genes;
-		class DRD2 sex smoke;
-		model caff = DRD2 BMI sex smoke;
-		lsmeans/ stderr;
-	run;
-
-	proc glm data=genes;
-		class 5HT2RA sex smoke;
-		model caff = 5HT2RA BMI sex smoke;
-		lsmeans/ stderr;
-	run;
+    proc glm data=genes;
+        class DRD2 sex smoke;
+        model caff = DRD2 BMI sex smoke;
+        lsmeans/ stderr;
+    run;
 
 # Why is that undesirable? #
-* Risk of making typos and overlooking them
-* File of your code can become very long
-* Not ideal for sharing with others, especially once you leave your lab
+
+* High risk of making typos or errors and overlooking them
+* Your SAS file can become very long
+* Not ideal for sharing with others, especially once you leave your
+  lab
 
 # Using a macro variable #
 
-Want to test association between caffeine intake and 4 genetic variants (CYP1A2, ADORA2A, DRD2, 5HT2RA):
+Want to test association between caffeine intake and 3 genetic
+variants (CYP1A2, ADORA2A, DRD2):
 
-	%let gene = CYP1A2 ADORA2A DRD2 5HT2RA;
-	proc glm data=genes;
-		class &gene sex smoke;
-		model caff = &gene BMI sex smoke;
-		lsmeans/ stderr;
-	run;
+    %let gene = CYP1A2 ADORA2A DRD2;
+    proc glm data=genes;
+        class &gene sex smoke;
+        model caff = &gene BMI sex smoke;
+        lsmeans/ stderr;
+    run;
+
+. . .
+
+But there is a problem with the above.
 
 # Using a macro #
 
-	%macro glm (predictors, class);
-    proc glm data=&data ;
+    %macro glm (data, outcome, predictors, class);
+        proc glm data=&data ;
             class &class;
-            model caff &predictors;
+            model &outcome = &predictors;
             lsmeans/ stderr;
             run;
-	%mend glm;
+    %mend glm;
 
-	%glm(data= ,
-    class = ,
-	predictors = CYP1A2 ADORA2A DRD2 5HT2RA);
+    %glm(data = genes, outcome = caff,
+        predictors = CYP1A2 ADORA2A DRD2);
 
 # Main Exercise #
 
@@ -153,6 +163,6 @@ Want to test association between caffeine intake and 4 genetic variants (CYP1A2,
 * Note differences between the two files
 * Try applying a macro to your own data
 
-# Thanks!#
+# Thanks! #
 
 * Next time: Combining macros with ODS = power!
