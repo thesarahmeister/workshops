@@ -1,7 +1,7 @@
 /********************Macro practice with SAS practice Class database************/
 
 
-proc contents data=sashelp.class;
+proc contents data=sashelp.class short;
 run;
 
 /*Example of a simple macro variable*/
@@ -34,28 +34,28 @@ run;
 
 /*Example of a slightly more complex macro*/
 
-%macro glm(vars, class=, data=);
+%macro glm(y, x, class=, data=);
     proc glm data=&data;
         class &class;
-		model &vars = weight;
+	model &y = &x &class;
     run;
     %mend glm;
 
-%let vars = height age;
+%let y = height age;
 
-%glm(&vars, class = sex, data = sashelp.class);
+%glm(&y, weight, class = sex, data = sashelp.class);
 
 
 /*What this code would look like without a macro*/
 
 proc glm data=sashelp.class;
     class sex;
-	model height = weight;
+	model height = weight sex;
 run;
 
 proc glm data=sashelp.class;
     class sex;
-	model age = weight;
+	model age = weight sex;
 run;
 
 	 
@@ -92,7 +92,7 @@ run;
 
 /*Proc contents*/
 %macro contents(db);
-	proc contents data =&db;
+	proc contents data =&db short;
 	run;
 %mend contents;
 
@@ -103,7 +103,7 @@ run;
 
 /*Proc print*/
 %macro print(db);
-	proc print data =&db;
+	proc print data =&db (obs=10);
 	run;
 %mend print;
 
@@ -115,7 +115,7 @@ run;
 
 
 /*************Macro practice with fish database******************/
-proc contents data=sashelp.fish;
+proc contents data=sashelp.fish short;
 run;
 
 
@@ -125,7 +125,7 @@ run;
         where &where;
         class &class;
     run;
-	%mend means;
+    %mend means;
 
 %let length = Length1 Length2 Length3;
 %let others = Weight Height Width;
@@ -139,68 +139,46 @@ run;
 /***Checking model fit, for males*/
 /*Regular Code*/
 proc sgplot data=sashelp.class;
-	scatter x=height y=weight;
-	where sex = "M";
+    scatter x=height y=weight;
+    where sex = "M";
 run;
 
 /*Macro*/
-%macro sgplot(vars, where=, class=, data=);
+%macro sgplot(x, y, where=, data=);
     proc sgplot data=&data;
-       scatter x=&var1 y=&var2;
-	   where &where;
+        scatter x=&x y=&y;
+        where &where;
     run;
     %mend sgplot;
 
-%let var1 = height;
-%let var2 = weight;
-
-%sgplot(&vars, where = sex = "M" , data = sashelp.class);
-%sgplot(&vars, where = sex = "F" , data = sashelp.class);
+%sgplot(height, weight, where = sex = "M" , data = sashelp.class);
+%sgplot(height, weight, where = sex = "F" , data = sashelp.class);
 
 
 
-/***Checking Residual Distribution -- 2 step process:
-Regular code:
-Step 1: Run a linear regression and output residual and predicted terms in a new dataset*/
+/***Linear regression
+    Regular code:
+Run a linear regression and output residual and predicted terms in a new dataset*/
 proc reg data=sashelp.class;
-	model height=weight age;
-	where sex = "m";
-	output out=resid residual=r predicted=fit;
+    model height=weight age;
+    where sex = "M";
 run;
 quit;
 
-/*Step 2: Plot the output of the new dataset*/
-goptions reset=all;
-proc univariate data=resid normal;
-	var r;
-	qqplot r / normal(mu=est sigma=est);
-run;
 
-
-/****Checking Residual Distribution -- 2 step process:
-Macro code:
-Step 1: Run a linear regression and output residual and predicted terms in a new dataset*/
-%macro reg(vars, where=, class=, data=);
+/****Linear regression
+    Macro code:
+Run a linear regression and output residual and predicted terms in a new dataset*/
+%macro reg(y, x, where=, data=);
     proc reg data=&data;
-       model &var1 = &var2 &var3;
-	   where &where;
-    output out=resid residual=r predicted=fit;
-	run;
-	quit;
+        model &y = &x;
+        where &where;
+    run;
+    quit;
+    %mend reg;
 
-/*Step 2: Plot the output of the new dataset*/
-goptions reset=all;
-proc univariate data=resid normal;
-	var r;
-	qqplot r / normal(mu=est sigma=est);
-	run;
-	%mend reg;
 
-%let var1 = height;
-%let var2 = weight;
-%let var3 = age;
-
-%reg(&vars, where = sex = "M" , data = sashelp.class);
+%reg(height, weight age, where = sex = "M" , data = sashelp.class);
 
 
 
