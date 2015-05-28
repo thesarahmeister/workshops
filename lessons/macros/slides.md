@@ -77,7 +77,7 @@ Example code:
 
     %let jar = BMI FatIntake Activity;
     proc print data = SASdataset;
-    var = &jar; * SAS replaces jar with 'BMI FatIntake Activity';
+    var &jar; * SAS replaces jar with 'BMI FatIntake Activity';
     run;
 
 # 4 steps to making a macro #
@@ -144,16 +144,21 @@ But there is a problem with the above.
 
 # Using a macro #
 
-    %macro glm (data, outcome, predictors, class);
+    %macro glm (data, outcome, predictors, class=);
         proc glm data=&data ;
             class &class;
-            model &outcome = &predictors;
+            model &outcome = &predictors &class;
             lsmeans/ stderr;
             run;
     %mend glm;
-
+    
     %glm(data = genes, outcome = caff,
-        predictors = CYP1A2 ADORA2A DRD2);
+        predictors = CYP1A2);
+    
+    /* Or... (for running each gene) */
+    %glm(genes, caff, CYP1A2);
+    %glm(genes, caff, ADORA2A);
+    %glm(genes, caff, DRD2);
 
 # Main Exercise #
 
