@@ -1,5 +1,6 @@
 ## File that tells git what to ignore
 
+ignore*
 ~*
 _site/
 tex2pdf*/
