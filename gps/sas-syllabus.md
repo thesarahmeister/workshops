@@ -54,7 +54,7 @@ transparent, which you can take with you for the rest of your career.
 
 ## Schedule ##
 
-Lesson content can be found [here](/lessons/).  The workshop will
+Lesson content can be found [here]({{ site.baseurl }}/lessons/).  The workshop will
 follow the following sequence of topics:
 
 1. Git
@@ -71,7 +71,7 @@ of data analysis using SAS.
 
 * Bring a fully charged laptop
 * Install the appropriate software (see our
-  [instructions page](/lessons/instructions/))
+  [instructions page]({{ site.baseurl }}/lessons/instructions/))
 * Fairly competent in coding SAS commands.  *We are not here to teach
   an introduction to SAS*, we assume you are fairly competent with
   using SAS.  If you are a novice, recognize that you may not
