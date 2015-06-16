@@ -53,3 +53,18 @@ categories:
 
 * [SAS ODS Output Support](http://support.sas.com/documentation/cdl/en/odsug/65308/HTML/default/viewer.htm#p0oxrbinw6fjuwn1x23qam6dntyd.htm)
 * 
+
+# Reproducible research #
+
+* <http://www.nature.com/nature/focus/reproducibility/>
+* <http://ropensci.org/blog/2014/06/09/reproducibility/>
+* <http://biostatistics.oxfordjournals.org/content/10/3/405.full>
+* <http://www.sciencemag.org/content/314/5807/1856.full>
+* <http://stats.stackexchange.com/questions/14999/how-are-we-defining-reproducible-research>
+* <http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003285>
+
+# Other resources #
+
+* <http://www.stackoverflow.com>
+* <http://stats.stackexchange.com>
+* <http://software-carpentry.org/>
