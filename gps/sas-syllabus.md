@@ -3,7 +3,7 @@ title: "Code as Manuscript: Practices for Reproducibility and Efficiency in SAS"
 author:
     - Luke Johnston
     - Daiva Nielsen
-date: 2015-04-12
+date: 2015-06-15
 geometry: margin=1in
 fontsize: 12pt
 papersize: letterpaper
@@ -57,10 +57,10 @@ transparent, which you can take with you for the rest of your career.
 Lesson content can be found [here]({{ site.baseurl }}/lessons/).  The workshop will
 follow the following sequence of topics:
 
-1. Git
-2. GitHub (or BitBucket)
-3. Macros
-4. ODS
+1. Git: June 16th, 3:00-5:00pm
+2. GitHub: June 23rd, 3:00-5:00pm
+3. Macros: June 30th, 3:00-5:00pm
+4. ODS: July 7th, 3:00-5:00pm
 
 ## Intended audience: ##
 
@@ -79,6 +79,26 @@ of data analysis using SAS.
   likely learn a lot!!
 * Some familiarity with the command-line or with computing is
   desirable, but not necessary.
+
+## Assignment: ##
+
+Because of the hands-on nature of the workshops, in order to obtain a
+GPS credit for the workshops you need to:
+
+1. Come to all the workshops
+2. Complete each workshop assignment
+
+To hand in the assignment, you will need to:
+
+1. Fork our shared workshop repository
+2. Clone it to your computer
+3. Create a new folder with your name
+4. Put the assignments for each workshop in your new folder
+5. Commit and push the assignments to your fork
+6. Submit a pull request to the main shared repository
+
+Don't worry if this doesn't make sense yet.  We will go over all these
+details over the workshop series.
 
 # Instructors #
 
