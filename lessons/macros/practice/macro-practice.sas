@@ -1,7 +1,16 @@
 /********************Macro practice with SAS practice Class database************/
 
 
+proc contents data=sashelp.class;
+run;
+
 proc contents data=sashelp.class short;
+run;
+
+proc contents data=sashelp.fish short;
+run;
+
+proc print data=sashelp.class;
 run;
 
 /*Example of a simple macro variable*/
@@ -11,7 +20,6 @@ proc glm data=sashelp.class;
 	model weight = &var;
 run;
 
-%let var = height age; 
 proc glm data=sashelp.class;
 	class sex;
 	model &var = weight sex;
@@ -34,7 +42,7 @@ run;
 
 /*Example of a slightly more complex macro*/
 
-%macro glm(y, x, class=, data=);
+%macro glm(y, x, class=, data= );
     proc glm data=&data;
         class &class;
 	model &y = &x &class;
@@ -44,6 +52,19 @@ run;
 %let y = height age;
 
 %glm(&y, weight, class = sex, data = sashelp.class);
+%glm(height, weight, data = sashelp.fish);
+
+
+%macro lesley(y, x, data= );
+    proc reg data=&data;
+	model &y = &x;
+    run;
+    %mend lesley;
+
+%let y = height age;
+
+%lesley(&y, weight, data = sashelp.class);
+%lesley(height, length1, data = sashelp.fish);
 
 
 /*What this code would look like without a macro*/
@@ -72,10 +93,11 @@ run;
 
  
 /*Transforming variables*/
-
-%macro transform(x);
-	&x._log= log(&x);
-	&x._sqrt= sqrt(&x);
+/*Must have '.' in between x and rest of your variable name so the macro knows what the end
+of the argument is*/
+%macro transform(x); 
+	&x.log= log(&x);
+	&x.sqrt= sqrt(&x);
 	&x._inv= 1/(&x);
 %mend transform;
 
@@ -118,22 +140,25 @@ run;
 proc contents data=sashelp.fish short;
 run;
 
+proc print data=sashelp.class;
+run;
+
 
 %macro means(vars, where=, class=, data=);
     proc means data=&data;
-        var &vars;
-        where &where;
+		where &where;
+		var &vars;
         class &class;
     run;
     %mend means;
 
-%let length = Length1 Length2 Length3;
-%let others = Weight Height Width;
+%let daiva = Length1 Length2 Length3;
+%let luke = Weight Height age;
 
-%means(&length, where = Weight < 200,
+%means(&daiva, where = Weight < 200,
     class = Species, data = sashelp.fish);
 
-%means(&others, class = Species, data = sashelp.fish);
+%means(&luke, data = sashelp.class, where = age = 14 and sex = "M");
 
 
 /***Checking model fit, for males*/
