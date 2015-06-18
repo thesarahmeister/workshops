@@ -6,3 +6,6 @@
   etc.)
 
 * Keep in mind accessibility issues
+
+* Include feedback within the assignment itself (though how to
+  anonymize it... should we? hmm)
