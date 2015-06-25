@@ -22,8 +22,16 @@ Thoughts on the (title) workshop --- Data
 
 **Daiva**:
 
-Comments here
+- Overall I think this went alright. I wasn't as smooth as I had hoped to be. I wasn't feeling 100% well because of my sore throat and headache, so things may have been better if I was in top notch health lol. But I agree that teaching Git and GitHub together illustrates the importance of version control more clearly, and its applications.  +1 for combining both topics into the first 2 workshops for the future.
+
+- I think we can cut back on the slides, particularly the ones with written points. The most valuable slides (in my opinion) were the ones with the visual images, particularly showing GitHub repos, forking, push/pull and PR. I think I got a bit caught up on bullet points and felt that I had to spend some time explaining them, when really I didn't. These workshops are very hands-on and I feel like the material seems to evolve as we go to some extent, so I don't think we need slides with 
+bullet points. Although they may be helpful for students?
+
+- One thing I noticed was that it is really hard to gauge how students are doing when I'm mainly standing in one spot. Last week when I was doing more of a "helper" role it was easy for me to spot troubles quickly and step in and help people, but this wasn't the case yesterday. There were a few times where I stopped to go help a student, but I'm not sure if this was good or not for the rest of the class. I suppose if it slowed things down it probably was ok.
+
+- Good point about the GitHub website. I'll go more slowly on this in the future and repeat steps multiple times so students don't miss things.
+
 
 **General**:
 
-Comments here
+- Maybe we can provide students with the full slide deck and modify them for our teaching purposes. If we are going to combine Git and GitHub next time to discuss both in the first 2 workshops then we will have to edit the slide decks. We should come up with a student version and instructor version at that time.
