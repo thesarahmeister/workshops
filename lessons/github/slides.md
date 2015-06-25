@@ -1,7 +1,7 @@
 ---
 title: "'Git'-ing better: Collaborating on your research with version control and GitHub"
 author: Daiva & Luke
-date: 2015-04-17
+date: 
 layout: page
 sidebar: false
 classoption: xcolor=dvipsnames
@@ -26,16 +26,6 @@ To review Git in more detail, give you more practice exercises that
 mimic what you may do in your day-to-day research activities, and show
 you how GitHub can be used for collaboration.
 
-# Caveat: We aren't here to teach statistics #
-
-Need help with stats? Use these resources!
-
-* U of T Statistical Consulting Services ([click here](http://www.utstat.toronto.edu/wordpress/?page_id=25))
-
-* <http://www.stackoverflow.com>
-
-* <http://stats.stackexchange.com>
-
 # Notes and help during this workshop #
 
 Go to this website:
@@ -51,7 +41,6 @@ Go to this website:
 # What is version control[^gitvcs] (VC) #
 
 * Keeps a history of everything done in a folder
-* Like a big track changes or logbook (basic science)
 * Can revert to previous change, try new things out
 * Don't have to worry about losing what you wrote!
 
@@ -60,7 +49,6 @@ Go to this website:
 ## Importance of VC! ##
 
 * Future of journals and retractions
-* Requests for data and code
 * Transparency, scientific rigor
 * Protect against accusations of fraud
 
@@ -70,7 +58,7 @@ Go to this website:
 
 # Visualization of VC[^gitpic] #
 
-\includegraphics[width=\textwidth]{{{ site.url }}/lessons/images/vcs-Snapshot.png}
+![]({{ site.url }}/lessons/images/vcs-Snapshot.png)
 
 [^gitpic]: Taken from the Git site
     ([click here](http://git-scm.com/book/en/v2/Getting-Started-Git-Basics))
@@ -81,19 +69,7 @@ Go to this website:
 Before we start...The command line is **not** something to be afraid
 of!!  Open up the terminal (Mac/Linux) or Git Bash (Windows).
 
-. . .
-
-Open up your terminal (Mac or Linux) or Git-Bash (Windows).
-
-```
-    git config --global user.name "Your Name"
-    git config --global user.email "you@some.domain"
-    git config --global color.ui "auto"
-    git config --global core.editor "your_editor"
-    git config --list
-```
-
-# Download our GitHub repository #
+# GitHub #
 
 GitHub[^gitserver] is a place to store your git repo for several
 reasons:
@@ -104,41 +80,26 @@ reasons:
 
 . . .
 
-In your terminal/Git-Bash, run:
-
-```
-cd ~
-git clone \
-    https://github.com/codeasmanuscript/gitWorkshop.git
-cd gitWorkshop/part2
-```
-
-. . .
-
-Check out the `cheatsheet.html` file.
+Check out the [cheatsheet](../cheatsheet).
 
 [^gitserver]: Or <http://BitBucket.org>
 
 # Create a GitHub account #
 
-# How GitHub works
+# How GitHub works #
 
-\centering
-\includegraphics[height=0.60\textheight]{{{ site.url }}/lessons/images/GitHubFlow.png}
+![]({{ site.url }}/lessons/images/GitHubFlow.png)
 
 # How GitHub Forking (collaboration) works
 
-\centering
-\includegraphics[height=0.60\textheight]{{{ site.url }}/lessons/images/GitHubForkFlow.png}
+![]({{ site.url }}/lessons/images/GitHubForkFlow.png)
 
 # Live coding -- Create git repo from scratch and push to GitHub #
 
 Tip: Most of the time you don't really need to remember the code, just
-google search it!  Or use our cheatsheet!! :D
+google search it!  Or use our [cheatsheet](../cheatsheet)!! :D
 
-\vfill
-
-# Main Exercise -- Collaborate on a project #
+# Optional exercise -- Collaborate on a project #
 
 . . .
 
