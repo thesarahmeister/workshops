@@ -39,16 +39,6 @@ the chance of overlooked errors, and give you more control over your
 work. They are also all important parts of a science movement gaining
 increasing attention -- Reproducible Research.
 
-# Caveat: We aren't here to teach statistics #
-
-Need help with stats? Use these resources!
-
-* U of T Statistical Consulting Services ([click here](http://www.utstat.toronto.edu/wordpress/?page_id=25))
-
-* <http://www.stackoverflow.com>
-
-* <http://stats.stackexchange.com>
-
 # Notes and help during this workshop #
 
 Go to this website:

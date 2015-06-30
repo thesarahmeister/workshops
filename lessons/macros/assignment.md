@@ -32,8 +32,8 @@ Depending on your circumstances, there are two possibilities for practice:
 
 Pair up with a peer and:
 
-    * Each of you create your own file of a repetitive statistical code without using macros. Use the SAS practice datasets if you need to and track these files using Git.
-    * Push both of your files to your personal Github repo.
-    * Pull your partner's code file.
-    * Apply macros to your partner's code to improve it.
-    * Push to your personal Github repo and create a PR to merge to your partner's repo.
+* Each of you create your own file of a repetitive statistical code without using macros. Use the SAS practice datasets if you need to and track these files using Git.
+* Push both of your files to your personal Github repo.
+* Pull your partner's code file.
+* Apply macros to your partner's code to improve it.
+* Push to your personal Github repo and create a PR to merge to your partner's repo.
