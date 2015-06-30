@@ -2,7 +2,7 @@
 title: "Fighting chaos: Tricks to re-use code and become more
     productive"
 author: Daiva & Luke
-date: 2015-05-26
+date: 2015-06-29
 layout: page
 sidebar: false
 classoption: xcolor=dvipsnames
@@ -53,7 +53,7 @@ Need help with stats? Use these resources!
 
 Go to this website:
 
-<https://etherpad.mozilla.org/dnsWorkshops>
+<https://etherpad.mozilla.org/codeasmanuscript>
 
 # What is a macro? #
 
@@ -160,13 +160,12 @@ But there is a problem with the above.
     %glm(genes, caff, ADORA2A);
     %glm(genes, caff, DRD2);
 
-# Main Exercise #
+# Assignment #
 
-* Work in pairs
-* Make a repetitive code without using a macro
-* Improve this code by making a macro (as a separate file)
-* Note differences between the two files
-* Try applying a macro to your own data
+* Make a repetitive code without using a macro. Track this file using Git.
+* Improve this code by making a macro. You can include both codes in the same .sas file. If you want you can even delete the long-style of code and do a "git diff" to see the changes to the file.
+* Give us some "Thoughts" about this workshop as a separate text file. Feel free to include points on how you think you can apply macros in your research.
+* Push both your SAS file and Thoughts file to the appropriate location in the Sandbox repo on GitHub. 
 
 # Thanks! #
 

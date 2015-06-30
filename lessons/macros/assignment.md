@@ -18,17 +18,22 @@ categories:
     - Macros
 ---
 
-> Work in progress
+Depending on your circumstances, there are two possibilities for practice:
 
-Because practicing Depending on your circumstances, there are two possibilities:
+## Working solo ##
 
-## You have your own data ##
+* Make a repetitive code without using a macro. You can work with one of the SAS practice datasets if you don't have your own data. Track this file using Git.
+* Improve this code by making a macro. You can include both codes in the same .sas file. If you want you can even delete the long-style of code and do a "git diff" to see the changes to the file.
+* Give us some "Thoughts" about this workshop as a separate text file. Feel free to include points on how you think you can apply macros in your research.
+* Push both your SAS file and Thoughts file to the appropriate location in the Sandbox repo on GitHub. 
 
-If you fall in this category, 
 
-* Exercises:
-    * Make bad code (together)
-    * Push to github
-    * Pull partners bad code
-    * Fix it by making macro (together)
-    * Push to github
+## Working in pairs ##
+
+Pair up with a peer and:
+
+    * Each of you create your own file of a repetitive statistical code without using macros. Use the SAS practice datasets if you need to and track these files using Git.
+    * Push both of your files to your personal Github repo.
+    * Pull your partner's code file.
+    * Apply macros to your partner's code to improve it.
+    * Push to your personal Github repo and create a PR to merge to your partner's repo.
