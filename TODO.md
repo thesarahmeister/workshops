@@ -9,3 +9,6 @@
 
 * Include feedback within the assignment itself (though how to
   anonymize it... should we? hmm)
+
+* Use the git issues for questions and answers, rather than on the
+  MoPad.
