@@ -51,8 +51,12 @@ rather than just a chance to teach.
 
 **Daiva**:
 
-Comments here
+I think this workshop went well. The pace felt quite slow for me, but I actually think that was good for the learners. They seemed to be able to follow along with the coding and did not seem to think things went slowly.
+
+I think the overview of GitHub at the beginning was useful. There seemed to be a few roadblocks that learners faced when trying to do the GitHub assignment and we were able to clarify them. Even though this took some time, I think it was valuable. But, since we plan to teach Git + GitHub together in the future we will probably modify the lesson based on our experience with this run of the workshop. If we devote 2 weeks to Git + GitHub and learners are comfortable with that material then we can stay focused on macros in the macros lesson. 
+
+I think creating a few different types of macro examples would be valuable for the next round. I basically just stuck with proc means and proc glm, but I will try to create examples for other tests as well (maybe proc logistic, proc freq, proc ttest).
 
 **General**:
 
-Comments here
+I agree with your comments about the sticky notes and learning objectives. Let's definitely incorporate those  ideas into the next round.
