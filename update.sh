@@ -12,13 +12,13 @@ git checkout master -- lessons/ gps/
 
 # Remove extraneous files from the git staging area
 git rm -r --cached lessons/template/ lessons/*.sh \
-    lessons/*.tex **/*.sas **/*.R gps/*.txt gps/*.pdf
+    lessons/*.tex **/*.sas **/*.R gps/*.txt
 
 # Delete the files from the directory
-rm -rf lessons/template/ lessons/*.sh lessons/*.tex gps/*.txt gps/*.pdf
+rm -rf lessons/template/ lessons/*.sh lessons/*.tex gps/*.txt
 
 find . -type f \( -iname '*.tex' -o \
     -iname '*.sas' -o \
     -iname '*.R' \) -delete
 
-find lessons/ -type f -print0 | xargs -0 sed -i 's;\.\./images;{{ site.url }}/lessons/images;'
+find lessons/ -type f -print0 | xargs -0 sed -i 's;\.\./images;{{ site.github.url }}/lessons/images;'
