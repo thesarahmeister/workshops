@@ -21,3 +21,6 @@ To contribute, fork the repository and submit a pull request!
 
 For images, put them in the `/lessons/images` folder and reference
 them within the lesson using `../images/`.
+
+For developing lesson plans, using the pull request feature.  For
+maintaining the site and the repository, use direct pushing.
