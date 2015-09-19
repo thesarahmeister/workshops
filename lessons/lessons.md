@@ -41,7 +41,7 @@ Our lesson material:
   {% for page in site.pages %} <!-- search all pages -->
       {% for pc in page.categories %} <!-- search categories -->
         {% if pc == cat %} <!-- compare category to config list -->
-          <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+          <li><a href="{{ site.github.url }}{{ page.url }}">{{ page.title }}</a></li>
         {% endif %}
       {% endfor %}
   {% endfor %}
