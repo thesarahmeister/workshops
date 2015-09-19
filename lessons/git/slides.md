@@ -49,7 +49,7 @@ Go to this website:
 
 . . .
 
-![](../images/filenamingComic.gif)
+![]({{ site.github.url }}/lessons/images/filenamingComic.gif)
 
 # What is version control[^gitvcs] (VC) #
 
@@ -74,7 +74,7 @@ Go to this website:
 
 # Visualization of VC[^gitpic] #
 
-![](../images/vcs-Snapshot.png)
+![]({{ site.github.url }}/lessons/images/vcs-Snapshot.png)
 
 [^gitpic]: Taken from the Git site
     ([click here](http://git-scm.com/book/en/v2/Getting-Started-Git-Basics))
