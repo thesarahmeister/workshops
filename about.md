@@ -52,7 +52,7 @@ Johnston (<lwjohnst@gmail.com>) for more information.
   {% for page in site.pages %}
       {% for pc in page.categories %}
         {% if pc == cat %}
-          <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+          <li><a href="{{ site.github.url }}{{ page.url }}">{{ page.title }}</a></li>
         {% endif %}   <!-- cat-match-p -->
       {% endfor %}  <!-- page-category -->
   {% endfor %}  <!-- page -->

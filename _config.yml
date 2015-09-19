@@ -10,13 +10,10 @@ relative_permalinks: false
 title:               Code As Manuscript
 tagline:             'Change the way you see your code.'
 description:         'Writing your code and analyses as if <i>it</i> was the manuscript.'
-url:                 http://codeasmanuscript.github.io/workshops
-baseurl: ""
+url:                 http://codeasmanuscript.org
 
 author:
-  name:           'Daiva & Luke'
-
-paginate:         5
+  name:           'Code As Manuscript'
 
 # Custom vars
 version:          2.1.0
