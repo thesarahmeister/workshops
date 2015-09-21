@@ -1,8 +1,8 @@
 ---
 title: "Introduction: R"
-author:
+author: Sarah Meister
     - 
-date: YYYY-MM-DD
+date: 2015-09-16
 fontsize: 12pt
 geometry: margin=1in
 papersize: letterpaper

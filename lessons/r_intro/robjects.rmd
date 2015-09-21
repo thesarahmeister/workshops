@@ -1,0 +1,35 @@
+---
+title: "R Objects"
+author: "Sarah Meister"
+date: 2015-09-16
+fontsize: 12pt
+geometry: margin=1in
+papersize: letterpaper
+layout: page
+sidebar: false
+output: html_document
+---
+
+R has a 5 basic classes of objects:
+
+* Character
+* Numeric
+* Integer
+* Complex
+* Logical
+
+# Vectors #
+
+The most basic object is a vector. A vector is a sequence of objects of the same class
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
