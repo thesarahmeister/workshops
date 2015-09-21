@@ -35,7 +35,7 @@ using Git.
     git config --global user.email "you@some.domain"
     git config --global color.ui "auto"
     git config --global core.editor "your_editor"
-    git config --global push.default current
+    git config --global push.default simple
     git config --list
 
 These commands basically tell Git:
