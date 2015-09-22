@@ -97,7 +97,15 @@ rbind (x, y)
 Factors are used to represent catagorical data. They can be ordered or unordered.
 
 * They are like an integer vector where each integer has a label. 
-Factors are treated specially by modelling functions like lm() and glm()
+* Factors are more descriptive than integers e.g. "Male" and "Female" vs. 1 and 2
+* Factors are treated specially by modelling functions like lm() and glm()
+
+```{r}
+x <- factor(c("yes", "yes", "no", "no", "yes"))
+x
+table (x)
+unclass(x)
+```
 
 # Attributes #
 
