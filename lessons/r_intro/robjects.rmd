@@ -9,6 +9,10 @@ layout: page
 sidebar: false
 output: html_document
 ---
+R is an object-oriented programing language, meaning everything we incounter in R is an object. 
+
+R has several types of objects:
+
 
 R has a 5 basic classes of objects:
 
@@ -18,18 +22,62 @@ R has a 5 basic classes of objects:
 * Complex
 * Logical
 
+R has several different types of objects:
+
+* Vectors
+* Lists
+*
+
 # Vectors #
 
-The most basic object is a vector. A vector is a sequence of objects of the same class
+The most basic object is a vector. A vector is a sequence of objects of the same class. We can make vectors using the c() function
 
 ```{r}
-summary(cars)
+a <- c(0.4, 1.2)         # numeric
+b <- c(TRUE, FALSE)      # logical
+c <- c("a","b","c")      # character
+d <- c(1L, 2L)           # integer
+e <- 1:10                # integer
+f <- c(1+0i, 2+4i)       # complex
 ```
 
-You can also embed plots, for example:
+Empty vectors can be made using the vector() function
 
-```{r, echo=FALSE}
-plot(cars)
+```{r}
+x <- vector("numeric", length=10)
+x
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+# Lists #
+
+A list is a special type of vector that can contain objects of different classes. For instance, we can have a list with a numeric dataframe as one object within the list, and a string vector as another. 
+
+```{r}
+x <- list(1,"a", TRUE, 1+4i)
+x
+```
+
+The elements of a list are seperated by double brackets. 
+ 
+# Matrices #
+Matrices are vectors with a dimension attribute. The dim attribute is an integer vector of length = 2 (nrow, ncol)
+
+```{r}
+x <- matrix(1:6, nrow=2, ncol=3)
+
+dim(x)
+
+attributes(x)
+```
+ 
+# Attributes #
+
+R objects can have attributes, such as:
+
+* names
+* classes
+* lengths
+* dimensions (matrices/dataframes)
+* user defined attributes, such as metadata
+
+Attributes can be modified with the attributes() function
