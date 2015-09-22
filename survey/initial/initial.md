@@ -1,37 +1,44 @@
-# Initial survey: Questions to ask on times, software, etc. #
+# Initial survey: Questions for registration #
 
-Where we can develop the questions for doing the initial survey that would get information on what times are good for people, what software is mostly used, and what they may best benefit from.
+Where we can develop the questions for doing the initial survey that
+would get a summary on the level of experience of the students.  The
+form is completed in the 'codeasmanuscript@gmail.com' Google Forms
+file.
 
 ## Potential Questions ##
 
-0. a) What is your name? b) What program are you in? c) What year are you into your program?
+What is your name?
 
-1. Which topics would you be interested in learning about? Select as many as you wish.
-    * Exploring your data visually using graphs (in R or SAS)
-    * Common statistical techniques
-    * Best practices in doing analyses in SAS or R
-    * Tips and tricks to be more efficient and productive in writing up your SAS or R analysis
-    * Managing, cleaning, and massaging your data into a suitable format for analysis
-    * Best practices in version control (e.g. sending your draft paper around for edits)
-    * Techniques to automate and make easier for putting your results into your manuscript
-    * Better understanding how coding and programming work
+What program are you in? (MSc, PhD?)
 
-2. Which statistical software do you use (e.g. SAS, R, SPSS, etc.)?
+What year of your program are you in? (Eg. 1, 2, 3, etc.)
 
-3. Do you own a laptop with this software installed?
-    * Yes/No
+What is your discipline/department? (Physics, biology, etc.)
 
-4. a) What statistics do you normally/often use in your analyses?
+Which statistical analysis program have you used or that your lab uses?
 
-4. b) Would you be interested in learning more about how they work and checking their assumptions (e.g. ANOVA assumes normal distributions of its variables)?
-   
-5. Please describe two predominant aspects of your research you struggle the most with and/or is most time consuming (eg. Managing and cleaning your data, getting your data into a format that can be analyzed, choosing the right test and learning how to apply it, getting results into the right format to put into tables and manuscripts, etc.).
+Describe the stage you are in for your data analysis in your research.
 
-6. Please describe other, secondary aspects of your research that you find difficult, challenging, and/or time consuming.
+Describe your statistical or analytic techniques you use in your
+research (if any).
 
-7. If a series of workshops were set up on all things data related, what times would be best for running them? Select as many options that apply.
-    * (should we do a link to doodle or something?)
-    * Thursday after seminar?
-    * Tuesday afternoon?
-    * a weekend morning?
-    * other time?
+How familiar are you with statistics? (For example, how well do you
+know how to use and interpret linear or logistic regression?)
+
+How familiar are you with R?  (For example, are you able to write a
+script that loads data, wrangle it, and run simple statistics on the
+data.)
+
+How familiar are you with version control (Git)?  (For example, are
+you able to push and pull to GitHub, commit changes to your files, and
+view the history of your repository?)
+
+Which, if any, programming language could you easily write a
+program/script that: filters a dataset and creates new variables;
+calculates simple statistics; and, produces a graph?
+
+Describe up to three aspects of your research that you struggle with
+frequently (if any)
+
+What operating system do you use on your laptop? (Multiple choice)
+

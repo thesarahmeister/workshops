@@ -55,3 +55,19 @@ you don't commit them, they stay there, but they do *not* go into the
 history. Modified files (when you *don't* `git add` them, continue to
 stay modified as you edit them, but they do not get saved until you do
 `git add` and `git commit`.
+
+# 'No new line at the end of file' after running `git diff` #
+
+This can easily be fixed by pressing Enter at the bottom of the file.
+This occurs because (more or less) Git follows the Unix convention.
+If you want a more detailed answer, see
+[this answer on the why](http://stackoverflow.com/a/5813359/2632184)
+and
+[this answer on the history of why](http://stackoverflow.com/questions/729692/why-should-files-end-with-a-newline).
+
+# My terminal is stuck and I can't get back to the prompt (`$` or `>`) #
+
+If you ever get stuck in the terminal, hit `Control-c` to 'c'ancel the
+command and get back to the prompt (the `$` or `>` characters).
+
+

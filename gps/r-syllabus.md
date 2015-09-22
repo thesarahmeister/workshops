@@ -1,56 +1,104 @@
-**Code as Manuscript: Analytical Practices in R for Data Efficiency and Reproducibility**
+---
+title: "Code as Manuscript: Data Analysis, Plotting, and Writing in R"
+author:
+    - Luke Johnston
+date: 2015-09-01
+geometry: margin=1in
+fontsize: 12pt
+papersize: letterpaper
+layout: page
+sidebar: false
+tag:
+    - GPS
+    - R
+    - Syllabus
+categories:
+    - GPS
+    - R
+    - Syllabus
 
-**Course Syllabus**
+---
 
+## Course description: ##
 
-**Instructors**
+This series of *hands-on* workshops aims to introduce students to the
+concept of research reproducibility and to get the students practicing
+with using version control systems and with using modern techniques in
+R that make analyses less error prone and reproducible, and that make
+you more efficient, productive, and in control.  Techniques for using
+version control systems to faciliate greater collaboration among peers
+will also be presented.  The ultimate goal of the workshop is to show
+how to reduce the number of steps needed to go from the initial data
+analysis to the final written manuscript or thesis (hence the name
+*Code As Manuscript*).  Given the applied nature of the concepts in
+these workshops, hands-on activities and
+[live coding](http://en.wikipedia.org/wiki/Live_coding) will be
+integrated into each workshop.
 
-Luke Johnston, MSc, PhD (C):
+## Goal: ##
+
+The expected goal of the workshops is that you will be able to:
+
+* Put your research under version control using Git.
+* Push and pull your git research repository to either
+  [GitHub](https://github.com/) or
+  [BitBucket](https://bitbucket.org/).
+* Learn the basics of R and functions within R
+* Produce publication quality plots
+* Quickly wrangle your data into an analyzable format
+* Reproducibly incorporate R code into your manuscript or thesis to
+  instantly add results and plots (no more copy and paste)
+
+Attaining these goals will be the first steps in making an efficient
+and highly productive workflow, that is also scientifically rigorous
+and transparent, and which you can take with you for the rest of your
+career (since R is free!).
+
+## Schedule ##
+
+Lesson content can be found [here]({{ site.github.url }}/lessons/).  The workshop will
+follow the following sequence of topics:
+
+1. Git & GitHub
+2. Basics of R
+3. Plotting
+4. Data wrangling
+5. Dynamic report generation
+
+## Intended audience: ##
+
+Graduate students or post-docs whose research involves a fair amount
+of data analysis.  No experience necessary for these workshops.
+
+## Pre-requisites: ##
+
+* Fully charged laptop (though we do have outlets)
+* Install the appropriate software (see our
+  [instructions page, under the R section]({{ site.github.url }}/lessons/instructions/))
+* Bring a positive, not-afraid-of-making-mistakes-or-feeling-unsure
+  attitude!!  Learning any language (either human or computer) is
+  hard work and *not* easy!
+
+## Assignments: ##
+
+Because this is a hands-on workshop, at the end of each workshop, we
+have an activity for you to try out.  And since this is a GPS-approved
+course, if you want to get a GPS credit, you will need to:
+
+1. Come to all the workshops (though we are flexible)
+2. Complete each workshop assignment and push to the shared repository
+   on GitHub (so we can track and view it).
+
+Don't worry if this doesn't make sense yet.  We will go over all these
+details over the workshop series.
+
+# Instructors #
+
+Luke Johnston, MSc, PhD (c)  
 luke.johnston@mail.utoronto.ca
 
-Daiva Nielsen, PhD: daiva.nielsen@mail.utoronto.ca
+Sarah Meister, MSc (c)  
+sarah.meister@mail.utoronto.ca
 
-**Class day, time and location:** 2 hours per class is requested
- 	 
-**Course description:** 
-The purpose of this course is to introduce students to the concept of research reproducibility and present methods of conducting statistical analyses in a more efficient, less error prone way. Tips for increasing the efficiency of collaborative work will also be presented. The content will be tailored specifically to R users. The ultimate goal of the course is to demonstrate how to reduce the number of steps required to produce a manuscript from the data analysis stage. Students will be expected to bring their own fully-charged laptop to each class with the appropriate software installed (Git, a text editor and R). Emphasis will be placed on hands-on practice activities integrated into each weekly class.
+You can contact the workshop email at: codeasmanuscript@gmail.com
 
-**Suggested preparation:** Working knowledge of R, some experience with the command line or familiarity with computing. 
-
-**Intended audience:** Graduate students or post-doctoral fellows who work with large-scale cohort or clinical databases.
-
-**Course objectives:**
-
-At the end of the course, students will be able to:
-
-* Track their research files with Git to control multiple versions of files.
-* Operate GitHub to maintain a back-up of files and have an outlet for efficient collaboration.
-* Create R Functions to condense code-writing.
-* Create R Packages to expedite process from code to visual format *(DN: Not sure if accurate on this..).*
-
-
-**Course Schedule**
-
-Week 1 	Introduction to version control with Git
-Week 2 	GitHub
-Week 3 	R Functions
-Week 4 	R Packages
-Week 5	Review and practice (optional) 
- 
-**Course Resource List**
-
-Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, et al. (2014). Best practices for scientific computing. PLoS Biol. 12(1):e1001745.
-
-Sandve GK, Nekrutenko A, Taylor J, Hovig E (2013) Ten Simple Rules for Reproducible Computational Research. PLoS Comput Biol 9(10): e1003285.
-
-Alsheikh-Ali, Qureshi W, Al-Mallah MH, Ioannidis JP. (2013). Public availability of published research data in high-impact journals. PLoS One. 6(9):e24357.
-
-Laine C, Goodman SN, Griswold ME, Sox HC. (2007). Reproducible research: moving toward research the public can really trust. Ann Intern Med. 146(6):450-3.
-
-Peng RD, Dominici F, Zeger SL (2006). Reproducible epidemiologic research. Am J Epidemiol. 163(9):783-789.
-
-http://reproducibleresearch.net/ (Contains informative Blog)
-
-http://blogs.plos.org/everyone/2012/08/14/plos-one-launches-reproducibility-initiative/ (PLOS ONE 2012 Reproducibility Initiative)
-
-***GitHub URLs and cheat sheets?***
