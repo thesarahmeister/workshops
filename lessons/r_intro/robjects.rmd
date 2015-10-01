@@ -7,7 +7,7 @@ geometry: margin=1in
 papersize: letterpaper
 layout: page
 sidebar: false
-output: html_document
+output: slidy_presentation
 ---
 R is an object-oriented programing language, meaning everything we incounter in R is an object. 
 
@@ -29,6 +29,8 @@ R has 5 different types of objects:
 * Matrices
 * Factors
 * Dataframes
+
+Thus you could have a logical vector, a character dataframe, a numeric matrix, etc. 
 
 # Vectors #
 
@@ -98,7 +100,7 @@ Factors are used to represent catagorical data. They can be ordered or unordered
 
 * They are like an integer vector where each integer has a label. 
 * Factors are more descriptive than integers e.g. "Male" and "Female" vs. 1 and 2
-* Factors are treated specially by modelling functions like lm() and glm()
+* Factors are treated specially by modelling functions like `lm()` and `glm()`
 
 ```{r}
 x <- factor(c("yes", "yes", "no", "no", "yes"))
@@ -106,6 +108,11 @@ x
 table (x)
 unclass(x)
 ```
+
+# Dataframe #
+
+Dataframes are used in R to store tabular data. They are represented in R as a special type of list where every element in the list has the same length. Each element of the list can be thought of as a **column** and each length of the list can be thought of as a **row**
+
 
 # Attributes #
 
