@@ -68,3 +68,8 @@ categories:
 * <http://www.stackoverflow.com>
 * <http://stats.stackexchange.com>
 * <http://software-carpentry.org/>
+
+# R #
+
+* http://adv-r.had.co.nz/Vocabulary.html
+
