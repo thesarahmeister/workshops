@@ -1,0 +1,202 @@
+---
+title: "Introduction: Data wrangling in R"
+author:
+    - Luke W. Johnston
+date: 2015-10
+layout: page
+sidebar: false
+tag:
+    - Lessons
+    - Introduction
+    - Wrangling
+    - R
+categories:
+    - Lessons
+    - Wrangling
+    - R
+permalink: lessons/topic/
+---
+
+* Introductions
+* State goal for workshop
+* Item 2
+
+# Learning objectives: #
+
+1. Objective one
+2. Objective two
+
+# Import/export your data #
+
+You'll need to import your data into R to analyze it.  I'm assuming
+the data is already cleaned and ready for analysis.  If at any time
+you need help with a command, use the `?` command, appended with the
+command of interest (eg. `?write.csv`).  R comes with many internal
+datasets that you can practice on.  The one I'm going to use is the
+`swiss` dataset.
+
+```{r importData}
+
+## Export
+write.csv(swiss, file = 'swiss.csv') # Export
+## Import
+ds <- read.csv('swiss.csv') # Import
+
+```
+
+# Viewing your data #
+
+R has several very useful and easy tools for quickly viewing your
+data.  `head()` shows the first few rows of a data.frame (a structure
+for storing data that can include numbers, integers, factors, strings,
+etc).  `names()` shows the column names.  `str()` shows the structure,
+such as what the object is, and its contents.  `summary()` shows a
+quick description of the summary statistics (means, median, frequency)
+for each of your columns.  `class()` is like `str()` but only shows
+the top level name of the object, so eg. while a data.frame contains
+multiple columns that `str()` would show, `class()` would only show
+that the object is a "data.frame".
+
+```{r viewData}
+head(ds)
+names(ds)
+str(ds)
+summary(ds)
+```
+
+# Wrangling your data #
+
+Data wrangling is a bit tedious in base R.  So I'm using two packages
+designed to make this easier.  Load packages by using the `library()`
+function.  `dplyr` comes with a `%>%` pipe function (via the
+`magrittr` package), which works similar to how the Bash shell `|`
+pipe works.  The command on the right-hand side takes the output from
+the command on the left-hand side, just like how a plumbing pipe works
+for water.
+
+The four lines of code below using `tbl_df` are all the same.  The `.`
+object represents the output from the pipe, but it doesn't have to be
+used as using `%>%` implies also using `.`.  `tbl_df` makes the object
+into a `tbl` class, making printing of the output nicer.
+
+```{r wrangle}
+
+library(dplyr)
+tbl_df(ds)
+ds %>% tbl_df()
+ds %>% tbl_df
+ds %>% tbl_df(.)
+
+## Let's put it into a new object
+ds2 <- tbl_df(ds)
+
+```
+
+Again, these next lines are the same. `select` does as it says: select
+the column from the dataset.
+
+```{r wrangleSelect}
+
+select(ds2, Education, Catholic, Fertility)
+ds2 %>% select(Education, Catholic, Fertility)
+ds2 %>% select(., Education, Catholic, Fertility)
+
+```
+
+You can rename columns either using `rename` or `select` (the new name
+is on the left hand side, so `newname = oldname`).  However, with the
+`select` command, only that column gets selected, while `rename`
+selects all columns.
+
+```{r wrangleRename}
+ds2 %>% rename(County = X)
+ds2 %>% select(County = X)
+```
+
+You can subset the dataset using `filter`.  Note the double equal sign
+`==` for testing if 'Examination' is equal to 15.  A single `=` is
+used for something else (assigning things to objects).
+
+```{r wrangleFilter}
+
+filter(ds2, Catholic < 20, Examination == 15)
+ds2 %>% filter(Catholic < 20, Examination == 15)
+ds2 %>% filter(., Catholic < 20, Examination == 15)
+## For string/factor variables
+ds2 %>% filter(X == 'Aigle')
+
+```
+
+We can start chaining these commands together using the `%>%` command.
+There is no limit to how long a chain can be.  `arrange`
+sorts/orders/re-arranges the column Education in ascending
+order. `mutate` creates a new column.
+
+```{r wrangleChain}
+
+ds2 %>%
+  filter(Catholic > 20) %>%
+  select(Education, Fertility) 
+  
+ds2 %>%
+  filter(Catholic > 20) %>%
+  select(County = X, Education, Fertility, Agriculture) %>%
+  arrange(Education) %>%
+  mutate(infertile = ifelse(Fertility < 50, 'yes', 'no'),
+         testing = 'Yes' ## Create a testing column to show how mutate works.
+         )
+
+```
+
+To get the data into a nicer and more analyable format, you can use
+the `tidyr` package.  See what `gather` does in the code below.  Then
+see what `spread` does.  Note that you can remove a column by having a
+minus `-` sign in front of a variable when you use `select`.
+
+```{r reorg}
+
+library(tidyr)
+## Compare this:
+ds2 %>%
+  select(-Infant.Mortality) %>%
+  rename(County = X)
+
+## With this:
+ds2 %>%
+  select(-Infant.Mortality) %>%
+  rename(County = X) %>%
+  gather(Measure, Value, -County)
+
+## And back again:
+ds2 %>%
+  select(-Infant.Mortality) %>%
+  rename(County = X) %>%
+  gather(Measure, Value, -County) %>%
+  spread(Measure, Value)
+
+```
+
+Combined with `dplyr`'s `group_by` and `summarise` you can quickly
+summarise data or do further, more complicated analyses. `group_by`
+makes it so further analyses or operations work on the groups.
+`summarise` transforms the data to only contain the new variable(s)
+created, in this case the mean.
+
+```{r reorgChain}
+
+ds2 %>%
+  select(-X) %>%
+  gather(Measure, Value) %>%
+  group_by(Measure) %>%
+  summarise(mean = mean(Value))
+
+```
+
+# Materials for this lesson: #
+
+* [Slides](slides/)
+* [Cheatsheet](cheatsheet/)
+* [Assignment](assignment/)
+
+Other resources can be found [here](../resources/).
+
