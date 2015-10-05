@@ -3,9 +3,6 @@ title: "Assignment: ..."
 author:
     - 
 date: YYYY-MM-DD
-fontsize: 12pt
-geometry: margin=1in
-papersize: letterpaper
 layout: page
 sidebar: false
 tag:
