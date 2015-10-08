@@ -5,3 +5,4 @@ ignore*
 _site/
 tex2pdf*/
 .Rproj.user
+.Rhistory
