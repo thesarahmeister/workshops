@@ -164,13 +164,33 @@ write.table(data, file= "myfile.csv", sep=",", row.names=TRUE, col.names=FALSE)
 
 # Subsetting Data #
 
-Using `[]` in R allows you to subset certain parts of a dataset
+Using `[]` in R allows you to subset certain parts of a vector
 
 ```{r}
-x <- c(TRUE, FALSE, "a", "b", 1, 2)
+x <- c(TRUE, FALSE, "alpha", "beta", "gamma", 1, 2)
 
-q <- x[c(1, 4, 5)]
+x[c(1, 4, 5)]
 
-q
+x[c("alpha", "gamma")]
 ```
 
+This also works for matrices
+```{r}
+a <- matrix(1:9, nrow = 3)
+colnames(a) <- c("A", "B", "C")
+a[1:2, ]
+a[c(T, F, T), c("B", "A")]
+a[0, -2]
+```
+
+and dataframes
+
+```{r}
+df <- data.frame(x = 1:3, y = 3:1, z = letters[1:3])
+
+df[df$x == 2, ]  #gives the row of df that is equal to 2
+
+df[ ,c(1, 3)]    #gives the columns that are in position 1 and 3
+```
+
+# Functions #
