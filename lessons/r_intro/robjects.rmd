@@ -111,7 +111,16 @@ unclass(x)
 
 # Dataframe #
 
-Dataframes are used in R to store tabular data. They are represented in R as a special type of list where every element in the list has the same length. Each element of the list can be thought of as a **column** and each length of the list can be thought of as a **row**
+Dataframes are used in R to store tabular data. They are represented in R as a special type of list where every element in the list has the same length. Each element of the list can be thought of as a **column** and each length of the list can be thought of as a **row**. Because a dataframe is a type of list, dataframes can store different classes of objects in each column (e.g. numeric, character, logical, etc.).
+
+Depending on the source of the data, dataframes can be made using the `read.table()`, `read.csv` or `data.frame()` functions. 
+
+```{r}
+x <- data.frame(foo = 1:4, bar = c(T,T,F,F))
+x
+nrow(x)
+ncol(x)
+```
 
 
 # Attributes #
@@ -123,5 +132,45 @@ R objects can have attributes, such as:
 * lengths
 * dimensions (matrices/dataframes)
 * user defined attributes, such as metadata
+* dataframes have a special attribute called `row.names`
 
-Attributes can be modified with the attributes() function
+Attributes can be modified with the attributes() function, among others.
+
+For example, modifiying the `names` of a vector can make your code more readable.
+```{r}
+x <- 1:3
+names(x)
+
+names(x) <- c("alpha", "beta", "gamma")
+x
+names(x)
+```
+
+# Imputting Tabular Data #
+
+Most data you will work with comes in tabular form (such as an Excel spreadsheet). The two most commonly-used functions used to imput tabular data into R are `read.table()` and `read.csv()`. 
+```{r}
+data <- read.table(file_name.txt, header=FALSE, sep="\t")
+
+data2 <- read.csv(file_name.csv, header=TRUE)
+```
+
+# Outputting Tabular Data #
+
+Often you'll want to save R data into a tabular form (e.g. to view in Excel). This is where you use `write.table()`
+```{r}
+write.table(data, file= "myfile.csv", sep=",", row.names=TRUE, col.names=FALSE)
+```
+
+# Subsetting Data #
+
+Using `[]` in R allows you to subset certain parts of a dataset
+
+```{r}
+x <- c(TRUE, FALSE, "a", "b", 1, 2)
+
+q <- x[c(1, 4, 5)]
+
+q
+```
+
