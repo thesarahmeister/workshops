@@ -266,4 +266,48 @@ while (count <10) {
 ## you can also add more than one condition by adding an if else expression in the body
 ```
 
-repeat loop
+# next & return #
+
+`next` is used to skip an iteration of a loop. 
+
+```{r}
+for (i in 1:100) {
+  if (i <= 20) {
+    ## skip the first 20 iterations
+    next
+  }
+  else 
+    ## do something here
+}
+```
+
+# Writing functions #
+
+functions are created using the `function()` directive and are stored as R objects of the class "function". Functions can be passed as arguements to other functions and they can be nested (functions inside functions)
+
+```{r}
+f <- function(arguement) {
+  ## do something here 
+}
+```
+
+```{r}
+above10 <- function(x) {
+  use <- x > 10
+  x[use]
+}
+
+above <- function(x, n) {
+  use <- x > n
+  x[use]
+}
+
+columnmean <- function (y, remove.NA = TRUE) {
+  nc <- ncol(y)
+  means <- numeric(nc)
+  for (i in 1:nc) {
+    means[i] <- mean(y[,i], na.rm = remove.NA)
+  }
+  means
+}
+```
