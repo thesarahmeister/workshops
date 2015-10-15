@@ -194,3 +194,76 @@ df[ ,c(1, 3)]    #gives the columns that are in position 1 and 3
 ```
 
 # Functions #
+
+# If-else expressions #
+
+```{r}
+if (condition) {
+  ##do this
+} else {
+  ##do that
+}
+
+## to add more conditions
+
+if (condition1) {
+  ## do this
+} else if (condition2) {
+  ## do something different
+} else {
+  ## do something else
+}
+```
+
+# If #
+
+```{r}
+if (x > 3) {
+  y <- 10
+} else {
+  y <- 0
+}
+
+
+### OR
+
+
+y <- if(x > 3) {
+  10
+} else {
+  0
+}
+```
+
+# for loop #
+```{r}
+for (i in 1:10) {
+  print (i)
+}
+
+
+### nested for loops
+
+x <- matrix(1:6, 2, 3)
+
+for (i in seq_len(nrow(x))) {
+  for (j in seq_len(ncol(x))) {
+    print (x[i, j])
+  }
+}
+```
+while loop
+
+While loops begin by testing a condition. If it's true, then they execute the loop body. Once the loop has been executed, the condition is tested again, and so forth. Be careful to not make infinite loops (condition to stop never actually occurs)!
+
+```{r}
+count <- 0
+while (count <10) {
+  print (count)
+  count <- count + 1
+}
+
+## you can also add more than one condition by adding an if else expression in the body
+```
+
+repeat loop
