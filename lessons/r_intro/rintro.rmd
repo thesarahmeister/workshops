@@ -13,7 +13,6 @@ R is an object-oriented programing language, meaning everything we incounter in 
 
 R has several types of objects:
 
-
 R has a 5 basic classes of objects:
 
 * Character
