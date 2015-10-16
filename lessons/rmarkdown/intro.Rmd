@@ -210,6 +210,21 @@ set.caption(tabNums('tabCars'))
 pander(head(cars), style = 'rmarkdown')
 ```
 
+## Sharing your code/file
+
+convert to word for oldies (fogie?) (or html)
+
+Send to pi
+
+Getting other people's code?
+
+Sharing via github
+
+Prettier code for others to see (reformat code in RStudio)
+
+Make sense, so write out what you are doing in the Rmd part and the code in the
+code chunk part
+
 # Generating this `.Rmd` document
 
 If you download the [source `.Rmd` version of this document](https://github.com/codeasmanuscript/workshops/tree/master/lessons/rmarkdown/intro.Rmd),
