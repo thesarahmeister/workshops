@@ -1,5 +1,5 @@
 ---
-title: "R Objects"
+title: "R Introduction"
 author: "Sarah Meister"
 date: 2015-09-16
 fontsize: 12pt
