@@ -1,0 +1,37 @@
+---
+title: "Plotting in R"
+author: "Sarah Meister"
+date: 2015-10-15
+fontsize: 12pt
+geometry: margin=1in
+papersize: letterpaper
+layout: page
+sidebar: false
+output: slidy_presentation
+---
+
+# Base plotting systems #
+
+The base plotting system in R is the `plot()` function. 
+
+```{r}
+library(datasets)
+data(cars)
+with(cars, plot(speed, dist))
+
+```
+
+# the Lattice system #
+
+This is the second base plotting system in R. Plots are created with a single call function. Margins and spacing are set automatically because the entire plot is specified at once. It is good at putting many plots on a screen and thus you can see things like how y changes with x over z. 
+
+```{r}
+library (lattice)
+state <- data.frame(state.x77, region = state.region)
+xyplot(Life.Exp ~ Income | region, data=state, layout = c(4,1))
+
+```
+
+# ggplot2 #
+
+The ggplot2 package is similar to lattice but it's easier and more intuitive to use. 
