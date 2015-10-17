@@ -1,0 +1,20 @@
+---
+title: "Assignment: ..."
+author: Sarah Meister
+    - 
+date: YYYY-MM-DD
+layout: page
+sidebar: false
+tag:
+    - Lessons
+    - Assignment
+    - IntroR
+categories:
+    - Lessons
+    - IntroR
+---
+
+# List of potential exercises here: #
+
+* List item 1
+* List item 2
