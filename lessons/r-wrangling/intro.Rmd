@@ -114,6 +114,17 @@ ds2 %>%
     select(Education, Catholic, Fertility)
 ```
 
+### Regular expression for selecting (matches)
+
+matches
+
+### Cleaning up mess: perl/regexp
+
+gsub
+sub
+grep
+grep
+
 ## Rename columns
 
 You can rename columns using the `rename` command (the new name is on the left
