@@ -1,11 +1,9 @@
 ---
-title: "Code as Manuscript: Data Analysis, Plotting, and Writing in R"
+title: "Code as Manuscript: Data wrangling, visualization, and reproducibility in R"
 author:
-    - Luke Johnston
-date: 2015-09-01
-geometry: margin=1in
-fontsize: 12pt
-papersize: letterpaper
+    - Luke W. Johnston
+    - Sarah Meister
+date: 2015-10-17
 layout: page
 sidebar: false
 tag:
@@ -16,7 +14,6 @@ categories:
     - GPS
     - R
     - Syllabus
-
 ---
 
 ## Course description: ##
