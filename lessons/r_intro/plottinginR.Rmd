@@ -35,7 +35,3 @@ xyplot(Life.Exp ~ Income | region, data=state, layout = c(4,1))
 # ggplot2 #
 
 The ggplot2 package is similar to lattice but it's easier and more intuitive to use. 
-
- ```{r}
- install.packages("ggplot2")
- ```

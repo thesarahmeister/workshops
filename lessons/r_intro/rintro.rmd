@@ -310,3 +310,146 @@ columnmean <- function (y, remove.NA = TRUE) {
   means
 }
 ```
+
+# Loop Functions #
+
+R has built loop functions, which often have the word "apply" in them.
+
+- `lapply`: loop over a list and evaluate a function on each element (useful with the `split` function)
+- `sapply`: same as `lapply` but it tries to simplify the result
+- `apply`: apply a function over the margins of an array 
+- `tapply`: apply a function over subsets of a vector
+- `mapply`: a multivariate version of lapply 
+
+# lapply #
+
+`lapply` loops internally with C code, making the looping faster
+
+`lapply` takes two to three arguments:
+1. a list `x` (or another object that is coerced to a list)
+2. a function
+3. other arguments as necessary
+
+```{r}
+x <- list(a=1:5, b=rnorm(10), c=rnorm(20,1), d=rnorm(100,5))
+lapply(x, mean)
+```
+`lapply` will always return a list
+
+`laaply` and others make heavy use of anonymous functions, which are functions without names.
+```{r}
+x <- list(a=matrix(1:4,2,2), b=matrix(1:6,3,2))
+x
+
+lapply(x, function(ele) ele[ ,1]) 
+## create function with the argument ele and then define that argument.
+```
+
+# sapply #
+
+`sapply` will try to simplify the result of lapply if possible
+
+- if the result is a list where every element is length 1, than a vector is returned 
+- if the result is a list where every element is a vector of the same length, a matrix is returned
+- otherwise a list is returned
+
+```{r}
+x <- list(a=1:5, b=rnorm(10), c=rnorm(20,1), d=rnorm(100,5))
+sapply(x, mean)
+```
+
+# apply #
+
+`apply` is used to evalute a function over the margins of an array. It is not faster than a loop, but it works in one line. `1` means do the function to the rows. `2` means 
+
+```{r}
+x <- matrix (rnorm(200), 20, 10)
+apply(x, 2, mean) # keeping number of columns and collapsing rows. This gives a vector of the means of columns. 
+
+apply(x, 1, sum) # this calculates the sum of all rows
+
+y <- matrix(rnorm(200), 20, 10)
+
+apply(y, 1, quantile, probs = c(0.25, 0.75))
+
+## with an array (stacks of matrices: multidimensional)
+
+a <- array(rnorm(2*2*10), c(2,2,10)) #create an array that looks like a bunch of 2 by 2 matrices and take the mean of those
+apply(a, c(1,2), mean) #this keeps the 1st and 2nd dimension
+
+```
+
+# mapply #
+
+mapply is a multivariate apply (like lapply) that applies a function over a set of arguments. 
+
+```{r}
+mapply(rep, 1:4. 4:1)
+
+## is the same as
+
+list(rep(1, 4), rep(2,3), rep(3,2), rep(4,1))
+```
+
+# Instant Vectorization #
+
+```{r}
+noise<- function(n,mean, sd) {
+  rnorm(n, mean, sd)
+}
+
+noise(5, 1, 2)
+
+mapply(noise, 1:5, 1:5, 2)
+
+## which is the same as
+
+list(noise(1,1,2), noise(2,2,2), noise(3,3,2), noise(4,4,2), noise(5,5,2))
+```
+
+# tapply #
+
+`tapply` is used to apply a function over subsets of a vector. 
+
+```{r}
+x <- c(rnorm(10), runif(10), rnorm(10,1))
+f<- gl(3,10) #factor variable
+f
+
+tapply(x, f, mean)
+
+tapply(x, f, range)
+
+```
+
+# split #
+
+`split` is like `tapply`, but without applying the summary statistics. It is useful in conjuction with `lapply` or `sapply`. `split` always returns a list
+
+```{r}
+x <- c(rnorm(10), runif(10), rnorm(10,1))
+f<- gl(3,10)
+split(x, f)
+
+## in conjuction with lapply
+
+lapply(split(x,f), mean)
+
+```
+
+# Splitting a dataframe #
+
+```{r}
+library(datasets)
+head(airquality)
+
+## calculate the mean within each month
+
+s <- split(airquality, airquality$Month)
+lapply(s, function(x) colMeans(x[,c("Ozone", "Solar.R", "Wind")]))
+
+
+sapply(s, function(x) colMeans(x[,c("Ozone", "Solar.R", "Wind")]))
+
+sapply(s, function(x) colMeans(x[,c("Ozone", "Solar.R", "Wind")], na.rm=TRUE))
+```
