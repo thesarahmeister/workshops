@@ -1,13 +1,21 @@
 ---
-title: "R Introduction"
+title: "Introduction to R"
 author: "Sarah Meister"
-date: '2015-09-16'
-output: slidy_presentation
+date: '2015-11-02'
+output: pdf_document
+fontsize: 8pt
+header-includes: \input{../slideOptions.tex}
 layout: page
-geometry: margin=1in
-papersize: letterpaper
+classoption: xcolor=dvipsnames
 sidebar: no
-fontsize: 12pt
+slide-level: 1
+tag:
+- Lessons
+- Slides
+- IntroR
+categories:
+- Lessons
+- IntroR
 ---
 R is an object-oriented programing language, meaning everything we incounter in R is an object. 
 
@@ -33,7 +41,7 @@ Thus you could have a logical vector, a character dataframe, a numeric matrix, e
 
 # Vectors #
 
-The most basic object is a vector. A vector is a sequence of objects of the same class. We can make vectors using the c() function
+The most basic object is a vector. A vector is a sequence of objects of the same class. We can make vectors using the `c()` function.
 
 ```{r , collapse=TRUE}
 a <- c(0.4, 1.2)         # numeric
@@ -44,7 +52,7 @@ e <- 1:10                # integer
 f <- c(1+0i, 2+4i)       # complex
 ```
 
-Empty vectors can be made using the vector() function
+Empty vectors can be made using the `vector()` function
 
 ```{r , collapse=TRUE}
 x <- vector("numeric", length=10)
@@ -64,7 +72,7 @@ The elements of a list are seperated by double brackets.
  
 # Matrices #
 
-Matrices are vectors with a dimension attribute. The dim attribute is an integer vector of length = 2 (nrow, ncol). 
+Matrices are vectors with a dimension attribute. The dim attribute is an integer vector of length = 2 (nrow, ncol). Matrix multiplication is done with the %*% operator
 
 ```{r , collapse=TRUE}
 x <- matrix(1:6, nrow=2, ncol=3)
@@ -134,7 +142,7 @@ R objects can have attributes, such as:
 * user defined attributes, such as metadata
 * dataframes have a special attribute called `row.names`
 
-Attributes can be modified with the attributes() function, among others.
+Attributes can be modified with the `attributes()` function, among others.
 
 For example, modifiying the `names` of a vector can make your code more readable.
 ```{r, collapse=TRUE}
@@ -145,6 +153,38 @@ names(x) <- c("alpha", "beta", "gamma")
 x
 names(x)
 ```
+
+# Looking for help in R #
+
+* Look up the documentation for a function: `help("function")`
+
+OR
+
+?function
+
+* Look up documentation for a package: `help(package="packagename")`
+
+# Packages #
+
+R comes with a few default packages, however there are thousands of R packages that extend R's capabilities (such as `ggplot2`, our next lesson)
+
+* To see what packages are loaded: `search()`
+
+* To view available packages: `library()`
+
+* To load a package: `library(packagename)`
+
+* Install new package: `install.packages("packagename")` 
+
+# Working Directory #
+
+R knows the directory it was started in, and refers to this as the "working directory". This is where R will search for any files you are imputting, and where it will place any files you output.  
+
+To look at the current working directory: `getwd()` 
+
+To change the working directory: ` setwd("directory_path")`
+
+To make a new folder in R: `dir.create(path)`
 
 # Imputting Tabular Data #
 
@@ -178,7 +218,8 @@ x[c(1, 4, 5)]
 ```
 
 This also works for matrices
-```{r}
+
+```{r, collapse=TRUE}
 a <- matrix(1:9, nrow = 3)
 colnames(a) <- c("A", "B", "C")
 a[1:2, ]
@@ -191,9 +232,14 @@ and dataframes
 ```{r, collapse=TRUE}
 df <- data.frame(x = 1:3, y = 3:1, z = letters[1:3])
 
-df[df$x == 2, ]  #gives the row of df that is equal to 2
-
 df[ ,c(1, 3)]    #gives the columns that are in position 1 and 3
+```
+
+You can also easily subset a column in a dataframe using a $
+```{r, collapse=TRUE}
+df <- data.frame(x = 1:10, y = 11:20, z = letters[1:10])
+
+df$z
 ```
 
 # Logical and Relative Operators #
@@ -208,7 +254,8 @@ Operator | Description
 /        | division
 ^ or **  | exponentiation
 x %% y   | modulus (5 %% 2 is 1)
-x %/%    | integer division (5%/% is 2)
+x %/% y    | integer division (5%/% is 2)
+x %*% y | matrix multiplication
 
 Logical Operators
 
@@ -230,25 +277,12 @@ isTRUE(x) | test if X is TRUE
 # subset function #
 
 The `subset()` function in R will return a subset of an argument that meet a particular condition. 
+
 ```{r, collapse=TRUE}
 numvec = c(2,5,8,9,0,6,7,8,4,5,7,11)
-charvec = c("David","James","Sara","Tim","Pierre",
-        "Janice","Sara","Priya","Keith","Mark",
-        "Apple","Sara")
-gender = c("M","M","F","M","M","M","F","F","F","M","M","F")
-state = c("CO","KS","CA","IA","MO","FL","CA","CO","FL","CA","WY","AZ")
 
-subset(numvec, numvec > 7)
 subset(numvec, numvec < 9 & numvec > 4)
-subset(numvec, numvec < 3 |numvec > 9)
 
-df = data.frame(var1=c(numvec), var2=c(charvec),
-          gender=c(gender), state=c(state))
-
-subset(df, var1 < 5)
-subset(df, var2 == "Sara")
-subset(df, var1==5, select=c(var2, state))
-subset(df, var2 != "Sara" & gender == "F" & var1 > 5)
 ```
 
 # if-else expressions #
@@ -273,7 +307,7 @@ if (condition1) {
 
 # if-else expressions #
 
-```{r, collapse=TRUE}
+```{r, collapse=TRUE, warning=FALSE}
 if (x > 3) {
   y <- 10
 } else {
@@ -319,7 +353,7 @@ f <- function(argument) {
 }
 ```
 
-```{r}
+```{r, collapse=TRUE}
 above10 <- function(x) {
   use <- x > 10
   x[use]
@@ -354,18 +388,19 @@ R has built loop functions, which often have the word "apply" in them.
 `lapply` loops internally with C code, making the looping faster
 
 `lapply` takes two to three arguments:
+
 1. a list `x` (or another object that is coerced to a list)
 2. a function
 3. other arguments as necessary
 
-```{r}
+```{r, collapse=TRUE}
 x <- list(a=1:5, b=rnorm(10), c=rnorm(20,1), d=rnorm(100,5))
 lapply(x, mean)
 ```
 `lapply` will always return a list
 
-`laaply` and others make heavy use of anonymous functions, which are functions without names.
-```{r}
+`lapply` and others make heavy use of anonymous functions, which are functions without names.
+```{r, collapse=TRUE}
 x <- list(a=matrix(1:4,2,2), b=matrix(1:6,3,2))
 x
 
@@ -381,14 +416,14 @@ lapply(x, function(ele) ele[ ,1])
 - if the result is a list where every element is a vector of the same length, a matrix is returned
 - otherwise a list is returned
 
-```{r}
+```{r, collapse=TRUE}
 x <- list(a=1:5, b=rnorm(10), c=rnorm(20,1), d=rnorm(100,5))
 sapply(x, mean)
 ```
 
 # apply #
 
-`apply` is used to evalute a function over the margins of an array. It is not faster than a loop, but it works in one line. `1` means do the function to the rows. `2` means 
+`apply` is used to evalute a function over the margins of an array. It is not faster than a loop, but it works in one line. `1` means do the function to the rows. `2` means do the function to the columns
 
 ```{r, collapse=TRUE}
 x <- matrix (rnorm(200), 20, 10)
@@ -409,7 +444,7 @@ apply(a, c(1,2), mean) #this keeps the 1st and 2nd dimension
 
 # mapply #
 
-mapply is a multivariate apply (like lapply) that applies a function over a set of arguments. 
+`mapply` is a multivariate apply (like `lapply`) that applies a function over a set of arguments. 
 
 ```{r, collapse=TRUE}
 mapply(rep, 1:4, 4:1)
