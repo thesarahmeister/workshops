@@ -12,14 +12,16 @@ tag:
 categories:
     - Lessons
     - IntroR
+    
+output: html_vignette
 ---
 
 # Intro to R Assignment #
 
 1. Create the following vectors in R:
 	
-a = 1 to 10
-b = 11 to 20
+* a = 1 to 10
+* b = 11 to 20
 
 Use vector arithmetic to multiply these vectors and call the result c.  Select subsets of c to identify the following.
 
@@ -30,10 +32,12 @@ B. What are all of the elements of c which are greater than 50?
 
 alpha: 
 
-| &nbsp;|&nbsp; |&nbsp; |
-|---| --- | --- |
+```{r, echo=FALSE}
+
+
 |7 | 9 | 12|
 |2 | 4 | 13|
+```
 
 beta: 
 
@@ -58,6 +62,6 @@ Use the `subset()` function to make a new vector where the hp is greater than 10
 4. Make a vector with the following arguments: "cat", "dog", "cow", "pig". Make a combination for loop and  {if/else expression that prints the second argument. 
 5. Create a function called `stats` that takes two arguments and prints the mean and standard deviation of the first argument and the median of the second argument. 
 
-Hint: use the built-in `mean()`, `median()` and `sd()` functions
+Hint: use the built-in `mean()`, `median()`, `sd()` and `print()` functions
 
 Use your function with the `disp` and `drat` columns from the `mtcars` dataset. 

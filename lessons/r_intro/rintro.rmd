@@ -2,7 +2,7 @@
 title: "Introduction to R"
 author: "Sarah Meister"
 date: '2015-11-02'
-output: pdf_document
+output: html_document
 fontsize: 8pt
 header-includes: \input{../slideOptions.tex}
 layout: page
@@ -190,11 +190,11 @@ To make a new folder in R: `dir.create(path)`
 
 Most data you will work with comes in tabular form (such as an Excel spreadsheet). The two most commonly-used functions used to imput tabular data into R are `read.table()` and `read.csv()`. 
 ```{r, eval=FALSE, collapse=TRUE}
-data <- read.table(file_name.txt, header=FALSE, sep="\t")
+data <- read.table("file_name.txt", header=FALSE, sep="\t")
 
 # \t is the regular expression for the tab key. This means our table is tab-delimited (tab-separated)
 
-data2 <- read.csv(file_name.csv, header=TRUE)
+data2 <- read.csv("file_name.csv", header=TRUE)
 
 #.csv is a comma-separated table 
 ```
@@ -246,16 +246,16 @@ df$z
 
 Arthmetic Operators
 
-Operator | Description
--------- | -----------
-+        | addition
--        | subtraction
-*        | multiplication
-/        | division
-^ or **  | exponentiation
-x %% y   | modulus (5 %% 2 is 1)
-x %/% y    | integer division (5%/% is 2)
-x %*% y | matrix multiplication
+|Operator | Description|
+|-------- | -----------|
+|+        | addition|
+|-        | subtraction|
+|*        | multiplication|
+|/        | division|
+|^ or **  | exponentiation|
+|x %% y   | modulus (5 %% 2 is 1)|
+|x %/% y    | integer division (5%/% is 2)|
+|x %*% y | matrix multiplication|
 
 Logical Operators
 
