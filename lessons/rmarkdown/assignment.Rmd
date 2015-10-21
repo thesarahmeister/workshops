@@ -22,7 +22,8 @@ output:
 ## Challenges: Try these out yourself!
 
 Try to progressively add these challenges into an `.Rmd` file. First, create a
-template R Markdown file from RStudio.
+template R Markdown file from RStudio. Push the final version to the GitHub
+repo, so we can look them over and make suggestions.
 
 1. Create section 'Brief description' describing your assigned dataset. Use
 inline R code to describe some basic statistics of the variables (eg. means,
