@@ -24,8 +24,6 @@ header-includes:
 
 To introduce you to the R language and common data manipulations used in R
 
-. . .
-
 ## Significance: ##
 
 Topics we cover will help you get more comfortable with R
@@ -38,62 +36,144 @@ Need help with R? Use these resources!
 
 * <http://stats.stackexchange.com>
 
-# Overview of other workshops? #
+R is an object-oriented programing language, meaning everything we encounter in R is an object. 
 
-# Notes and help during this workshop #
+R has several types of objects:
 
-Go to this website:
+R has a 5 basic classes of objects:
 
-<https://etherpad.mozilla.org/dnsWorkshops>
+* Character
+* Numeric
+* Integer
+* Complex
+* Logical
 
-# Slide title #
+R has 5 different types of objects:
 
-Text, some **bolded**, or *italics*
+* Vectors
+* Lists
+* Matrices
+* Factors
+* Dataframes
 
-__bold__ or _italics_ also works.
+Thus you could have a logical vector, a character dataframe, a numeric matrix, etc. 
 
-[URL link here](http://link/here.com)
+# Vectors #
+
+The most basic object is a vector. A vector is a sequence of objects of the same class. We can make vectors using the `c()` function.
+
+```{r , collapse=TRUE}
+a <- c(0.4, 1.2)         # numeric
+b <- c(TRUE, FALSE)      # logical
+c <- c("a","b","c")      # character
+d <- c(1L, 2L)           # integer
+e <- 1:10                # integer
+f <- c(1+0i, 2+4i)       # complex
+```
+
+Empty vectors can be made using the `vector()` function
+
+```{r , collapse=TRUE}
+(x <- vector("numeric", length=10))
+```
+
+# Lists #
+
+A list is a special type of vector that can contain objects of different classes. For instance, we can have a list with a numeric dataframe as one object within the list, and a string vector as another. 
+
+```{r , collapse=TRUE}
+(x <- list(1,"a", TRUE, 1+4i))
+```
+
+The elements of a list are seperated by double brackets. 
+ 
+# Matrices #
+
+Matrices are vectors with a dimension attribute. The dim attribute is an integer vector of length = 2 (nrow, ncol). Matrix multiplication is done with the %*% operator
+
+```{r , collapse=TRUE}
+(x <- matrix(1:6, nrow=2, ncol=3))
+
+dim(x)
+
+attributes(x)
+```
+ 
+Matrices are constructed column-wise, so entries start at the upper left corner and run down the columns. 
+
+Matrices can be created directly from vectors by adding a dimension value
+
+```{r, collapse=TRUE}
+(x <- 1:10)
+
+(dim(x) <- c(2,5))
 
 ```
-    Code block
+
+We can also create matrices by column-binding or row-binding with the functions `cbind()` and `rbind()`
+
+```{r, collapse=TRUE}
+x <- 1:3
+y <- 10:12
+cbind(x,y)
+rbind (x, y)
 ```
 
-Or:
+# Factors #
 
-    Code block
+Factors are used to represent catagorical data. They can be ordered or unordered.
 
-List here:
+* They are like an integer vector where each integer has a label. 
+* Factors are more descriptive than integers e.g. "Male" and "Female" vs. 1 and 2
+* Factors are treated specially by modelling functions like `lm()` and `glm()`
 
-* Item 1
-* Item 2
+```{r, collapse=TRUE}
+(x <- factor(c("yes", "yes", "no", "no", "yes")))
+table (x)
+unclass(x)
+```
 
-List, but one-by-one 'animation':
+# Dataframe #
 
-> * Item 1 appears first
-> * Item 2 appears second
+Dataframes are used in R to store tabular data. They are represented in R as a special type of list where every element in the list has the same length. Each element of the list can be thought of as a **column** and each length of the list can be thought of as a **row**. Because a dataframe is a type of list, dataframes can store different classes of objects in each column (e.g. numeric, character, logical, etc.).
 
-Inline `code text`
+Depending on the source of the data, dataframes can be made using the `read.table()`, `read.csv` or `data.frame()` functions. 
 
-Image:
-![](../images/file.png)
+```{r, collapse=TRUE}
+(x <- data.frame(foo = 1:4, bar = c(T,T,F,F)))
 
-Footnote[^1]
+nrow(x)
+ncol(x)
+```
 
-[^1]: Footnote text
 
-# Live coding #
+# Attributes #
 
-# Main Exercise #
+R objects can have attributes, such as:
 
-A pause/transition here (the . . .)
+* names
+* classes
+* lengths
+* dimensions (matrices/dataframes)
+* user defined attributes, such as metadata
+* dataframes have a special attribute called `row.names`
 
-. . .
+Attributes can be modified with the `attributes()` function, among others.
 
-Numbered list
+For example, modifiying the `names` of a vector can make your code more readable.
+```{r, collapse=TRUE}
+x <- 1:3
+names(x)
 
-1. Exercise 1
-2. Exercise 2
+names(x) <- c("alpha", "beta", "gamma")
 
+x
+names(x)
+```
+
+# Now let's code! #
+
+Download the airQuality.csv file from our [Github repo](https://github.com/codeasmanuscript/workshops/tree/master/lessons/rintro)
 
 
 ```{r, collapse=TRUE}
