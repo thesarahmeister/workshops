@@ -52,6 +52,7 @@ categories:
 * [Simpler first-steps guide](http://rogerdudler.github.io/git-guide/)
 * [Reference pages for all git commands](http://gitref.org/)
 * [Interactive, visual tutorial on branching](http://pcottle.github.io/learnGitBranching/)
+* [StackOverflow questions and answers on Git](http://stackoverflow.com/questions/tagged/git)
 
 # SAS ODS #
 
