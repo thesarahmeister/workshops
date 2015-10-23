@@ -41,13 +41,17 @@ categories:
 
 # Git #
 
+* [Visual guide to Git](http://marklodato.github.io/visual-git-guide/index-en.html)
 * [Official Git documentation and introduction](http://git-scm.com/doc)
 * [Other documentation (nice and clean)](https://www.atlassian.com/git/tutorials)
-* [Interactive and step-by-step tutorial](https://try.github.io/levels/1/challenges/1)
+* [Hands-on tutorial, with web-based terminal](https://try.github.io/levels/1/challenges/1)
 * [A tutorial from a scientists perspective](http://nyuccl.org/pages/gittutorial/)
 * [An introduction to Git for researchers](http://datapub.cdlib.org/2014/05/05/github-a-primer-for-researchers/)
 * [Software carpentry lesson material for Git](http://swcarpentry.github.io/git-novice/)
 * [A scientists arguments and evidence for using Git](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3639880/)
+* [Simpler first-steps guide](http://rogerdudler.github.io/git-guide/)
+* [Reference pages for all git commands](http://gitref.org/)
+* [Interactive, visual tutorial on branching](http://pcottle.github.io/learnGitBranching/)
 
 # SAS ODS #
 
