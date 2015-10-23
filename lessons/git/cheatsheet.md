@@ -87,6 +87,16 @@ These commands basically tell Git:
     cd ~/Desktop # Change to the desktop
     cd /home/username/Documents/ # Change to documents.
 
+## `mkdir directory-name/` ##
+
+> Make (mk) a directory (dir) that has the name `directory-name`. This can be
+> any name you want it to be.
+
+> Example code:
+
+    mkdir ~/Desktop/testing # Create a testing folder on your desktop
+    mkdir playingAround/ # Make a folder in the current directory
+
 ## `ls` ##
 
 > View the contents of the directory, showing files and sub-directories.
