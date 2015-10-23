@@ -1,11 +1,8 @@
 ---
 title: "Assignment: Git"
 author:
-    - Luke Johnston
-date: 2015-03-20
-fontsize: 12pt
-geometry: margin=1in
-papersize: letterpaper
+    - Luke W. Johnston
+date: 2015-10
 layout: page
 sidebar: false
 tag:
@@ -17,64 +14,49 @@ categories:
     - Git
 ---
 
-In order to learn how to use Git, you really need to just start using
-it and get some practice!  So, here are some things we would like you
-to do:
+## Challenges: Try these out yourself! ##
 
-1. (If not already done) Set global configuration values (see the
-  [cheatsheet](cheatsheet/) for more details):
-  * user.name
-  * user.email
-  * color.ui
-  * core.editor
-  * push.default
+In order to learn how to use Git, you really need to just start using it and get
+some practice!  *Use only the commandline/terminal*.  Don't forget to push them
+to your GitHub account and submitting a pull request at the end, so we can give
+feedback/make suggestions.
 
-2. Create a Git repository (repo) in a folder of your choice.
+Make sure to also have these folders in your own directory on the practice *Code
+As Manuscript* repo (called `practice-YYYY-MM` where `YYYY-MM` represents the
+year and month):
 
-3. Create a plain *text* file and name it `your-name-bio.txt` where
-   `your-name` is... well your name!  Write a brief bio about yourself
-   and save it:
-   * Your name
-   * Your program
-   * Types of analyses you normally do
+```
+your-name/
+- bio/
+- git/
+- intror/
+- plotting/
+- wrangling/
+- rmarkdown/
+```
 
-4. Check the status of your Git repo.  Make sure that it says
-   somewhere that your file is "untracked".
+Now, make sure all of these challenges are placed in the proper folder (`git/`).
 
-5. Add the file to your repo.  Check the status to confirm it was
-   added.
-
-6. Commit to the repository history and make sure to write up a
-   descriptive commit message.
-
-7. Check the status of your repo than check the log of your repo.
-   Confirm that your commit message was there.
-
-8. Write in the bio file your understanding of what version control is
-   and why you think it may (or may not) be important.  Save it.
-
-9. Compare the file you just saved with the file in your history.
-   See the differences you made.  Check the status of your repo.
-
-10. Add the changed file to your repo, commit it, check the status and
-    than the log.
-
-11. Create a new file (named `your-name-thoughts.txt`) and this time
-    type out your thoughts on the git workshop, the good and the bad
-    (be detailed, we really do want to hear your thoughts!).  Save it
-    and than check the status of your git repo.
-
-12. Add and commit the new file into your repo history.
-
-13. Create a branch to experiment with your files and move to that
-    branch.  Check the status of your repo.
-
-14. Change or edit your files however you please, checking the repo
-    status.
-
-15. Add and commit the changed files into your repo history.
-
-16. Check your log.  Now, move back to the master branch.  Confirm
-    that you moved by checking your files to make sure they are as in
-    the original.
+1. Create a new file under the `your-name/git/` directory called `aboutme.txt`.
+   Write up a bit about yourself, some hobbies, what you are doing, etc. Now
+   get Git to track (add) that file and commit it to the history.
+2. Make a change to the `aboutme.txt` file by including something else about
+   yourself and making some edits to what you already wrote. Run `git diff` and
+   save the output of the `git diff` into a file called `diff.txt` (Hint: run
+   `git diff aboutme.txt > diff.txt`). **Don't commit the change yet**.
+3. Create a new file called `how-git-works.txt` and write up how you understand
+   how Git works, using your own words. After you have done that, do `git
+   status` and save the output into a file called `status.txt` (Hint: see the
+   hint in challenge 2 above).  After you have created the `status.txt` file,
+   commit the files one by one, making sure to write up **descriptive** commit
+   messages!
+4. Add to the `how-git-works.txt` file and explain why you think Git and version
+   control are important. Then, add another file called `filesystem.txt` and
+   write up how *you* understand how filesystems work. Add and commit these
+   files to the git history, making sure to make *descriptive* commit messages.
+5. Lastly, push these files up to your GitHub account and submit a pull request
+   of your changes with the original practice Code As Manuscript
+   repository. Once pull requests have been completed, make sure to update your
+   local and your own GitHub repository with the original GitHub repository
+   (Hint: `git pull upstream master`).
 
