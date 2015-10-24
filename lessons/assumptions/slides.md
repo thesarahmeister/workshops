@@ -108,7 +108,7 @@ Need help with stats? Use these resources!
 
 # Model fit #
 
-![]({{ site.github.url }}/lessons/images/modelFit.jpg)
+![](/lessons/images/modelFit.jpg)
 
 # Residual distribution #
 
@@ -136,7 +136,7 @@ Need help with stats? Use these resources!
 
 # Residual distribution #
 
-![]({{ site.github.url }}/lessons/images/residNorm.jpg)
+![](/lessons/images/residNorm.jpg)
 
 # Residual variance #
 
@@ -154,7 +154,7 @@ Need help with stats? Use these resources!
 
 # Residual variance #
 
-![]({{ site.github.url }}/lessons/images/residVar.jpg)
+![](/lessons/images/residVar.jpg)
 
 # What do you do if your data does not meet these assumptions? #
 

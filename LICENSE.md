@@ -3,9 +3,11 @@ layout: default
 title: License
 ---
 
-> Content: Copyright (c) 2015 Luke W. Johnston and Daiva Nielsen (CC-BY)
+> Content: Copyright (c) 2015 Luke W. Johnston, Daiva Nielsen, and Sarah Meister (CC-BY)
 > 
 > Design: Copyright (c) 2013 Mark Otto (MIT, see bottom)
+
+Copyright (c) 2015 Luke W. Johnston and Daiva Nielsen (CC-BY)
 
 ## creative commons
 
@@ -167,6 +169,7 @@ d. Nothing in this Public License constitutes or may be interpreted as a limitat
 
 > Creative Commons may be contacted at [creativecommons.org](http://creativecommons.org/).
 
+<<<<<<< HEAD
 # Released under MIT License for Poole
 
 Copyright (c) 2013 Mark Otto for website layout and design.
@@ -176,3 +179,5 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+=======
+>>>>>>> master

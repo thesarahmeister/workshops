@@ -1,4 +1,12 @@
+## File that tells git what to ignore
+
 ~*
 _site
 .sass*
 *~
+ignore*
+~*
+_site/
+tex2pdf*/
+.Rproj.user
+.Rhistory

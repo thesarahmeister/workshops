@@ -1,0 +1,18 @@
+ID,FamilaritySAS,FamiliarityGit,ReasonToParticipate,AttendedFirst,AttendedSecond,AttendedThird,AttendedFourth
+1,Novice/Intermediate,Novice/Intermediate,"Finance grad, believes SAS is necessary to know, especially for job hunting",y,y,y,y
+2,Novice,None,Important for future career,y,n,n,n
+3,Novice,Advanced,Get code to be more reproducible (reviewer asked them to reproduce results),y,y,y,y
+4,Intermediate,Intermediate,Would like to get some refreshed formal training (doesn't use SAS often),n,n,n,n
+5,Novice,None,Important for future career as research analyst,n,n,n,n
+6,None,Novice/Intermediate,Interested in data analysis for research project and for finding work after graduation,?,y,y,y
+7,Novice/Intermediate,None,Wants to be independent in data collection and analysis,y,y,n,y
+8,Novice/Intermediate,None,Interested in learning more about SAS,y,y,y,y
+9,Novice,Intermediate,Like to use GitHub to collaborate and more advanced version control topics,y,y,n,n
+10,Novice,None,Improve data analysis skills through coding efficiency and reproducibiltiy,n,n,n,n
+11,Intermediate,None,Want to learn advanced SAS techniques as part of graduate program,n,n,n,n
+12,Intermediate,None,"Want to be more efficient in coding, make it cleaner",y,y,y,y
+13,Intermediate,None,"Excited to learn macros, be more efficient in analysis, learn where to find quality help",y,y,y,n
+14,Novice,None,"Learn how to organize data, make visualizations and presentations",n,n,n,n
+15,None,None,"Interested in analyzing admin datasets, wants to gain expertise",y,n,n,n
+16,Novice,None,"Uses SPSS, but wants to learn SAS for better analysis",y,n,n,n
+17,Intermediate,Novice,NA,y,y,y,y
