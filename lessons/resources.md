@@ -71,5 +71,27 @@ categories:
 
 # R #
 
-* http://adv-r.had.co.nz/Vocabulary.html
+* [RStudio Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
 
+## R Markdown ##
+
+**Short guides/help:**
+
+* [R Markdown Cheat Sheet](http://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+* [Markdown basics](http://rmarkdown.rstudio.com/authoring_basics.html)
+* [Code chunk options brief](http://rmarkdown.rstudio.com/authoring_rcodechunks.html)
+* [Bibliographies and citations](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
+* [Creating HTML documents (`YAML` options)](http://rmarkdown.rstudio.com/html_document_format.html)
+* [Creating Word documents (`YAML` options)](http://rmarkdown.rstudio.com/word_document_format.html)
+* [Using the `captioner` package](https://cran.r-project.org/web/packages/captioner/vignettes/using_captioner.html)
+
+**Detailed guides/help:**
+
+* [R Markdown site](http://rmarkdown.rstudio.com/)
+* [R Markdown more complete reference sheet](http://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+* [More detailed markdown reference (`pandoc`)](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html)
+* [Pandoc Markdown website](http://pandoc.org/README.html)
+* [`knitr` website](http://yihui.name/knitr/)
+* [Code chunk options detailed](http://yihui.name/knitr/options/)
+* [Customization of markdown tables (`pander`)](http://rapporter.github.io/pander/)
+* [For installation or documentation of LaTeX](https://www.latex-project.org/)
