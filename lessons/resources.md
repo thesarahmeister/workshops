@@ -71,6 +71,8 @@ categories:
 
 # R #
 
+## Data wrangling ##
+
 * [Common and frequently used commands in R](http://adv-r.had.co.nz/Vocabulary.html)
 * [Data frames in `dplyr`](https://cran.r-project.org/web/packages/dplyr/vignettes/data_frames.html)
 * [Introduction to `dplyr`](https://cran.r-project.org/web/packages/dplyr/vignettes/introduction.html)
@@ -78,4 +80,6 @@ categories:
 * [Merging two dataframes using `dplyr`](https://cran.r-project.org/web/packages/dplyr/vignettes/two-table.html)
 * [Introduction to `tidyr`](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
 * [Shorter intro to `tidyr`](http://blog.rstudio.org/2014/07/22/introducing-tidyr/)
+* [Regular expressions](http://www.regular-expressions.info/)
+* [Regular expression symbol meaning](http://www.endmemo.com/program/R/gsub.php)
 
