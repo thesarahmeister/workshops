@@ -114,16 +114,31 @@ ds2 %>%
     select(Education, Catholic, Fertility)
 ```
 
-### Regular expression for selecting (matches)
+The real power with using the `select()` function comes when you combine it with
+[regular expressions (regexp)](http://www.regular-expressions.info/), or rather pattern
+searching. `dplyr` has several pattern searching functions, including
+`starts_with()`, `contains()`, and the most powerful `matches()`. The function
+`matches()` uses regexp, which are special commands that use
+certain, unique syntax for searching for patterns. For example, `^string` means
+that `string` is the first character, `string$` means that `string` is last
+character, `string|strung` searches for either `string` or `strung`, etc.
+regexp syntax are nearly a language to themselves, so use
+[StackOverflow](http://stackoverflow.com/) and Google as much as you can! 
 
-matches
+Ok, so lets say you want to search for variables that have certain patterns:
 
-### Cleaning up mess: perl/regexp
+```{r wrangleSelectRegExp}
+ds2 %>% 
+    select(contains('Edu'), starts_with('Cath'))
 
-gsub
-sub
-grep
-grep
+## Or more simplified
+ds2 %>% 
+    select(matches('Edu|Cath'))
+```
+
+You can see that if you have many variables that have a common structure to
+their name, you can quickly select all those variables by using functions such
+as `matches()`.
 
 ## Rename columns
 
@@ -152,7 +167,7 @@ ds2 %>%
     filter(X == 'Aigle')
 ```
 
-## Create new columns
+## Create new columns or clean up existing ones
 
 If you want to create a new column, you use the `mutate` command.  The
 `ifelse()` command lets you use a condition to have different values depending
@@ -163,6 +178,40 @@ ds2 %>%
     mutate(Testing = 'yes',
            Infertile = ifelse(Fertility < 50, 'yes', 'no'))
 ```
+
+However, it's fairly common that you need to do some data janitorial work by
+cleaning up an existing column. For example, in a dataset with a 'Sex' variable,
+some values had data entry errors in spelling, such as 'fmale' when it should be
+'female'. This needs to be fixed and can be done fairly easily in R. So let's
+'pretend that all words starting with 'G' in the `X` (county) column should
+'actually be 'J' and that all words with an 'e' at the end should be removed.
+'For this, we will use the `gsub()` command within `mutate()`, which will
+'*g*lobablly *sub*stitute a pattern with the replacement.
+
+```{r wrangleMutateGsub}
+ds2 %>% 
+    mutate(
+        X = gsub(pattern = '^G', replacement = 'J', X),
+        X = gsub(pattern = 'e$', replacement = '', X)
+        )
+```
+
+Notice the `^` and `$` characters. Those are special syntax symbols used in
+regexp commands. We introduced them above, but we'll quickly go over
+it again. These special symbols perform certain functions. In this case `^G`
+means for all "G" that are at the start of the string/character, while `e$`
+means for all "e" that are at the end of a string. Or let"s say that all "mont",
+"mout", and "mnt" should actually be "ment". We can do some cleaning fairly easily
+here.
+
+```{r wrangleMutateGsub2}
+ds2 %>% 
+    mutate(X = gsub('mont|mnt|mout', 'ment', X, ignore.case = TRUE))
+```
+
+Regular expressions are incredibly powerful, but also can be confusing. Make
+sure to check out [our resources page](/lessons/resources/) for links to sites
+that explain regexp in more detail.
 
 ## Chaining pipes
 
