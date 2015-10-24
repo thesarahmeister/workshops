@@ -210,22 +210,7 @@ set.caption(tabNums('tabCars'))
 pander(head(cars), style = 'rmarkdown')
 ```
 
-## Sharing your code/file
-
-convert to word for oldies (fogie?) (or html)
-
-Send to pi
-
-Getting other people's code?
-
-Sharing via github
-
-Prettier code for others to see (reformat code in RStudio)
-
-Make sense, so write out what you are doing in the Rmd part and the code in the
-code chunk part
-
-# Generating this `.Rmd` document
+## Generating this `.Rmd` document and sharing with others
 
 If you download the [source `.Rmd` version of this document](https://github.com/codeasmanuscript/workshops/tree/master/lessons/rmarkdown/intro.Rmd),
 you can recreate the web version and the HTML version by using these commands
@@ -238,3 +223,19 @@ render('intro.Rmd', 'html_document')
 ## md version on the website
 render('intro.Rmd', 'md_document')
 ```
+
+R Markdown can also make it very easy to collaborate with people who may not be
+as tech-savvy and who don't know much outside of Microsoft Word by converting
+all your `.Rmd` files into Word! Try it out:
+
+```{r renderWord, eval = FALSE}
+render('intro.Rmd', 'word_document')
+```
+
+Using R Markdown can help with making your code easier to understand. That's
+because as you type out your code, you are also typing explanations and reasons
+in markdown. You can then easily create documents, manuscripts, theses, and
+other file types that others (and your future self) can read to understand your
+code and your analysis better. Combine R and R Markdown with Git and GitHub and
+you have a powerful tool for making your work better, more scientifically
+rigorous and transparent, and share-able so others can use your work easily!
