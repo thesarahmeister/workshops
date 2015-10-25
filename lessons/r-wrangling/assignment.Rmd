@@ -1,5 +1,6 @@
 ---
 title: "Assignment: Data wrangling in R"
+published: false
 author:
     - Luke W. Johnston
 date: 2015-10

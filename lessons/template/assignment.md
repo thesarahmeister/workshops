@@ -1,5 +1,6 @@
 ---
 title: "Assignment: ..."
+published: false
 author:
     - 
 date: YYYY-MM-DD
