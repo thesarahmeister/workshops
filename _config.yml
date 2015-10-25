@@ -1,5 +1,5 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         kramdown
 highlighter:      pygments
 
 # Permalinks
@@ -21,6 +21,6 @@ version:          2.1.0
 github:
   repo:           https://github.com/codeasmanuscript
 
-lesson-list: [Git, GitHub, Macros, ODS]
-category-list: [Lessons, Git, GitHub, Macros, ODS]
+lesson-list: [Git, Intro, Plotting, Wrangling, Rmarkdown, Macros, ODS]
+category-list: [R, Git, Macros, ODS, Lessons]
 tag-list: [Lessons, Git, GitHub, Macros, ODS, Assignment, Slides, Cheatsheet]
