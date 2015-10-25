@@ -15,10 +15,3 @@ commands :
 build_local :
 	jekyll serve --watch --draft
 
-## clean_lessons  : Clean out the lessons folder to update the material
-clean_lessons :
-	rm -rf lessons/* gps/*
-
-## update_content : Update the content of the site from the master branch
-update_content :
-	sh update.sh
