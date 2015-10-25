@@ -29,6 +29,8 @@ setwd("/Users/thesarahmeister/")
 
 setwd("Github/workshops/lessons/rintro")
 
+dir()
+
 ```
 
 # Now let's code! #
@@ -110,6 +112,7 @@ sd(colFour)
 sd(airQualNoMonth)
 ```
 
+What happens if we have multiple columns that are non-numeric and we don't want to remove them all to use the built-in `colMeans()` function? We can make our **own** function!
 
 ```{r, collapse=TRUE}
 columnmean <- function (y, remove.NA = TRUE) {
@@ -120,12 +123,54 @@ columnmean <- function (y, remove.NA = TRUE) {
   }
   means
 }
+
+columnmean(airQuality)
 ```
+
+Cool right? Now let's try a function with an if/else expression. 
 
 ```{r, collapse=TRUE}
 
+above80 <- function(y) {
+    y <- na.omit(y)
+    high <- vector("numeric", length=0)
+    low <- vector("numeric", length=0)
+  for (i in seq_along(y)) {
+    if (y[i] > 80) {
+      high <- append(high, y[i])
+    }
+    else {
+      low <- append(low, y[i])
+    }
+  }
+  high <<- high
+  low <<- low
+}
+
+above80(airQuality$Temp)
+
 ```
 
-```{r, collapse=TRUE}
+# Loop Functions #
 
+The last thing for today are the very useful built-in loop functions. These functions have the word `apply` in them.
+
+- `lapply`: loop over a list and evaluate a function on each element 
+- `sapply`: same as `lapply` but it tries to simplify the result
+- `apply`: apply a function over the margins of an array 
+- `tapply`: apply a function over subsets of a vector (`lapply()` used with `split()` does the same thing)
+- `mapply`: a multivariate version of `lapply` 
+
+# lapply() #
+
+Remember the function we made? It can be replaced with an `lapply()` loop.
+```{r, collapse=TRUE}
+lapply(airQuality, mean, na.rm = TRUE)
+```
+
+# lapply() #
+
+Alternatively we can try `
+```{r, collapse=TRUE}
+lapply(airQuality, mean, na.rm = TRUE)
 ```

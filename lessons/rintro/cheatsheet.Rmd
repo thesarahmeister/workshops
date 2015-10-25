@@ -258,7 +258,13 @@ df <- data.frame(x = 1:10, y = 11:20, z = letters[1:10])
 df$z
 ```
 
-# Logical and Relative Operators #
+# R Operators #
+
+Assignment operators
+|Operator | Description|
+|---- | ---- |
+| <- | local environment assignment |
+| <<- | global environment assignment | 
 
 Arthmetic Operators
 
@@ -397,11 +403,11 @@ columnmean <- function (y, remove.NA = TRUE) {
 
 R has built loop functions, which often have the word "apply" in them.
 
-- `lapply`: loop over a list and evaluate a function on each element (useful with the `split` function)
+- `lapply`: loop over a list and evaluate a function on each element 
 - `sapply`: same as `lapply` but it tries to simplify the result
 - `apply`: apply a function over the margins of an array 
-- `tapply`: apply a function over subsets of a vector
-- `mapply`: a multivariate version of lapply 
+- `tapply`: apply a function over subsets of a vector (`lapply()` used with `split()` does the same thing)
+- `mapply`: a multivariate version of `lapply` 
 
 # lapply #
 
