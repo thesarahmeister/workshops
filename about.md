@@ -39,10 +39,10 @@ two parts:
 
 Have questions or suggestions? Feel free to
 [open an issue on GitHub](https://github.com/codeasmanuscript/development/issues/new)
-or contact either Daiva Nielsen (<daiva.nielsen@gmail.com>) or Luke
-Johnston (<lwjohnst@gmail.com>) for more information.
+or email the *Code As Manuscript* instructors (<codeasmanuscript@gmail.com>) for
+more information
 
-# Site categories and content: #
+# Site listing and content: #
 
 {% for cat in site.category-list %}
 
