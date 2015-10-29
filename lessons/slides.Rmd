@@ -1,7 +1,9 @@
 ---
 title: "Welcome to *Code As Manuscript*!"
 published: false
-author: Luke W. Johnston
+author: 
+    - Luke W. Johnston
+    - Sarah Meister
 date: 2015-10
 layout: page
 sidebar: false
