@@ -46,5 +46,11 @@ After this workshop, our expectation is that you will be able to:
 * [Assignment](assignment/)
 * [Assignment Answers](answer)
 
-Other resources can be found [here](../resources/)
+Other resources can be found here:
+
+* [CRAN website](https://cran.r-project.org/)
+* [CRAN R Reference Card](https://cran.r-project.org/doc/contrib/Short-refcard.pdf)
+* [Interactive R tutorial](http://tryr.codeschool.com/)
+* [R in a Nutshell](http://web.udl.es/Biomath/Bioestadistica/R/Manuals/r_in_a_nutshell.pdf)
+
 
