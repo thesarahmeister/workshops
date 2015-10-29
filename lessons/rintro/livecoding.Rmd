@@ -3,19 +3,9 @@ title: "Introduction to R"
 author: "Sarah Meister"
 date: '2015-11-02'
 output: html_vignette
-fontsize: 8pt
-header-includes: \input{../slideOptions.tex}
 layout: page
-classoption: xcolor=dvipsnames
 sidebar: no
-slide-level: 1
-tag:
-- Lessons
-- Slides
-- IntroR
-categories:
-- Lessons
-- IntroR
+published: false
 ---
 
 # Starting R #

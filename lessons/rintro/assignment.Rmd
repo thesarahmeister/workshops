@@ -1,7 +1,6 @@
 ---
 title: "Assignment: Intro to R"
 author: Sarah Meister
-    - 
 date: 2015-11-02
 layout: page
 sidebar: false
@@ -9,10 +8,11 @@ tag:
     - Lessons
     - Assignment
     - IntroR
+    - R
 categories:
     - Lessons
     - IntroR
-    
+    - R
 output: html_vignette
 ---
 
