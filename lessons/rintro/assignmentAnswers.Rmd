@@ -1,0 +1,107 @@
+---
+title: "Assignment Answers: Intro to R"
+author: Sarah Meister
+    - 
+date: 2015-11-02
+layout: page
+sidebar: false
+tag:
+    - Lessons
+    - Assignment
+    - IntroR
+categories:
+    - Lessons
+    - IntroR
+    
+output: html_vignette
+---
+
+1. 
+
+```{r, collapse=TRUE}
+a <- c(1:10)
+b <- c(11:20)
+
+(c <- a*b)
+
+c[5]
+
+subset(c, c > 50)
+```
+
+
+2. 
+```{r, collapse=TRUE}
+(d <- matrix(c(7,9,12,2,4,13), 2, 3))
+
+(e <- matrix(c(1,7,12,19,2,8,13,20,3,9,14,21), 3, 4))
+
+
+(f <- d %*% e)
+```
+
+3. 
+
+```{r, collapse=TRUE}
+library(datasets)
+
+(g <- mtcars)
+
+apply(g, 2, mean)
+
+(h <- g[,"mpg"])
+
+#OR 
+
+(h <- g$mpg)
+
+(i <- g[, 4])
+
+(j <- g[c(3,5),])
+
+(k <- subset(g, g$hp < 100))
+```
+
+4. 
+
+```{r, collapse=TRUE}
+
+ani <- c("cat", "dog", "cow", "pig")
+for (i in ani) {
+ if (i == "dog") {
+ print(i) }
+ else {
+ }
+}
+```
+
+5. 
+
+```{r, collapse=TRUE}
+stats <- function(a,b) {
+  print (mean(a))
+  print (sd(a))
+  print(median(b))
+}
+
+stats(g$disp, g$drat)
+```
+
+6. 
+```{r, collapse=TRUE}
+lapply(g, range, na.rm = TRUE)
+
+sapply(g, range, na.rm = TRUE)
+
+## lapply always returns a list while sapply simiplied the result and returned a matrix
+```
+
+7. 
+```{r, collapse=TRUE}
+mapply(range, mtcars[,c(1,6,7)], na.rm = TRUE)
+```
+
+8.
+```{r, collapse=TRUE}
+tapply(mtcars$hp, mtcars$gear, max, na.rm = TRUE)
+```
