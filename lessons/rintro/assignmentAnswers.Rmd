@@ -86,3 +86,22 @@ stats <- function(a,b) {
 
 stats(g$disp, g$drat)
 ```
+
+6. 
+```{r, collapse=TRUE}
+lapply(g, range, na.rm = TRUE)
+
+sapply(g, range, na.rm = TRUE)
+
+## lapply always returns a list while sapply simiplied the result and returned a matrix
+```
+
+7. 
+```{r, collapse=TRUE}
+mapply(range, mtcars[,c(1,6,7)], na.rm = TRUE)
+```
+
+8.
+```{r, collapse=TRUE}
+tapply(mtcars$hp, mtcars$gear, max, na.rm = TRUE)
+```

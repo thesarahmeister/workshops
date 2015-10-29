@@ -34,8 +34,24 @@ xyplot(Life.Exp ~ Income | region, data=state, layout = c(4,1))
 
 # ggplot2 #
 
-The ggplot2 package is similar to lattice but it's easier and more intuitive to use. 
+The ggplot2 package is an R package that uses the "Grammar of Graphics" to put together different aspects of data visualization to build quality graphics. It is a very popular package. 
 
- ```{r}
+ ```{r, collapse=TRUE}
  install.packages("ggplot2")
+ 
+ library(ggplot2)
+ 
  ```
+ 
+ # the Basics #
+ 
+ `qplot()` is the basic plotting function in `ggplot2` and plots are made up of aesthetics (size, shape, color, etc.) and geoms (points, lines, etc.). 
+ 
+ `ggplot()` is the core function and can do things that `qplot` cannot. 
+ 
+```{r, collapse=TRUE}
+str(mpg)
+
+qplot(displ, hwy, data = mpg)
+
+```
