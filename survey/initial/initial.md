@@ -9,6 +9,8 @@ file.
 
 What is your name?
 
+What is your email address?
+
 What program are you in? (MSc, PhD?)
 
 What year of your program are you in? (Eg. 1, 2, 3, etc.)

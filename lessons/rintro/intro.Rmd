@@ -2,19 +2,18 @@
 title: "Introduction: R"
 author:
     - Sarah Meister
-date: 2015-03-23
-fontsize: 12pt
-geometry: margin=1in
-papersize: letterpaper
+date: 2015-11-02
 layout: page
 sidebar: false
 tag:
     - Lessons
     - Introduction
     - IntroR
+    - R
 categories:
     - Lessons
     - IntroR
+    - R
 permalink: lessons/git/
 ---
 

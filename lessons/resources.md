@@ -41,13 +41,18 @@ categories:
 
 # Git #
 
+* [Visual guide to Git](http://marklodato.github.io/visual-git-guide/index-en.html)
 * [Official Git documentation and introduction](http://git-scm.com/doc)
 * [Other documentation (nice and clean)](https://www.atlassian.com/git/tutorials)
-* [Interactive and step-by-step tutorial](https://try.github.io/levels/1/challenges/1)
+* [Hands-on tutorial, with web-based terminal](https://try.github.io/levels/1/challenges/1)
 * [A tutorial from a scientists perspective](http://nyuccl.org/pages/gittutorial/)
 * [An introduction to Git for researchers](http://datapub.cdlib.org/2014/05/05/github-a-primer-for-researchers/)
 * [Software carpentry lesson material for Git](http://swcarpentry.github.io/git-novice/)
 * [A scientists arguments and evidence for using Git](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3639880/)
+* [Simpler first-steps guide](http://rogerdudler.github.io/git-guide/)
+* [Reference pages for all git commands](http://gitref.org/)
+* [Interactive, visual tutorial on branching](http://pcottle.github.io/learnGitBranching/)
+* [StackOverflow questions and answers on Git](http://stackoverflow.com/questions/tagged/git)
 
 # SAS ODS #
 
@@ -68,3 +73,42 @@ categories:
 * <http://www.stackoverflow.com>
 * <http://stats.stackexchange.com>
 * <http://software-carpentry.org/>
+
+# R #
+
+* [RStudio Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
+
+## Data wrangling ##
+
+* [Common and frequently used commands in R](http://adv-r.had.co.nz/Vocabulary.html)
+* [Data frames in `dplyr`](https://cran.r-project.org/web/packages/dplyr/vignettes/data_frames.html)
+* [Introduction to `dplyr`](https://cran.r-project.org/web/packages/dplyr/vignettes/introduction.html)
+* [Cheatsheet for `dplyr` and `tidyr`](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+* [Merging two dataframes using `dplyr`](https://cran.r-project.org/web/packages/dplyr/vignettes/two-table.html)
+* [Introduction to `tidyr`](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
+* [Shorter intro to `tidyr`](http://blog.rstudio.org/2014/07/22/introducing-tidyr/)
+* [Regular expressions](http://www.regular-expressions.info/)
+* [Regular expression symbol meaning](http://www.endmemo.com/program/R/gsub.php)
+
+## R Markdown ##
+
+**Short guides/help:**
+
+* [R Markdown Cheat Sheet](http://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+* [Markdown basics](http://rmarkdown.rstudio.com/authoring_basics.html)
+* [Code chunk options brief](http://rmarkdown.rstudio.com/authoring_rcodechunks.html)
+* [Bibliographies and citations](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
+* [Creating HTML documents (`YAML` options)](http://rmarkdown.rstudio.com/html_document_format.html)
+* [Creating Word documents (`YAML` options)](http://rmarkdown.rstudio.com/word_document_format.html)
+* [Using the `captioner` package](https://cran.r-project.org/web/packages/captioner/vignettes/using_captioner.html)
+
+**Detailed guides/help:**
+
+* [R Markdown site](http://rmarkdown.rstudio.com/)
+* [R Markdown more complete reference sheet](http://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+* [More detailed markdown reference (`pandoc`)](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html)
+* [Pandoc Markdown website](http://pandoc.org/README.html)
+* [`knitr` website](http://yihui.name/knitr/)
+* [Code chunk options detailed](http://yihui.name/knitr/options/)
+* [Customization of markdown tables (`pander`)](http://rapporter.github.io/pander/)
+* [For installation or documentation of LaTeX](https://www.latex-project.org/)

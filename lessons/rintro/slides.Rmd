@@ -4,18 +4,15 @@ author: Sarah Meister
 date: 2015-11-02
 layout: page
 sidebar: false
-classoption: xcolor=dvipsnames
 tag:
     - Lessons
     - Slides
     - IntroR
+    - R
 categories:
     - Lessons
     - IntroR
-slide-level: 1
-fontsize: 8pt
-header-includes:
-    - \input{../slideOptions.tex}
+    - R
 ---
     
 # Welcome to our R introduction workshop #
