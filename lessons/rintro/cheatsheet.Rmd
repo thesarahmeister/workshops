@@ -2,19 +2,18 @@
 title: "Cheatsheet: Introduction to R"
 author:
     - Sarah Meister
-date: 2015-MM-DD
-fontsize: 12pt
-geometry: margin=1in
-papersize: letterpaper
+date: 2015-11-02
 layout: page
 sidebar: false
 tag:
     - Lessons
     - Cheatsheet
-    - (lesson topic)
+    - IntroR
+    - R
 categories:
     - Lessons
-    - (lesson topic)
+    - IntroR
+    - R
 ---
 
 Brief description/intro

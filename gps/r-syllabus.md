@@ -1,11 +1,9 @@
 ---
-title: "Code as Manuscript: Data Analysis, Plotting, and Writing in R"
+title: "Code as Manuscript: Data wrangling, visualization, and reproducibility in R"
 author:
-    - Luke Johnston
-date: 2015-09-01
-geometry: margin=1in
-fontsize: 12pt
-papersize: letterpaper
+    - Luke W. Johnston
+    - Sarah Meister
+date: 2015-10-17
 layout: page
 sidebar: false
 tag:
@@ -16,7 +14,6 @@ categories:
     - GPS
     - R
     - Syllabus
-
 ---
 
 ## Course description: ##
@@ -57,13 +54,14 @@ career (since R is free!).
 ## Schedule ##
 
 Lesson content can be found [here]({{ site.github.url }}/lessons/).  The workshop will
-follow the following sequence of topics:
+follow the following sequence of topics on **Mondays from 3:00-6:00pm** at **65
+St. George St., room 201**:
 
-1. Git & GitHub
-2. Basics of R
-3. Plotting
-4. Data wrangling
-5. Dynamic report generation
+1. Git & GitHub -- Oct. 26th
+2. Basics of R -- Nov. 2nd
+3. Visualization -- Nov. 9th
+4. Data wrangling -- Nov. 16th
+5. Dynamic report generation -- Nov. 23rd
 
 ## Intended audience: ##
 
@@ -77,7 +75,7 @@ of data analysis.  No experience necessary for these workshops.
   [instructions page, under the R section]({{ site.github.url }}/lessons/instructions/))
 * Bring a positive, not-afraid-of-making-mistakes-or-feeling-unsure
   attitude!!  Learning any language (either human or computer) is
-  hard work and *not* easy!
+  hard work and *not* easy, but can be done!
 
 ## Assignments: ##
 

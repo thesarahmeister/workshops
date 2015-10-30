@@ -1,19 +1,5 @@
 ---
-title: "Assignment Answers: Intro to R"
-author: Sarah Meister
-    - 
-date: 2015-11-02
-layout: page
-sidebar: false
-tag:
-    - Lessons
-    - Assignment
-    - IntroR
-categories:
-    - Lessons
-    - IntroR
-    
-output: html_vignette
+published: false
 ---
 
 1. 
