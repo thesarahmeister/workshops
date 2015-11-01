@@ -78,6 +78,18 @@ categories:
 
 * [RStudio Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
 
+## Data wrangling ##
+
+* [Common and frequently used commands in R](http://adv-r.had.co.nz/Vocabulary.html)
+* [Data frames in `dplyr`](https://cran.r-project.org/web/packages/dplyr/vignettes/data_frames.html)
+* [Introduction to `dplyr`](https://cran.r-project.org/web/packages/dplyr/vignettes/introduction.html)
+* [Cheatsheet for `dplyr` and `tidyr`](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+* [Merging two dataframes using `dplyr`](https://cran.r-project.org/web/packages/dplyr/vignettes/two-table.html)
+* [Introduction to `tidyr`](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
+* [Shorter intro to `tidyr`](http://blog.rstudio.org/2014/07/22/introducing-tidyr/)
+* [Regular expressions](http://www.regular-expressions.info/)
+* [Regular expression symbol meaning](http://www.endmemo.com/program/R/gsub.php)
+
 ## R Markdown ##
 
 **Short guides/help:**
