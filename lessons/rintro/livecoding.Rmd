@@ -1,0 +1,199 @@
+---
+title: "Introduction to R"
+author: "Sarah Meister"
+date: '2015-11-02'
+output: html_vignette
+layout: page
+sidebar: no
+published: false
+---
+
+# Starting R #
+
+We will be using R studio for this course as it's a user-friendly GUI for R. You can also access R from Terminal (Mac) or Command Line (Windows) if you please. 
+
+```{r, collapse=TRUE, eval=FALSE}
+getwd()
+
+setwd("/Users/thesarahmeister/")
+
+dir.create("Desktop/practice-2015-10/sarah/intror")
+
+setwd("Desktop/practice-2015-10/sarah/intror")
+
+dir()
+
+```
+
+# Now let's code! #
+
+Download the `airQuality.csv` file from our [Github repo](https://github.com/codeasmanuscript/practice-2015-10) and import it into R using the `read.csv` function
+
+
+```{r, collapse=TRUE}
+airQuality <- read.csv("airQuality.csv", header = TRUE)
+```
+
+Now let's look at the data using a few different functions
+
+```{r, collapse=TRUE}
+head(airQuality)
+
+head(airQuality, n=8)
+
+tail(airQuality)
+
+str(airQuality)
+
+summary(airQuality)
+
+nrow(airQuality)
+
+ncol(airQuality)
+
+range(airQuality$Temp)
+
+```
+
+Lets alter our dataset a bit
+
+```{r, collapse=TRUE}
+
+names(airQuality$Solar.R) <- "Solar"
+
+airQuality$Random <- rnorm(153, 1, 2)
+
+```
+
+Okay time to subset our data
+
+```{r, collapse=TRUE}
+
+rowThree <- airQuality[3, ]
+
+colFour <- airQuality[ ,4]
+
+ozone <- airQuality$Ozone
+
+highTemp <- airQuality[airQuality$Temp > 80, ]
+
+may <- airQuality[airQuality$Month == "May", ]
+
+highTempOrMay <- airQuality[airQuality$Month == "May" | airQuality$Temp > 80, ]
+
+lowTempAndSep <- subset(airQuality, airQuality$Month == "Sep" & airQuality$Temp < 70)
+
+```
+
+okay let's perform some basic data manipulations on our dataframe and subsetted data
+
+```{r, collapse=TRUE, eval=FALSE}
+
+mean(airQuality$Ozone) #returns an NA
+
+mean(airQuality$Ozone, na.rm=TRUE)
+
+colMeans(airQuality, na.rm=TRUE) #this one doesn't work
+
+airQualNoMonth <- airQuality[,-5]
+
+colMeans(airQualNoMonth, na.rm=TRUE)
+
+sd(colFour)
+
+sd(airQualNoMonth)
+```
+
+What happens if we have multiple columns that are non-numeric and we don't want to remove them all to use the built-in `colMeans()` function? We can make our **own** function!
+
+```{r, collapse=TRUE}
+columnmean <- function (y, remove.NA = TRUE) {
+  nc <- ncol(y)
+  means <- vector("numeric", length=0)
+  for (i in 1:nc) {
+    means[i] <- mean(y[,i], na.rm = remove.NA)
+  }
+  means
+}
+
+columnmean(airQuality)
+```
+
+Cool right? Now let's try a function with an if/else expression. 
+
+```{r, collapse=TRUE}
+
+above80 <- function(y) {
+    y <- na.omit(y)
+    nob <- length(y)
+    high <- vector("numeric", length=0)
+    low <- vector("numeric", length=0)
+  for (i in 1:nob) {
+    if (y[i] > 80) {
+      high <- append(high, y[i])
+    }
+    else {
+      low <- append(low, y[i])
+    }
+  }
+  list(high,low)
+}
+
+above80(airQuality$Temp)
+
+highlow <- above80(airQuality$Temp)
+
+high <- highlow[[1]]
+
+low <- highlow[[2]]
+```
+
+# Loop Functions #
+
+The last thing for today are the very useful built-in loop functions. These functions have the word `apply` in them.
+
+- `lapply`: loop over a list and evaluate a function on each element 
+- `sapply`: same as `lapply` but it tries to simplify the result
+- `apply`: apply a function over the margins of an array 
+- `tapply`: apply a function over subsets of a vector (`lapply()` used with `split()` does the same thing)
+- `mapply`: a multivariate version of `lapply` 
+
+# lapply() #
+
+Remember the function we made? It can be replaced with an `lapply()` loop.
+```{r, collapse=TRUE}
+lapply(airQuality, mean, na.rm = TRUE)
+```
+
+# sapply() #
+
+Alternatively we can try `sapply()`. This will return a named numeric vector (simpified from a list)
+```{r, collapse=TRUE}
+sapply(airQuality, mean, na.rm = TRUE)
+```
+
+# apply() #
+
+`apply()` first coerces your dataframe to a matrix, which means all the columns must have the same type. Because our dataframe does not meet this requirement, I'll be taking a subset of the data. However normally this function would be used with matrices.
+
+```{r, collapse=TRUE}
+apply(airQuality[,c(-5)], 2, sd, na.rm = TRUE)
+
+apply(airQuality[,c(-5)], 1, sd, na.rm = TRUE)
+```
+
+# mapply #
+
+`mapply` is a multivariate apply (like `lapply`) that applies a function over a set of arguments.
+```{r, collapse=TRUE}
+mapply(range, airQuality[,c(1,3,6)], na.rm = TRUE)
+```
+
+# tapply #
+
+`tapply` is used to apply a function over subsets of a vector. It takes two arguements: a vector to apply to function on and a factor variable that subsets the vector. It will simplify the result, like sapply. 
+
+```{r, collapse=TRUE}
+tapply(airQuality$Ozone, airQuality$Month, range, na.rm = TRUE)
+```
+
