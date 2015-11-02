@@ -38,14 +38,16 @@ challenge.
     * The 5th element of `c`
     * All of elements of `c` that are greater than 50
 
-2. Use R to create the following two matrices and multiply them. Make a new
-object of the resulting matrix; choose your own object name!
+2. Use R to create the following two matrices (*without* the column names) and
+multiply them. Make a new object of the resulting matrix; choose your own object
+name!
 
 *alpha:*
 
 ```{r}
 library(knitr)
 d <- matrix(c(7,9,12,2,4,13), 2, 3)
+colnames(d) <- c('Col1', 'Col2', 'Col3')
 kable(d, output = TRUE, align = "c")
 ```
  
@@ -53,6 +55,7 @@ kable(d, output = TRUE, align = "c")
 
 ```{r}
 e <- matrix(c(1,7,12,19,2,8,13,20,3,9,14,21), 3, 4)
+colnames(e) <- c('Col1', 'Col2', 'Col3', 'Col4')
 kable(e, output = TRUE, align = "c")
 ```
 
