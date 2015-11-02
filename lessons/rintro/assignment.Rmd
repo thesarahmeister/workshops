@@ -23,18 +23,14 @@ knitr::opts_chunk$set(echo = FALSE, collapse = TRUE)
 
 ## Challenges for R basics
 
-Write up and complete all of these challenges in a file called `challenges.R`.
-To get more practice with Git, **add and commit** after completing each
-challenge.
+Write up and complete all of these challenges in a file called `challenges.R`. 
+Save this file in your `intror` folder on the `practice` repository. So the file
+location should look like: `your-name/intror/challenge.R`. To get more practice
+with Git, **add and commit** after completing each challenge.
 
-1. Create the following vectors in R:
-	
-    * a = 1 to 10
-    * b = 11 to 20
-
-    Use vector arithmetic to multiply these vectors and put the results into a
-    new variable `c`. Select subsets of `c` to identify the following:
-
+1. Create the following vectors in R: a = 1 to 10; b = 11 to 20. Then, use
+vector arithmetic to multiply these vectors and put the results into a new 
+variable `c`. Select subsets of `c` to identify the following:
     * The 5th element of `c`
     * All of elements of `c` that are greater than 50
 
@@ -42,27 +38,16 @@ challenge.
 multiply them. Make a new object of the resulting matrix; choose your own object
 name!
 
-*alpha:*
-
-```{r}
-library(knitr)
-d <- matrix(c(7,9,12,2,4,13), 2, 3)
-colnames(d) <- c('Col1', 'Col2', 'Col3')
-kable(d, output = TRUE, align = "c")
-```
- 
-*beta:* 
-
-```{r}
-e <- matrix(c(1,7,12,19,2,8,13,20,3,9,14,21), 3, 4)
-colnames(e) <- c('Col1', 'Col2', 'Col3', 'Col4')
-kable(e, output = TRUE, align = "c")
-```
+    ```{r, comment = NA}
+    paste('alpha')
+    matrix(c(7,9,12,2,4,13), 2, 3)
+    paste('beta')
+    matrix(c(1,7,12,19,2,8,13,20,3,9,14,21), 3, 4)
+    ```
 
 3. Load the `datasets` package and make a new dataframe with the `mtcars`
 dataset. What are the means of the columns? Hint: use a loop function. Subset
 the `mtcars` dataset and make new vectors with:
-
     * The column mpg
     * The fourth column
     * The third and fifth row
