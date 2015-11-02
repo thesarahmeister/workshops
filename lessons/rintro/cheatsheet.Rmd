@@ -312,43 +312,43 @@ write.csv(data, file = 'myfile.csv')
 **Assignment operators:** (Note: only use `<<-` under *very* special
 circumstances...)
 
-|Operator | Description |
-|-----|----|
-| <- | local environment assignment |
-| <<- | global environment assignment | 
+| Operator | Description |
+| :-----| :----|
+|  <- | local environment assignment |
+|  <<- | global environment assignment | 
 
 **Arthmetic Operators:**
 
-|Operator | Description |
-|---------|----------|
-|+        | addition |
-|-        | subtraction |
-|*        | multiplication |
-|/        | division |
-|^ or **  | exponentiation |
-|x %% y   | modulus (5 %% 2 is 1) |
-|x %/% y  | integer division (5%/% is 2) |
-|x %\*% y  | matrix multiplication |
+|  Operator | Description |
+| :--------- | :----------|
+| +        | addition |
+| -        | subtraction |
+| *        | multiplication |
+| /        | division |
+| ^ or **  | exponentiation |
+| x %% y   | modulus (5 %% 2 is 1) |
+| x %/% y  | integer division (5%/% is 2) |
+| x %\*% y  | matrix multiplication |
 
 **Logical Operators:**
 
-Operator  | Description
---------  | -----------
-<         | less than
-<=        | less than or equal to
->         | greater than
->=        | greater than or equal to
-==        | exactly equal to
-!=        | not equal to
-!x        | not x
-x \| y    | x OR y (returns a vector)
-x \|\| y    | x OR y (examines only 1st element of vector)
-x & y     | x AND y (returns a vector)
-x && y    | x AND y (examines only 1st element of vector)
-isTRUE(x) | test if X is TRUE
-any(x) | whether any of x is TRUE
-all(x) | whether all of x is TRUE
-identical(x, y) | whether x and y are the same
+| Operator  | Description |
+| :--------  | :----------- |
+| <         | less than |
+| <=        | less than or equal to |
+| >         | greater than |
+| >=        | greater than or equal to |
+| ==        | exactly equal to |
+| !=        | not equal to |
+| !x        | not x |
+| x \| y    | x OR y (returns a vector) |
+| x \|\| y    | x OR y (examines only 1st element of vector) |
+| x & y     | x AND y (returns a vector) |
+| x && y    | x AND y (examines only 1st element of vector) |
+| isTRUE(x) | test if X is TRUE |
+| any(x) | whether any of x is TRUE |
+| all(x) | whether all of x is TRUE |
+| identical(x, y) | whether x and y are the same |
 
 # Commenting in R #
 
