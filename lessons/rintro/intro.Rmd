@@ -1,5 +1,6 @@
 ---
-title: "Introduction: R"
+title: "Introduction: Basics of R"
+published: false
 author:
     - Sarah Meister
 date: 2015-11-02
@@ -14,14 +15,15 @@ categories:
     - Lessons
     - IntroR
     - R
-permalink: lessons/git/
+permalink: lessons/rintro/
 ---
 
-# What is R and why do I need to learn it? #
+# What is R and why should I learn it? #
 
 R is an object-oritented programming language for statistical computing and graphics.
 
 Benefits of R:
+
 1. Easily extenible through **FREE** R packages
 2. Active community (lots on online help)
 3. Able to produce publication-quality graphs, and dynamic and interactive graphs with additional packages (did I mention they were **FREE**??)
@@ -43,13 +45,5 @@ After this workshop, our expectation is that you will be able to:
 * [Slides](slides/)
 * [Cheatsheet](cheatsheet/)
 * [Assignment](assignment/)
-* [Assignment Answers](answer)
-
-Other resources can be found here:
-
-* [CRAN website](https://cran.r-project.org/)
-* [CRAN R Reference Card](https://cran.r-project.org/doc/contrib/Short-refcard.pdf)
-* [Interactive R tutorial](http://tryr.codeschool.com/)
-* [R in a Nutshell](http://web.udl.es/Biomath/Bioestadistica/R/Manuals/r_in_a_nutshell.pdf)
-
+* [Resources](/lessons/resources/)
 
