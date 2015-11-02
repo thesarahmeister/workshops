@@ -44,7 +44,7 @@ object of the resulting matrix; choose your own object name!
 *alpha:*
 
 ```{r}
-library(pander)
+library(knitr)
 d <- matrix(c(7,9,12,2,4,13), 2, 3)
 kable(d, output = TRUE, align = "c")
 ```
