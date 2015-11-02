@@ -78,6 +78,13 @@ categories:
 
 * [RStudio Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
 
+## Basics of R ##
+
+* [CRAN website](https://cran.r-project.org/)
+* [CRAN R Reference Card](https://cran.r-project.org/doc/contrib/Short-refcard.pdf)
+* [Interactive R tutorial](http://tryr.codeschool.com/)
+* [R in a Nutshell](http://web.udl.es/Biomath/Bioestadistica/R/Manuals/r_in_a_nutshell.pdf)
+
 ## Data wrangling ##
 
 * [Common and frequently used commands in R](http://adv-r.had.co.nz/Vocabulary.html)
