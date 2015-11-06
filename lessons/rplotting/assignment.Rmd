@@ -1,8 +1,8 @@
 ---
-title: "Assignment: ..."
-author:
+title: "Assignment: Plotting in R"
+author: Sarah Meister
     - 
-date: YYYY-MM-DD
+date: 2015-11-09
 fontsize: 12pt
 geometry: margin=1in
 papersize: letterpaper
@@ -11,10 +11,10 @@ sidebar: false
 tag:
     - Lessons
     - Assignment
-    - (lesson topic)
+    - rplotting
 categories:
     - Lessons
-    - (lesson topic)
+    - rplotting
 ---
 
 # List of potential exercises here: #
