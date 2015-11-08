@@ -62,7 +62,7 @@ qplot(hwy, data=mpg, fill=drv) # here we are making a histogram of the hwy varia
 
 qplot(displ, hwy, data=mpg, facets =.~drv) # another option is to separate the data into different plots (facets). 
 
-# the facets variable takes two arguments: one on the left an one on the right and they are separated by a tilde. The one on the right determines the columns of the facets and the one on the right determines the rows. 
+# the facets variable takes two arguments: one on the left and one on the right, and they are separated by a tilde. The one on the right determines the columns of the facets and the one on the right determines the rows. 
 
 qplot(hwy, data=mpg, facet=drv~., binwidth=2) #here we have 3 rows with each plot. 
 
