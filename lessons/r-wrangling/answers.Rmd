@@ -1,0 +1,82 @@
+# Answers
+
+Please note these are all **possible** answers. These answers are not the *end
+all be all* of answers and may not at all be how you answered them. As long as
+the end product is the same, it doesn't really matter how you got there.
+
+```{r}
+library(dplyr)
+library(tidyr)
+```
+
+
+1.
+```{r}
+swiss %>% 
+    filter(Catholic < 60) %>% 
+    mutate(Fertile = ifelse(Fertility > 50, 'Fertile', 'Infertile')) %>% 
+    gather(Variable, Value, -Fertile) %>% 
+    group_by(Fertile, Variable) %>% 
+    summarize(Means = mean(Value)) %>% 
+    spread(Fertile, Means)
+```
+
+2.
+```{r}
+swiss %>% 
+    filter(Catholic < 60) %>% 
+    mutate(Fertile = ifelse(Fertility > 50, 'Fertile', 'Infertile')) %>% 
+    gather(Variable, Value, -Fertile) %>% 
+    group_by(Fertile, Variable) %>% 
+    summarize(MeanSD = paste0(round(mean(Value), 2), ' (', 
+                              round(sd(Value), 2), ')')) %>% 
+    spread(Fertile, MeanSD)
+```
+
+3.
+```{r}
+swiss %>% 
+    add_rownames() %>% 
+    gather(Variable, Value, -rowname) %>% 
+    group_by(Variable) %>% 
+    mutate(Level = as.numeric(Value == min(Value) |
+                                  Value == max(Value))) %>% 
+    ungroup() %>% 
+    filter(Level == 1) %>% 
+    select(County = rowname, Variable, Value)
+```
+
+
+4. 
+```{r}
+swiss %>% 
+    tbl_df() %>%
+    gather(Measure, Value) %>% 
+    group_by(Measure) %>% 
+    summarize(min = min(Value),
+              mean = mean(Value),
+              max = max(Value))
+
+```
+
+5.
+```{r}
+swiss %>% 
+    add_rownames() %>% 
+    filter(Education >= 8, Infant.Mortality < 18, Fertility <= 60 & Fertility >= 50) %>% 
+    select(rowname)
+```
+
+6. 
+```{r}
+swiss %>% 
+    mutate(Educated = as.factor(ifelse(Education > 8, 'Yes', 'No'))) %>% 
+    group_by(Educated) %>% 
+    do(cor(.[-7], use = 'complete.obs') %>% broom::tidy()) %>% 
+    gather(Measure, Value,-.rownames, -Educated) %>% 
+    rename(Var1 = .rownames, Var2 = Measure) %>% 
+    filter(Var1 != Var2)
+```
+
+7. Not given an answer for this as it is more open ended. Much can be found on
+my blog that I linked on how to set this up.
