@@ -26,7 +26,7 @@ Try each of these challenges using only one continuous chain of `%>%` pipes,
 from raw data to final output. Create a file in the `practice` repo under
 `your-name/wrangling` called `challenge.R`. The file location should look like
 `your-name/wrangling/challenge.R`. To get more practice with Git, **add and
-commit** after completing each challenge.
+commit** after completing each challenge. Use the `swiss` dataset that comes with R.
 
 1. Make a new dataframe with the means of Agriculture, Examination, Education,
 and Infant.Mortality for each category of Fertility (hint: convert it into a
