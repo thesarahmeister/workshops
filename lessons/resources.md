@@ -96,6 +96,7 @@ categories:
 * [Shorter intro to `tidyr`](http://blog.rstudio.org/2014/07/22/introducing-tidyr/)
 * [Regular expressions](http://www.regular-expressions.info/)
 * [Regular expression symbol meaning](http://www.endmemo.com/program/R/gsub.php)
+* [`dplyr` with databases in SQL and other formats](https://cran.r-project.org/web/packages/dplyr/vignettes/databases.html)
 
 ## R Markdown ##
 
