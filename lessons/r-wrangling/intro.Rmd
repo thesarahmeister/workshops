@@ -43,7 +43,7 @@ etc).
 - [Slides](slides/)
 - [Cheatsheet](cheatsheet/)
 - [Assignment](assignment/)
-- [Resources](../resources.)
+- [Resources](../resources/)
 
 # Let's get wrangling, the basics
 

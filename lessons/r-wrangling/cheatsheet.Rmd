@@ -28,7 +28,7 @@ knitr::opts_chunk$set(eval = FALSE)
 R is a statistical computing environment to analyze data and write programs. 
 Getting the data into an analyzable form is the hardest part of an analysis. 
 Here is a cheatsheet of useful and/or common commands.  For a more detailed
-cheatsheet, [check out the resource page](../resources/).
+cheatsheet, [check out the resource page](../../resources/).
 
 # R data wrangling commands: Some useful or common ones #
 
