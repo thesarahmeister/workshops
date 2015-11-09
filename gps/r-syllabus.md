@@ -53,14 +53,14 @@ career (since R is free!).
 
 ## Schedule ##
 
-Lesson content can be found [here]({{ site.github.url }}/lessons/).  The workshop will
+Lesson content can be found [here](/lessons/).  The workshop will
 follow the following sequence of topics on **Mondays from 3:00-6:00pm** at **65
 St. George St., room 201**:
 
 1. Git & GitHub -- Oct. 26th
 2. Basics of R -- Nov. 2nd
-3. Visualization -- Nov. 9th
-4. Data wrangling -- Nov. 16th
+3. Data wrangling -- Nov. 9th
+4. Visualization -- Nov. 16th
 5. Dynamic report generation -- Nov. 23rd
 
 ## Intended audience: ##
@@ -72,7 +72,7 @@ of data analysis.  No experience necessary for these workshops.
 
 * Fully charged laptop (though we do have outlets)
 * Install the appropriate software (see our
-  [instructions page, under the R section]({{ site.github.url }}/lessons/instructions/))
+  [instructions page, under the R section](/lessons/instructions/))
 * Bring a positive, not-afraid-of-making-mistakes-or-feeling-unsure
   attitude!!  Learning any language (either human or computer) is
   hard work and *not* easy, but can be done!
