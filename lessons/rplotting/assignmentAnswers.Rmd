@@ -58,3 +58,18 @@ b + geom_boxplot() + labs(title="Depth and color of round cut diamonds", x= "Dia
 ```{r}
 b + geom_boxplot() + labs(title="Depth and color of round cut diamonds by clarity", x= "Diamond color, from J(worst) to D(best)", y="Depth (mm)") + facet_wrap(~clarity, ncol=4)
 ```
+
+9.
+```{r}
+library(tidyr)
+
+diamonds %>%
+  selects (-cut, -color, -clarity) %>%
+  cor() %>%
+  round(2) %>%
+  as.data.frame() %>%
+  add_rownames() %>%
+  gather(Var1, Corr, -rowname) %>%
+  ggplot(aes(Var1, rowname, fill=Corr)) + 
+  geom_tile()
+```

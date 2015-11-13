@@ -22,16 +22,24 @@ categories:
 **We will be using the `diamonds` dataframe included in `ggplot2` for all questions **
 
 1. Use the `qplot()` function to make a scatterplot with x=carat and y=price
+
 2. Now color the plot by the cut. 
+
 3. Change the above scatterplot to a histogram of carat, with the fill color of cut. 
+
 4. Change the binwidth of the histogram to 1
 
 ** now to the `ggplot()` function **
 
 5. Use the `ggplot()` function to make an object called `b` with x=color and y=depth. 
+
 6. Make a boxplot out of `b`
+
 7. Add the following titles:
     * Title: Depth and color of round cut diamonds
     * x label: Diamond color, from J(worst) to D(best)
     * y label: Depth (mm)
+    
 8. Create a `facet_wrap()` using the clarity attribute. Make 4 columns of facets (Hint: use `ncol`. Modifiy the title to say: Depth and color of round cut diamonds by clarity 
+
+9. Make a correlation heat map of all the numeric/integer columns of the diamonds dataset. Round the correlations to 3 digits. BONUS: use piping to solve this problem. HINT: the cor function turns your data into a matrix. Be sure to make this back into a dataframe. 
