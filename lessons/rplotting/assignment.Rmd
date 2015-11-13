@@ -42,4 +42,4 @@ categories:
     
 8. Create a `facet_wrap()` using the clarity attribute. Make 4 columns of facets (Hint: use `ncol`. Modifiy the title to say: Depth and color of round cut diamonds by clarity 
 
-9. Make a correlation heat map of all the numeric/integer columns of the diamonds dataset. Round the correlations to 3 digits. BONUS: use piping to solve this problem. HINT: the cor function turns your data into a matrix. Be sure to make this back into a dataframe. 
+9. Make a correlation heat map of all the numeric/integer columns of the diamonds dataset. Round the correlations to 3 digits. BONUS: use piping to solve this problem. HINT: the cor function turns your data into a matrix. Be sure to make this back into a dataframe.
