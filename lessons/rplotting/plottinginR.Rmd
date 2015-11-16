@@ -1,10 +1,8 @@
 ---
 title: "Plotting in R"
+published: false
 author: "Sarah Meister"
 date: 2015-10-15
-fontsize: 12pt
-geometry: margin=1in
-papersize: letterpaper
 layout: page
 sidebar: false
 output: slidy_presentation
@@ -24,7 +22,7 @@ library(tidyr)
 library(ggplot2)
 ```
  
- # the Basics #
+# the Basics #
  
  `qplot()` is the basic plotting function in `ggplot2` and plots are made up of aesthetics (size, shape, color, etc.) and geoms (points, lines, etc.). 
  
