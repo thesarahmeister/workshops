@@ -58,10 +58,12 @@ x-axis. Make sure to properly label the axes and plot. As a bonus/option, make
 the graph prettier.
 
 11. Expand on challenge 10, but split the means up by `price` (hint: make a new 
-factor variable from `price`) for dollars >2000 and <2000.  The graph should
-have two dots for each variable on the y-axis representing the means for each
-group of `price`. Make sure the labels on the plot make sense.
+factor variable from `price`) for dollars >2000 ('expensive') and <2000
+('inexpensive').  The graph should have two dots for each variable on the y-axis
+representing the means for each group of `price`. Make sure the labels on the
+plot make sense.
 
-12. Expand on challenge 10, but instead of just plotting the means, plot a line
+12. Expand on challenge 11, but instead of just plotting the means, plot a line
 indicating the standard deviation (sd). This style of plot is known as a forest
 plot. Hint: Use `geom_errorbarh` for the line of upper and lower `sd`.
+

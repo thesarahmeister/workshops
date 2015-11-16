@@ -57,3 +57,61 @@ diamonds %>%
   geom_tile()
 ```
 
+10.
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+
+diamonds %>%
+    select(carat, depth, table, price, x, y, z) %>% 
+    gather(Variable, Value) %>% 
+    group_by(Variable) %>% 
+    summarize(mean = mean(Value)) %>% 
+    ggplot(aes(mean, Variable)) +
+    geom_point() +
+    labs(x = 'Mean of the value for the variable',
+         y = 'Variable from the diamonds dataset') +
+    ggtitle('Means of the numerical variables from the diamonds dataset') +
+    theme_bw()
+```
+
+
+11. 
+
+```{r}
+diamonds %>% 
+    mutate(PriceGroup = as.factor(ifelse(price > 2000, 'Expensive', 'Inexpensive'))) %>% 
+    select(PriceGroup, carat, depth, table, x, y, z) %>% 
+    gather(Variable, Value, -PriceGroup) %>% 
+    group_by(PriceGroup, Variable) %>% 
+    summarize(mean = mean(Value)) %>% 
+    ggplot(aes(mean, Variable, shape = PriceGroup)) +
+    geom_point() +
+    labs(x = 'Mean of the value for the variable',
+         y = 'Variable from the diamonds dataset') +
+    ggtitle('Means of the numerical variables from\nthe diamonds dataset by cost')
+```
+
+
+12. 
+
+```{r}
+diamonds %>%
+    mutate(PriceGroup = as.factor(ifelse(price > 2000, 'Expensive', 'Inexpensive'))) %>% 
+    select(PriceGroup, carat, depth, table, x, y, z) %>% 
+    gather(Variable, Value, -PriceGroup) %>% 
+    group_by(PriceGroup, Variable) %>% 
+    summarize(mean = mean(Value),
+              sd = sd(Value)) %>% 
+    ggplot(aes(mean, Variable, shape = PriceGroup)) +
+    geom_point() +
+    geom_errorbarh(aes(xmin = mean - sd, xmax = mean + sd),
+                   height = .25) +
+    labs(x = 'Mean of the value for the variable',
+         y = 'Variable from the diamonds dataset') +
+    ggtitle('Means and SD of the numerical variables from\nthe diamonds dataset by cost') +
+    theme_light()
+
+```
