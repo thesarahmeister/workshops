@@ -1,21 +1,20 @@
 ---
 title: "Plotting in R"
-author: 
+published: false
+author: Sarah Meister
 date: 2015-11-09
 layout: page
 sidebar: false
-classoption: xcolor=dvipsnames
 tag:
     - Lessons
     - Slides
-    - (lesson topic)
+    - Plotting
+    - R
 categories:
     - Lessons
-    - (lesson topic)
-slide-level: 1
-fontsize: 8pt
-header-includes:
-    - \input{../slideOptions.tex}
+    - Plotting
+    - R
+output: slidy_presentation
 ---
     
 # Welcome to Plotting in R #
@@ -30,4 +29,4 @@ To teach you about plotting in R, specifically using the `ggplot2` package.
 1. Learn about the "grammar of graphics" and why it makes life easier. 
 2. Learn and use the `qplot()` function in `ggplot2`
 3. Learn and use the `ggplot()` function in `ggplot2`
-4. Combine functions from the `reshape2` and `plyr` packages with ggplot2 
+4. Combine functions from the `tidyr` and `dplyr` packages with ggplot2 
