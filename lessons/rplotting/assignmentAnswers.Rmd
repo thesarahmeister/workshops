@@ -1,0 +1,75 @@
+---
+title: "Assignment: Plotting in R"
+author: Sarah Meister
+    - 
+date: 2015-11-09
+fontsize: 12pt
+geometry: margin=1in
+papersize: letterpaper
+layout: page
+sidebar: false
+tag:
+    - Lessons
+    - Assignment
+    - rplotting
+categories:
+    - Lessons
+    - rplotting
+---
+
+
+1. 
+```{r}
+qplot(carat, price, data=diamonds)
+```
+
+2. 
+```{r}
+plot(carat, price, data=diamonds, color=cut)
+
+```
+
+3. 
+```{r}
+qplot(carat, data=diamonds, fill=cut)
+```
+
+4. 
+```{r}
+qplot(carat, data=diamonds, fill=cut, binwidth = 1)
+```
+
+5. 
+```{r}
+b <- ggplot(diamonds, aes(color, depth))
+```
+
+6. 
+```{r}
+b + geom_boxplot()
+```
+
+7. 
+```{r}
+b + geom_boxplot() + labs(title="Depth and color of round cut diamonds", x= "Diamond color, from J(worst) to D(best)", y="Depth (mm)")
+```
+
+8. 
+```{r}
+b + geom_boxplot() + labs(title="Depth and color of round cut diamonds by clarity", x= "Diamond color, from J(worst) to D(best)", y="Depth (mm)") + facet_wrap(~clarity, ncol=4)
+```
+
+9.
+```{r}
+library(tidyr)
+
+diamonds %>%
+  selects (-cut, -color, -clarity) %>%
+  cor() %>%
+  round(2) %>%
+  as.data.frame() %>%
+  add_rownames() %>%
+  gather(Var1, Corr, -rowname) %>%
+  ggplot(aes(Var1, rowname, fill=Corr)) + 
+  geom_tile()
+```
