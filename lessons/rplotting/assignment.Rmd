@@ -9,9 +9,11 @@ tag:
     - Lessons
     - Assignment
     - Plotting
+    - R
 categories:
     - Lessons
     - Plotting
+    - R
 ---
 
 # Assignment: Plotting with ggplot2 #
