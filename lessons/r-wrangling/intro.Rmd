@@ -1,5 +1,6 @@
 ---
 title: "Introduction: Data wrangling in R"
+published: false
 author:
     - Luke W. Johnston
 date: 2015-10
@@ -35,14 +36,14 @@ etc).
 1. How to import/export your data
 2. How to view the structure of your data
 3. How to wrangle data into an analyzable format
+4. How to use basic statistics to summarize your data
 
 # Materials for this lesson:
 
 - [Slides](slides/)
 - [Cheatsheet](cheatsheet/)
 - [Assignment](assignment/)
-
-Other resources can be found [here](../resources/).
+- [Resources](../resources/)
 
 # Let's get wrangling, the basics
 
@@ -86,7 +87,10 @@ function (via the `magrittr` package), which works similar to how the Bash shell
 `|` pipe works (for those familiar with Bash, ie. those who use Mac or Linux).
 The command on the right-hand side takes the output from the command on the
 left-hand side, just like how a plumbing pipe works for water.  `tbl_df` makes
-the object into a `tbl` class, making printing of the output nicer.
+the object into a `tbl` class, making printing of the output nicer. The other
+nice thing about `dplyr` is that it can connect to SQL and other type of
+databases and is very fast at wrangling data, unlike base R. Check out the
+[resources page](../resources/) for links to more about this.
 
 ```{r wrangle}
 library(dplyr)
@@ -272,6 +276,8 @@ ds2 %>%
   gather(Measure, Value) %>%
   group_by(Measure) %>%
   summarise(mean = mean(Value),
+            sd = sd(Value),
+            median = median(Value),
             sampleSize = n())
 ```
 

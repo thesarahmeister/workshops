@@ -1,5 +1,6 @@
 ---
 title: "Cheatsheet: Data wrangling in R"
+published: false
 author:
     - Luke W. Johnston
 date: 2015-01
@@ -27,7 +28,7 @@ knitr::opts_chunk$set(eval = FALSE)
 R is a statistical computing environment to analyze data and write programs. 
 Getting the data into an analyzable form is the hardest part of an analysis. 
 Here is a cheatsheet of useful and/or common commands.  For a more detailed
-cheatsheet, [check out the resource page](../resources/).
+cheatsheet, [check out the resource page](../../resources/).
 
 # R data wrangling commands: Some useful or common ones #
 
@@ -233,7 +234,7 @@ swiss %>%
     group_by(EarlyDeath)
 ```
 
-## `summarise` ##
+## `summarise`, `mean`, `sd`, `median`, `quantile` ##
 
 > Create a new column of values, usually using a descriptive statistic function
 such as `mean()` or `median()`, as well as informational functions like `n()`
@@ -246,18 +247,26 @@ library(dplyr)
 swiss %>%
     mutate(Educated = ifelse(Education >= 50, 'yes', 'no')) %>%
     group_by(Educated) %>%
-    str()
-    summarise(mean = mean(Agriculture))
+    summarise(
+        mean = mean(Agriculture),
+        sd = sd(Agriculture),
+        median = median(Agriculture),
+        firstQuartile = quantile(Agriculture, 1 / 4),
+        meanSD = paste0(round(mean(Agriculture), 2), 
+                        ' (', round(sd(Agriculture), 2)
+                        , ')')
+        )
 ```
 
 
-## `gather` ##
+## `gather`, `add_rownames` ##
 
 > Convert a wide dataframe to a long dataframe.  This creates a dataframe with
 at least two new variables, one containing the names of the original variables
 and the other containing the values of the variables.  You can include or
 exclude certain variables by selecting the variable you want to include or
-exclude (with a `-`) after the name of the two new variables.
+exclude (with a `-`) after the name of the two new variables. The `add_rownames`
+function is also useful if the dataframe as a rowname attribute.
 
 > Example code:
 

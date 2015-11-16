@@ -1,5 +1,6 @@
 ---
 title: "...title..."
+published: false
 author: 
 date: YYYY-MM-DD
 layout: page

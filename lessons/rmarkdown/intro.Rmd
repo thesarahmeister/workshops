@@ -1,5 +1,6 @@
 ---
 title: "Introduction: Report generation using R Markdown"
+published: false
 author:
     - Luke W. Johnston
 date: 2015-10
@@ -63,6 +64,7 @@ both you and the computer will understand. A typical YAML metadata looks like:
 ```
 ---
 title: "Introducing R Markdown"
+published: false
 author: "Luke Johnston"
 date: "July 23, 2015"
 output: html_document

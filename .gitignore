@@ -1,5 +1,9 @@
 ## File that tells git what to ignore
 
+~*
+_site
+.sass*
+*~
 ignore*
 ~*
 _site/

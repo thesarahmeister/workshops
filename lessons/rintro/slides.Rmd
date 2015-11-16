@@ -1,6 +1,7 @@
 ---
 title: "Introduction to R"
 author: Sarah Meister
+published: false
 date: 2015-11-02
 layout: page
 sidebar: false
@@ -42,15 +43,6 @@ After this workshop, our expectation is that you will be able to:
 3. View data in R and perform basic calculations & manipulations
 4. Make and use a basic R function 
 5. Understand and use the useful built-in loop functions
-
-# Materials for this lesson: #
-
-* [Slides](slides/)
-* [Cheatsheet](cheatsheet/)
-* [Assignment](assignment/)
-* [Assignment Answers](answer)
-
-Other resources can be found [here](../resources/)
 
 # The R language #
 

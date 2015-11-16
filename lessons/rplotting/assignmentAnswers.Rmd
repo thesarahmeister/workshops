@@ -1,32 +1,14 @@
----
-title: "Assignment: Plotting in R"
-author: Sarah Meister
-    - 
-date: 2015-11-09
-fontsize: 12pt
-geometry: margin=1in
-papersize: letterpaper
-layout: page
-sidebar: false
-tag:
-    - Lessons
-    - Assignment
-    - rplotting
-categories:
-    - Lessons
-    - rplotting
----
-
+# Answers
 
 1. 
 ```{r}
+library(ggplot2)
 qplot(carat, price, data=diamonds)
 ```
 
 2. 
 ```{r}
-plot(carat, price, data=diamonds, color=cut)
-
+qplot(carat, price, data=diamonds, color=cut)
 ```
 
 3. 
@@ -62,6 +44,7 @@ b + geom_boxplot() + labs(title="Depth and color of round cut diamonds by clarit
 9.
 ```{r}
 library(tidyr)
+library(dplyr)
 
 diamonds %>%
   selects (-cut, -color, -clarity) %>%
@@ -73,3 +56,4 @@ diamonds %>%
   ggplot(aes(Var1, rowname, fill=Corr)) + 
   geom_tile()
 ```
+

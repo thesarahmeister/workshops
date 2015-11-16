@@ -15,7 +15,8 @@ categories:
 
 * [Reproductibility](#reproducibility)
 * [Git](#git)
-* [SAS ODS](#sas-ods)
+* [R](#r)
+* [SAS](#sas)
 
 # Reproducibility #
 
@@ -38,6 +39,12 @@ categories:
 * <http://reproducibleresearch.net/> *(an informative blog)*
 * <http://blogs.plos.org/everyone/2012/08/14/plos-one-launches-reproducibility-initiative/>
   *(Announcement of PLOS ONE 2012 Reproducibility Initiative)*
+* <http://www.nature.com/nature/focus/reproducibility/>
+* <http://ropensci.org/blog/2014/06/09/reproducibility/>
+* <http://biostatistics.oxfordjournals.org/content/10/3/405.full>
+* <http://www.sciencemag.org/content/314/5807/1856.full>
+* <http://stats.stackexchange.com/questions/14999/how-are-we-defining-reproducible-research>
+* <http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003285>
 
 # Git #
 
@@ -54,29 +61,16 @@ categories:
 * [Interactive, visual tutorial on branching](http://pcottle.github.io/learnGitBranching/)
 * [StackOverflow questions and answers on Git](http://stackoverflow.com/questions/tagged/git)
 
-# SAS ODS #
-
-* [SAS ODS Output Support](http://support.sas.com/documentation/cdl/en/odsug/65308/HTML/default/viewer.htm#p0oxrbinw6fjuwn1x23qam6dntyd.htm)
-* 
-
-# Reproducible research #
-
-* <http://www.nature.com/nature/focus/reproducibility/>
-* <http://ropensci.org/blog/2014/06/09/reproducibility/>
-* <http://biostatistics.oxfordjournals.org/content/10/3/405.full>
-* <http://www.sciencemag.org/content/314/5807/1856.full>
-* <http://stats.stackexchange.com/questions/14999/how-are-we-defining-reproducible-research>
-* <http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003285>
-
-# Other resources #
-
-* <http://www.stackoverflow.com>
-* <http://stats.stackexchange.com>
-* <http://software-carpentry.org/>
-
 # R #
 
 * [RStudio Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
+
+## Basics of R ##
+
+* [CRAN website](https://cran.r-project.org/)
+* [CRAN R Reference Card](https://cran.r-project.org/doc/contrib/Short-refcard.pdf)
+* [Interactive R tutorial](http://tryr.codeschool.com/)
+* [R in a Nutshell](http://web.udl.es/Biomath/Bioestadistica/R/Manuals/r_in_a_nutshell.pdf)
 
 ## Data wrangling ##
 
@@ -89,6 +83,7 @@ categories:
 * [Shorter intro to `tidyr`](http://blog.rstudio.org/2014/07/22/introducing-tidyr/)
 * [Regular expressions](http://www.regular-expressions.info/)
 * [Regular expression symbol meaning](http://www.endmemo.com/program/R/gsub.php)
+* [`dplyr` with databases in SQL and other formats](https://cran.r-project.org/web/packages/dplyr/vignettes/databases.html)
 
 ## R Markdown ##
 
@@ -112,3 +107,16 @@ categories:
 * [Code chunk options detailed](http://yihui.name/knitr/options/)
 * [Customization of markdown tables (`pander`)](http://rapporter.github.io/pander/)
 * [For installation or documentation of LaTeX](https://www.latex-project.org/)
+
+# SAS #
+
+## ODS ##
+
+* [SAS ODS Output Support](http://support.sas.com/documentation/cdl/en/odsug/65308/HTML/default/viewer.htm#p0oxrbinw6fjuwn1x23qam6dntyd.htm)
+
+
+# Other resources #
+
+* <http://www.stackoverflow.com>
+* <http://stats.stackexchange.com>
+* <http://software-carpentry.org/>

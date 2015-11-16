@@ -25,15 +25,13 @@ Make sure to also have these folders in your own directory on the practice *Code
 As Manuscript* repo (called `practice-YYYY-MM` where `YYYY-MM` represents the
 year and month):
 
-```
-your-name/
-- bio/
-- git/
-- intror/
-- plotting/
-- wrangling/
-- rmarkdown/
-```
+    your-name/
+    - bio/
+    - git/
+    - intror/
+    - plotting/
+    - wrangling/
+    - rmarkdown/
 
 Now, make sure all of these challenges are placed in the proper folder (`git/`).
 

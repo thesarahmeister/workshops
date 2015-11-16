@@ -1,5 +1,6 @@
 ---
 title: "Dynamic report generation using R Markdown and knitr"
+published: false
 author: Luke W. Johnston
 date: 2015-10
 layout: page

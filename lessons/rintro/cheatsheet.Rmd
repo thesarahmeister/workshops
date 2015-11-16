@@ -1,5 +1,6 @@
 ---
 title: "Cheatsheet: Introduction to R"
+published: false
 author:
     - Sarah Meister
 date: 2015-11-02
@@ -16,53 +17,21 @@ categories:
     - R
 ---
 
-Brief description/intro
+```{r knitrOpt, echo = FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
 
-# (language) commands: Some useful or common ones #
+R is an object-oriented programing language, meaning everything we encounter in
+R is an object.
 
-## `command` ##
+# Basic R data types #
 
-> Description
-
+> R has a rich syntax for describing data. There are 5 basic classes of data
+types: character, numeric, integer, complex, and logical
+> 
 > Example code:
 
-    example code (note the tab/4 spaces indent)
-
-## `command` ##
-
-> Description
-
-> Example code:
-
-    example code (note the tab/4 spaces indent)
-    
-R is an object-oriented programing language, meaning everything we encounter in R is an object. 
-
-R has several types of objects:
-
-R has a 5 basic classes of objects:
-
-* Character
-* Numeric
-* Integer
-* Complex
-* Logical
-
-R has 5 different types of objects:
-
-* Vectors
-* Lists
-* Matrices
-* Factors
-* Dataframes
-
-Thus you could have a logical vector, a character dataframe, a numeric matrix, etc. 
-
-# Vectors #
-
-The most basic object is a vector. A vector is a sequence of objects of the same class. We can make vectors using the `c()` function.
-
-```{r , collapse=TRUE}
+```{r}
 a <- c(0.4, 1.2)         # numeric
 b <- c(TRUE, FALSE)      # logical
 c <- c("a","b","c")      # character
@@ -71,320 +40,353 @@ e <- 1:10                # integer
 f <- c(1+0i, 2+4i)       # complex
 ```
 
-Empty vectors can be made using the `vector()` function
+# Basic R object types (classes) #
 
-```{r , collapse=TRUE}
-(x <- vector("numeric", length=10))
+> Not only does R have rich syntax for data, but also for the objects that store
+them. Typical object types that contain data include: vectors, lists, matrices,
+factors, and dataframes. Combining the data types with the object types, you
+could have a logical vector, a character dataframe, a numeric matrix, and so on.
+
+## `c()`, `vector()`, `[`, `length()` ##
+
+> The most basic object is a vector. A vector is a sequence of objects of the
+same class. We can make vectors using the `c()` function. Empty vectors can be
+made using the `vector()` function. Use the `[` command to access the number
+from the vector.
+>
+> Example code:
+
+```{r}
+vector("numeric", length=10)
+x <- c(1:10)
+## Select the first element
+x[1]
+## Select the first and second element
+x[1:2]
+## select the first and third element
+x[c(1,3)]
+
+## Check out long the vector is
+length(x)
 ```
 
-# Lists #
+## `list()`, `[[`, `$` ##
 
-A list is a special type of vector that can contain objects of different classes. For instance, we can have a list with a numeric dataframe as one object within the list, and a string vector as another. 
+> A list is a special type of vector that can contain various object and data
+types. For instance, we can have a list with a numeric dataframe as one
+object within the list, and a string vector as another. You can even have lists
+within a list. Accessing the contents of a list can be done using the `[[`
+command.
+>
+> Example code:
 
-```{r , collapse=TRUE}
-(x <- list(1,"a", TRUE, 1+4i))
+```{r}
+x <- list(num = 1, char = "a", logic = TRUE, complex = 1+4i)
+x
+## Use [[ to select the contents inside the list
+x[[1]]
+x[[2]]
+x[[3]]
+x2 <- list(
+    vector = c(1:10), dataframe = data.frame(1:10, 1:10),
+    char.list = list('a', 'b')
+    )
+x2
+## Use the [ to select the vector number within the list item.
+x2[[1]]
+x2[[1]][1]
+## Select a list item specifically (if it is named)
+x2$vector
 ```
 
-The elements of a list are seperated by double brackets. 
- 
-# Matrices #
+## `matrix()`, `dim()`, `nrow()`, `ncol()`, `rbind()`, `cbind()` ##
 
-Matrices are vectors with a dimension attribute. The dim attribute is an integer vector of length = 2 (nrow, ncol). Matrix multiplication is done with the %*% operator
+> Matrices are vectors with a dimension attribute. The `dim` attribute is an 
+integer vector of length = 2 (nrow, ncol). Matrices are constructed column-wise,
+so entries start at the upper left corner and run down the columns. Matrix 
+multiplication is done with the %*% operator. Accessing the values within the 
+matrix ared done using the `[` command, but with two values. Matrices can be
+created directly from vectors by adding a dimension value, either by changing
+the `dim()` attribute or by using `cbind()` and `rbind()`.
+> 
+> Example code:
 
-```{r , collapse=TRUE}
-(x <- matrix(1:6, nrow=2, ncol=3))
+```{r}
+x <- matrix(1:6, nrow=2, ncol=3)
+x
+# The first row, third column
+x[1,3]
+# The first two rows and second and third column
+x[1:2, 2:3]
 
+## Check the attributes of the matrix
+dim(x)
+ncol(x)
+nrow(x)
+attributes(x)
+
+## Creating a matrix from a vector
+x <- 1:10
+x
+dim(x) <- c(2,5)
+x
 dim(x)
 
-attributes(x)
-```
- 
-Matrices are constructed column-wise, so entries start at the upper left corner and run down the columns. 
-
-Matrices can be created directly from vectors by adding a dimension value
-
-```{r, collapse=TRUE}
-(x <- 1:10)
-
-(dim(x) <- c(2,5))
-
-```
-
-We can also create matrices by column-binding or row-binding with the functions `cbind()` and `rbind()`
-
-```{r, collapse=TRUE}
+## Using rbind ('row bind') or cbind ('column bind')
 x <- 1:3
 y <- 10:12
-cbind(x,y)
-rbind (x, y)
+cbind(x, y)
+rbind(x, y)
 ```
 
-# Factors #
+## `factor()`, `table()` ##
 
-Factors are used to represent catagorical data. They can be ordered or unordered.
+> Factors are used to represent catagorical data. They can be ordered or
+unordered. They are like an integer vector but with a label for each integer.
+Factors are more descriptive than integers e.g. "Male" and "Female" vs. 1 and 2.
+Factors are also treated differently by modelling functions like `lm()` and
+`glm()`.
+> 
+> Example code:
 
-* They are like an integer vector where each integer has a label. 
-* Factors are more descriptive than integers e.g. "Male" and "Female" vs. 1 and 2
-* Factors are treated specially by modelling functions like `lm()` and `glm()`
-
-```{r, collapse=TRUE}
-(x <- factor(c("yes", "yes", "no", "no", "yes")))
-table (x)
+```{r}
+x <- factor(c("yes", "yes", "no", "no", "yes"))
+x
+table(x)
 unclass(x)
+
+## Converting the factor into a numeric
+as.numeric(x)
 ```
 
-# Dataframe #
+## `data.frame()`, `read.table()`, `read.csv()`, `[[`, `[`, `$` ##
 
-Dataframes are used in R to store tabular data. They are represented in R as a special type of list where every element in the list has the same length. Each element of the list can be thought of as a **column** and each length of the list can be thought of as a **row**. Because a dataframe is a type of list, dataframes can store different classes of objects in each column (e.g. numeric, character, logical, etc.).
+> Dataframes are used in R to store tabular data. They are represented in R as a
+special type of list where every element in the list has the same length. Each
+element of the list can be thought of as a **column** and each length of the
+list can be thought of as a **row**. Because a dataframe is a type of list,
+dataframes can store different classes of objects in each column (e.g. numeric,
+character, logical, etc.). Dataframes can be thought of like data contained
+within an Excel spreadsheet... but much more powerful. Depending on the source 
+of the data, dataframes can be imported from an external files using the 
+`read.table()` or `read.csv`, or can be created using `data.frame()`.
 
-Depending on the source of the data, dataframes can be made using the `read.table()`, `read.csv` or `data.frame()` functions. 
+```{r}
+x <- data.frame(
+    foo = 1:4, bar = c(T,T,F,F), char = c('a', 'b', 'b', 'a')
+    )
+x
 
-```{r, collapse=TRUE}
-(x <- data.frame(foo = 1:4, bar = c(T,T,F,F)))
+## Select certain rows and columns: 
+## - 1:2 rows with 2:3 columns
+x[c(1:2), c(2:3)]
+## - Select columns by name
+x[c('foo', 'bar')]
+## - Select rows by number and columns by name
+x[c(2:3), 'foo']
+## - Select column directly
+x$bar
+## - Select a single column using the list [[ select command
+x[[2]]
 
+## Check the attributes
+dim(x)
 nrow(x)
 ncol(x)
+length(x)
+class(x)
 ```
 
 
-# Attributes #
+# Attributes of objects in R #
 
-R objects can have attributes, such as:
+> R objects can have attributes, such as names, length, classes, dimensions,
+user-created classes (eg. metadata), and row names (dataframe). Attributes can
+be modified with the `attributes()` and other functions.
+>
+> Example code
 
-* names
-* classes
-* lengths
-* dimensions (matrices/dataframes)
-* user defined attributes, such as metadata
-* dataframes have a special attribute called `row.names`
-
-Attributes can be modified with the `attributes()` function, among others.
-
-For example, modifiying the `names` of a vector can make your code more readable.
-```{r, collapse=TRUE}
+```{r}
 x <- 1:3
 names(x)
 
+## Modify names attribute
 names(x) <- c("alpha", "beta", "gamma")
-
 x
 names(x)
+
+## Add to the class attribute
+class(x)
+class(x) <- c('my-own-class', class(x))
+class(x)
 ```
 
 # Looking for help in R #
 
-* Look up the documentation for a function: `help("function")` OR
+> Example code:
 
-* ?function
+```{r, eval = FALSE}
+## Help for functions
+help('c')
+help('class')
+?c
+?class
 
-* Look up documentation for a package: `help(package="packagename")`
+## Help for specific packages
+help(package = 'ggplot2')
+help(package = 'rmarkdown')
+```
 
-# Packages #
+# Using R packages #
 
-R comes with a few default packages, however there are thousands of R packages that extend R's capabilities (such as `ggplot2`, our next lesson)
+> R comes with a few default packages, however there are more than six thousand
+R packages that extend R's capabilities (such as `ggplot2`, our next lesson).
+>
+> Example code:
 
-* To see what packages are loaded: `search()`
+```{r, eval = FALSE}
+## Check what's loaded
+search()
 
-* To view available packages: `library()`
+## Load a package that is installed in the library
+library(ggplot2)
+library(rmarkdown)
+library(dplyr)
 
-* To load a package: `library(packagename)`
-
-* Install new package: `install.packages("packagename")` 
+## Install a package
+install.packages('ggplot2')
+install.packages('rmarkdown')
+```
 
 # Working Directory #
 
-R knows the directory it was started in, and refers to this as the "working directory". This is where R will search for any files you are imputting, and where it will place any files you output.  
+> R knows the directory it was started in, and refers to this as the "working
+directory". This is where R will search for any files you are imputting, and
+where it will place any files you output.
+>
+> Example code:
 
-To look at the current working directory: `getwd()` 
+```{r, eval = FALSE}
+## Check the current directory
+getwd()
 
-To change the working directory: ` setwd("directory_path")`
+## Change the directory
+getwd('path/to/new/directory')
 
-To make a new folder in R: `dir.create(path)`
+## Create a directory
+dir.create('path')
+```
 
-# Imputting Tabular Data #
+# Importing tabular data #
 
-Most data you will work with comes in tabular form (such as an Excel spreadsheet). The two most commonly-used functions used to imput tabular data into R are `read.table()` and `read.csv()`. 
-```{r, eval=FALSE, collapse=TRUE}
-data <- read.table("file_name.txt", header=FALSE, sep="\t")
+> Most data you will work with comes in tabular form (such as an Excel
+spreadsheet). The two most commonly-used functions used to import tabular data
+into R are `read.table()` and `read.csv()`.
 
-# \t is the regular expression for the tab key. This means our table is tab-delimited (tab-separated)
-
-data2 <- read.csv("file_name.csv", header=TRUE)
+```{r, eval=FALSE}
+# \t is the regular expression for the tab key. This means our table is
+# tab-delimited (tab-separated)
+data <- read.table("file_name.txt", header = FALSE, sep = "\t")
 
 #.csv is a comma-separated table 
+data2 <- read.csv("file_name.csv", header = TRUE)
 ```
 
-# Outputting Tabular Data #
+# Saving/outputting tabular data #
 
-Often you'll want to save R data into a tabular form (e.g. to view in Excel). This is where you use `write.table()`
-```{r, eval=FALSE, collapse=TRUE}
-write.table(data, file= "myfile.csv", sep=",", row.names=TRUE, col.names=FALSE)
+> Often you'll want to save R data into a tabular form (e.g. to view in Excel).
+This is where you use `write.table()` or `write.csv()`.
+>
+> Example code:
+
+```{r, eval=FALSE}
+## Comma separated file
+write.table(
+    data, file = "myfile.csv", sep = ",", row.names = TRUE, col.names = FALSE
+    )
+write.csv(data, file = 'myfile.csv')
 ```
 
-# Subsetting Data #
+# R operators and special symbols #
 
-Using `[]` in R allows you to subset certain parts of a vector
+**Assignment operators:** (Note: only use `<<-` under *very* special
+circumstances...)
 
-```{r, collapse=TRUE}
-x <- c(TRUE, FALSE, "alpha", "beta", "gamma", 1, 2)
+| Operator | Description |
+| :-----| :----|
+|  <- | local environment assignment |
+|  <<- | global environment assignment | 
 
-x[c(1, 4, 5)]
+**Arthmetic Operators:**
 
-```
+|  Operator | Description |
+| :--------- | :----------|
+| +        | addition |
+| -        | subtraction |
+| *        | multiplication |
+| /        | division |
+| ^ or **  | exponentiation |
+| x %% y   | modulus (5 %% 2 is 1) |
+| x %/% y  | integer division (5%/% is 2) |
+| x %\*% y  | matrix multiplication |
 
-This also works for matrices
+**Logical Operators:**
 
-```{r, collapse=TRUE}
-a <- matrix(1:9, nrow = 3)
-colnames(a) <- c("A", "B", "C")
-a[1:2, ]
-a[c(T, F, T), c("B", "A")]
-a[0, -2]
-```
+| Operator  | Description |
+| :--------  | :----------- |
+| <         | less than |
+| <=        | less than or equal to |
+| >         | greater than |
+| >=        | greater than or equal to |
+| ==        | exactly equal to |
+| !=        | not equal to |
+| !x        | not x |
+| x \| y    | x OR y (returns a vector) |
+| x \|\| y    | x OR y (examines only 1st element of vector) |
+| x & y     | x AND y (returns a vector) |
+| x && y    | x AND y (examines only 1st element of vector) |
+| isTRUE(x) | test if X is TRUE |
+| any(x) | whether any of x is TRUE |
+| all(x) | whether all of x is TRUE |
+| identical(x, y) | whether x and y are the same |
 
-and dataframes
+# Commenting in R #
 
-```{r, collapse=TRUE}
-df <- data.frame(x = 1:3, y = 3:1, z = letters[1:3])
-
-df[ ,c(1, 3)]    #gives the columns that are in position 1 and 3
-```
-
-You can also easily subset a column in a dataframe using a $
-
-```{r, collapse=TRUE}
-df <- data.frame(x = 1:10, y = 11:20, z = letters[1:10])
-
-df$z
-```
-
-# R Operators #
-
-Assignment operators
-
-|Operator | Description|
-|---- | ---- |
-| <- | local environment assignment |
-| <<- | global environment assignment | 
-
-Arthmetic Operators
-
-|Operator | Description|
-|-------- | -----------|
-|+        | addition|
-|-        | subtraction|
-|*        | multiplication|
-|/        | division|
-|^ or **  | exponentiation|
-|x %% y   | modulus (5 %% 2 is 1)|
-|x %/% y    | integer division (5%/% is 2)|
-|x %*% y | matrix multiplication|
-
-Logical Operators
-
-Operator  | Description
---------  | -----------
-<         | less than
-<=        | less than or equal to
->         | greater than
->=        | greater than or equal to
-==        | exactly equal to
-!=        | not equal to
-!x        | not x
-x &#124; y    | x OR y (returns a vector)
-x &#124;&#124; y    | x OR y (examines only 1st element of vector)
-x & y     | x AND y (returns a vector)
-x && y    | x AND y (examines only 1st element of vector)
-isTRUE(x) | test if X is TRUE
-
-## Commenting in R #
+> Example code:
 
 ```{r}
-# commenting in R is easy! Everything past a # means that R will ignore whatever is written there. 
+# commenting in R is easy! Everything past a # means that R will ignore whatever
+# is written there.
 ```
 
-# subset function #
 
-The `subset()` function in R will return a subset of an argument that meet a particular condition. 
+# Functions #
 
-```{r, collapse=TRUE}
-numvec = c(2,5,8,9,0,6,7,8,4,5,7,11)
+## `function()` ##
 
-subset(numvec, numvec < 9 & numvec > 4)
+> Functions are snippets of code that allow you to simplify your code and to not
+repeat yourself (a tenet of programming is DRY... 'don't repeat yourself'). 
+They are created using the `function()` command and are stored as R objects of
+the class "function". Functions can be passed as arguments to other functions
+and they can be nested (functions inside functions, but not recommended).
+Whatever output is printed last is what a function will return when it is used. 
+Any time you do an analysis or series of commands more than once, put it into a 
+function and save yourself time and effort later on!
+>
+> Example code:
 
-```
-
-# if-else expressions #
-
-```{r, eval=FALSE, collapse=TRUE}
-if (condition) {
-  ##do this
-} else {
-  ##do that
-}
-
-## to add more conditions
-
-if (condition1) {
-  ## do this
-} else if (condition2) {
-  ## do something different
-} else {
-  ## do something else
-}
-```
-
-# if-else expressions #
-
-```{r, collapse=TRUE, warning=FALSE}
-if (x > 3) {
-  y <- 10
-} else {
-  y <- 0
-}
-
-
-### OR
-
-
-y <- if(x > 3) {
-  10
-} else {
-  0
-}
-```
-
-# for loop #
-```{r, collapse=TRUE}
-for (i in 1:10) {
-  print (i)
-}
-
-
-### nested for loops
-
-x <- matrix(1:6, 2, 3)
-
-for (i in seq_len(nrow(x))) {
-  for (j in seq_len(ncol(x))) {
-    print (x[i, j])
-  }
-}
-```
-
-# Writing functions #
-
-functions are created using the `function()` directive and are stored as R objects of the class "function". Functions can be passed as arguments to other functions and they can be nested (functions inside functions)
-
-```{r, eval=FALSE, collapse=TRUE}
+```{r, eval = FALSE}
 f <- function(argument) {
-  ## do something here 
+    ## do something here 
+    commands
+    more commands
 }
 ```
 
-```{r, collapse=TRUE}
+```{r}
 
-## make a function called above10 with the argument x that subsets all variables of x that are greater than 10
+## make a function called above10 with the argument x that subsets all variables
+## of x that are greater than 10
 above10 <- function(x) {
   use <- x > 10
   x[use]
@@ -396,7 +398,10 @@ above <- function(x, n) {
   x[use]
 }
 
-## create a function called columnmean that takes the arguments y and the argument remove.NA with a default value of TRUE. This function takes the number of columns of y, turns it into a numeric object, and calculates the mean of each column of y while removing NA values
+## create a function called columnmean that takes the arguments y and the
+## argument remove.NA with a default value of TRUE. This function takes the
+## number of columns of y, turns it into a numeric object, and calculates the
+## mean of each column of y while removing NA values
 columnmean <- function (y, remove.NA = TRUE) {
   nc <- ncol(y)
   means <- numeric(nc)
@@ -406,126 +411,211 @@ columnmean <- function (y, remove.NA = TRUE) {
   means
 }
 ```
+
+## `if .. else`, `ifelse` ##
+
+> If-else commands are a mainstay of programming languages and are used to 
+control the flow and conditions of an R script or analysis. Very useful when
+used within functions.
+>
+> Example code:
+
+```{r, eval = FALSE}
+
+x <- 1:20
+
+if (length(x) < 10) {
+    print('Less then ten numbers')
+} else {
+    print('More than ten numbers')
+}
+
+## to add more conditions
+if (length(x) < 10) {
+    print('Less then ten numbers')
+} else if (length(x) == 20) {
+    print('There are 20 numbers')
+} else {
+    print('Not sure how many numbers...')
+}
+
+ifelse(x < 10, 'yes', 'no')
+```
+
+```{r}
+y <- c()
+if (length(x) > 3) {
+  y <- 10
+} else {
+  y <- 0
+}
+y
+
+## Or
+y <- if(length(x) > 3) {
+  10
+} else {
+  0
+}
+y
+```
+
+## `for (x in list)` ##
+
+> For loops allow you to iterate over a sequence to do a particular task. R's
+looping in inherently slow, so for looping should not be relied on for heavy
+data-intensive tasks.
+>
+> Example code:
+
+```{r}
+for (i in 1:10) {
+  print (i)
+}
+
+## Nested loops
+x <- matrix(1:6, 2, 3)
+for (i in seq_len(nrow(x))) {
+  for (j in seq_len(ncol(x))) {
+    print (x[i, j])
+  }
+}
+```
+
 # Loop Functions #
 
-R has built loop functions, which often have the word "apply" in them.
-
+> R's for looping is inherently (excruciatingly) slow. Because of this, there
+are several built-in functions that speed up looping, which often have the word
+"apply" in them. Using these and other techniques compared to using for loops is
+called vectorization. R is very computationally efficient at vectorizations.
+>
 - `lapply`: loop over a list and evaluate a function on each element 
 - `sapply`: same as `lapply` but it tries to simplify the result
 - `apply`: apply a function over the margins of an array 
 - `tapply`: apply a function over subsets of a vector (`lapply()` used with `split()` does the same thing)
 - `mapply`: a multivariate version of `lapply` 
 
-# lapply #
+## `lapply()` ##
 
-`lapply` loops internally with C code, making the looping faster
+> `lapply` loops internally with C code, making the looping very fast. It
+takes two to three arguments: a list `x` (or another object that is coerced to a
+list); a function, including anonymous functions, which are user created without
+a name; other arguments as necessary. It will always return a list object.
+>
+> Example code:
 
-`lapply` takes two to three arguments:
-
-1. a list `x` (or another object that is coerced to a list)
-2. a function
-3. other arguments as necessary
-
-```{r, collapse=TRUE}
+```{r}
 x <- list(a=1:5, b=rnorm(10), c=rnorm(20,1), d=rnorm(100,5))
 lapply(x, mean)
-```
-`lapply` will always return a list
 
-`lapply` and others make heavy use of anonymous functions, which are functions without names.
-```{r, collapse=TRUE}
 x <- list(a=matrix(1:4,2,2), b=matrix(1:6,3,2))
 x
-
+## Use an anonymous function with the argument `ele` and then define that
+## argument.
 lapply(x, function(ele) ele[ ,1]) 
-## create an anonymous function with the argument ele and then define that argument. 
 ```
 
-# sapply #
+## `sapply()` ##
 
-`sapply` will try to simplify the result of lapply if possible
-
-- if the result is a list where every element is length 1, than a vector is returned 
-- if the result is a list where every element is a vector of the same length, a matrix is returned
-- otherwise a list is returned
+> This function tries to simplify the result of `lapply`, if possible. For
+instance, if the result is a list where every element is length 1, than a vector
+is returned. Or, if the result is a list where every element is a vector of the
+same length, a matrix is returned. Otherwise a list is returned.
+> 
+> Example code:
 
 ```{r, collapse=TRUE}
 x <- list(a=1:5, b=rnorm(10), c=rnorm(20,1), d=rnorm(100,5))
 sapply(x, mean)
 ```
 
-# apply #
+## `apply()` ##
 
-`apply` is used to evalute a function over the margins of an array. It is not faster than a loop, but it works in one line. `1` means do the function to the rows. `2` means do the function to the columns
+> Used to evalute a function over the margins of an array. It is not faster than
+a loop, but it works in one line. `1` means do the function to the rows. `2`
+means do the function to the columns.
+>
+> Example code:
 
-```{r, collapse=TRUE}
+```{r}
 x <- matrix (rnorm(200), 20, 10)
-apply(x, 2, mean) # keeping number of columns and collapsing rows. This gives a vector of the means of columns. 
+# keeping number of columns and collapsing rows. This gives a vector of the
+# means of columns.
+apply(x, 2, mean) 
 
-apply(x, 1, sum) # this calculates the sum of all rows
+# this calculates the sum of all rows
+apply(x, 1, sum) 
 
+## Use additional arguments in apply, that it passes to the function quantile.
 y <- matrix(rnorm(200), 20, 10)
-
 apply(y, 1, quantile, probs = c(0.25, 0.75))
 
-# with an array (stacks of matrices: multidimensional)
-
-a <- array(rnorm(2*2*10), c(2,2,10)) #create an array that looks like a bunch of 2 by 2 matrices and take the mean of those
-
+# With an array (stacks of matrices: multidimensional).
+# Create an array that looks like a bunch of 2 by 2 matrices and take the mean of
+# those.
+a <- array(rnorm(2*2*10), c(2,2,10)) 
 apply(a, c(1,2), mean) #this keeps the 1st and 2nd dimension
-
 ```
 
-# mapply #
+## `mapply()` ##
 
-`mapply` is a multivariate apply (like `lapply`) that applies a function over a set of arguments. 
+> `mapply` is a multivariate apply (like `lapply`) that applies a function over
+a set of arguments.
 
-```{r, collapse=TRUE}
+```{r}
 mapply(rep, 1:4, 4:1)
-
 # is the same as
-
-list(rep(1, 4), rep(2,3), rep(3,2), rep(4,1))
+list(rep(1, 4), rep(2, 3), rep(3, 2), rep(4, 1))
 ```
 
-# Instant Vectorization to make your code faster#
-
 ```{r, collapse=TRUE}
-
-## create a function called noise that takes the arguments n, mean and sd and produces random varibles with those specifications. 
-
+## create a function called noise that takes the arguments n, mean, and sd and
+## produces random varibles with those specifications.
 noise<- function(n,mean, sd) {
   rnorm(n, mean, sd)
 }
 
 ## apply the noise function with n=5, mean=1 and sd=2
-
 noise(5, 1, 2)
 
 ## apply the noise function for n= 1 to 5, mean = 1 to 5, and sd = 2
-
 mapply(noise, 1:5, 1:5, 2)
 
 ## which is the same as writing
-
 list(noise(1,1,2), noise(2,2,2), noise(3,3,2), noise(4,4,2), noise(5,5,2))
 
-# (the outputs are different because our function makes new random varibles each time)
+# (the outputs are different because our function makes new random varibles each
+# time)
 ```
 
-# tapply #
+## `tapply()` ##
 
-`tapply` is used to apply a function over subsets of a vector. It will simplify the result, like sapply. 
+> `tapply` is used to apply a function over subsets of a vector. It will
+simplify the result, like sapply.
+>
+> Example code:
 
-```{r, collapse=TRUE}
+```{r}
 x <- c(1:30) # make a vector with 30 variables
 f<- gl(3,10) # make a factor variable with 3 levels and 10 reps of each level
 f
 
-tapply(x, f, mean) # apply the mean function to x, subsetting by f
-
-tapply(x, f, range) # apply the range function to x, subsetting by f
-
+# apply the mean function to x, subsetting by f
+tapply(x, f, mean) 
+# apply the range function to x, subsetting by f
+tapply(x, f, range) 
 ```
 
+# Misc commands #
 
+## `subset()` ##
+
+> The `subset()` function in R will return a subset of an argument that meet a
+particular condition.
+>
+> Example code:
+
+```{r}
+numvec <- c(2,5,8,9,0,6,7,8,4,5,7,11)
+subset(numvec, numvec < 9 & numvec > 4)
+```
